@@ -40,9 +40,9 @@ input{
 
 
 
-.bg-dark {
+/* .bg-dark {
   background-color: #212529 !important;
-}
+} */
 
 .color-primary{
   background-color: #50AD55 ;
@@ -133,9 +133,11 @@ img::-moz-selection {
 }
 
 #mainNav {
-  -webkit-transition: all 0.2s;
+  /* -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
-  transition: all 0.2s;
+  transition: all 0.2s; */
+  position: relative;
+  z-index: 2;
 }
 
 #mainNav .navbar-brand {
@@ -165,16 +167,16 @@ img::-moz-selection {
   /* color: #007bff; */
 }
 
-#mainNav .navbar-nav>li.nav-item>a.nav-link.active,
+/* #mainNav .navbar-nav>li.nav-item>a.nav-link.active,
 #mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active {
-  /* color: #007bff !important; */
+  color: #007bff !important;
   background-color: transparent;
 }
 
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover,
 #mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active:hover {
   background-color: transparent;
-}
+} */
 
 @media (min-width: 992px) {
   #mainNav {
@@ -237,8 +239,8 @@ img::-moz-selection {
 }
 
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
   /* background-image: url("../img/paranaque-back.jpg"); */
   background-color: #50AD55;
   background-position: center center;
@@ -254,7 +256,7 @@ header.masthead hr {
 }
 
 header.masthead h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 header.masthead p {
@@ -303,6 +305,7 @@ header.masthead p {
   .long-header {
     display: none;
   }
+
 }
 
 @media (min-width: 1200px) {
@@ -384,6 +387,7 @@ header.masthead p {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px;
   }
+
 }
 
 .text-primary {
