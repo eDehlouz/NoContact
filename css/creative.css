@@ -18,7 +18,7 @@ hr.light {
   border-color: #fff;
 }
 
-a {
+/* a {
   color: #007bff;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -27,22 +27,13 @@ a {
 
 a:hover {
   color: #007bff;
-}
+} */
 
-h1{
-
-}
 
 input{
   width: 50%;
   margin: 1.2rem auto;
 }
-
-
-
-/* .bg-dark {
-  background-color: #212529 !important;
-} */
 
 .color-primary{
   background-color: #50AD55 ;
@@ -87,6 +78,9 @@ section#nov, section#cpn {
   padding: 0;
 }
 
+section#safety, section#funding{
+	height: auto;
+}
 
 
 footer {
@@ -133,9 +127,6 @@ img::-moz-selection {
 }
 
 #mainNav {
-  /* -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s; */
   position: relative;
   z-index: 2;
 }
@@ -143,7 +134,6 @@ img::-moz-selection {
 #mainNav .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
-  /* color: #007bff; */
 }
 
 #mainNav .nav-item {
@@ -152,7 +142,6 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  /* color: #007bff; */
 }
 
 #mainNav .navbar-nav>li.nav-item>a.nav-link,
@@ -167,16 +156,9 @@ img::-moz-selection {
   /* color: #007bff; */
 }
 
-/* #mainNav .navbar-nav>li.nav-item>a.nav-link.active,
-#mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active {
-  color: #007bff !important;
-  background-color: transparent;
-}
 
-#mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover,
-#mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active:hover {
-  background-color: transparent;
-} */
+
+
 
 @media (min-width: 992px) {
   #mainNav {
@@ -211,23 +193,13 @@ img::-moz-selection {
     background-color: #fff;
   }
 
-  #mainNav.navbar-shrink .navbar-brand {
-    /* color: #007bff; */
-  }
 
-  #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
-    /* color: #007bff; */
-  }
 
   #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link,
   #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus {
     color: #212529;
   }
 
-  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover,
-  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus:hover {
-    /* color: #007bff; */
-  }
 
   .abr-header {
     display: block;
@@ -241,7 +213,6 @@ img::-moz-selection {
 header.masthead {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
-  /* background-image: url("../img/paranaque-back.jpg"); */
   background-color: #50AD55;
   background-position: center center;
   -webkit-background-size: cover;
@@ -264,13 +235,6 @@ header.masthead p {
 }
 
 @media (min-width: 768px) {
-  /* header.masthead {
-    height: 100vh;
-    min-height: 400px;
-    padding-top: 0;
-    padding-bottom: 0;
-  } */
-
 
   header.masthead p {
     font-size: 1.15rem;
@@ -283,6 +247,15 @@ header.masthead p {
   .long-header {
     display: none;
   }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
+
 
 }
 
@@ -312,27 +285,22 @@ header.masthead p {
   header.masthead h1 {
     font-size: 4rem;
   }
-
   .abr-header {
     display: none;
   }
-
   .long-header {
     display: block;
   }
 }
-
 .service-box {
   max-width: 400px;
 }
-
 .portfolio-box {
   position: relative;
   display: block;
   max-width: 650px;
   margin: 0 auto;
 }
-
 .portfolio-box .portfolio-box-caption {
   position: absolute;
   bottom: 0;
@@ -347,7 +315,6 @@ header.masthead p {
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
   position: absolute;
   top: 50%;
@@ -355,39 +322,23 @@ header.masthead p {
   transform: translateY(-50%);
   text-align: center;
 }
-
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   padding: 0 15px;
 }
-
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
 }
-
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   font-size: 18px;
 }
-
 .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
-
 .portfolio-box:focus {
   outline: none;
-}
-
-@media (min-width: 768px) {
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    font-size: 16px;
-  }
-
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 22px;
-  }
-
 }
 
 .text-primary {
