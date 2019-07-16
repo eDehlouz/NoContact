@@ -1,6 +1,9 @@
 .font-w {
   color: white; }
 
+.font-g {
+  color: #50AD55; }
+
 body, html {
   width: 100%;
   height: 100%; }
@@ -26,7 +29,10 @@ h4 {
   font-weight: 700; }
 
 p {
-  font-size: 15px; }
+  font-size: 14px; }
+
+a {
+  font-size: 10px; }
 
 header, #mainNav {
   padding-left: 1rem;
@@ -46,6 +52,8 @@ header {
       width: 300px;
       bottom: 0;
       padding-bottom: 15%; }
+      header .container .header-elements.mission {
+        padding-bottom: 40%; }
   header .intro-text {
     display: none; }
 
@@ -70,6 +78,10 @@ section {
     color: #5F5F5F; }
     section#features .relative {
       display: none; }
+    section#features .card-body {
+      height: 176px;
+      display: flex;
+      align-items: center; }
   section#nov {
     padding: 0; }
     section#nov #nov-info {
@@ -87,15 +99,84 @@ section {
         padding-bottom: 0.6rem; }
   section#news {
     background-color: #85BE5B; }
-  section#safety, section#funding {
-    height: auto; }
+  section#maps {
+    padding: 0; }
+    section#maps .map-selector {
+      background-color: #85BE5B;
+      padding: 3rem 1.5rem; }
+    section#maps button:nth-of-type(1) {
+      margin-top: 0; }
+  section#safety {
+    padding: 0; }
+    section#safety ul {
+      list-style-type: none;
+      position: absolute;
+      /* bottom: 670px; */
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      padding-left: 0;
+      width: 90%; }
+      section#safety ul li {
+        background-color: #1F8425;
+        text-align: right;
+        margin: 0.7rem 0;
+        font-size: 14px;
+        padding: 0.2rem 1rem 0.2rem 0;
+        border-radius: 0 50px 50px 0;
+        color: white;
+        font-style: italic; }
+        section#safety ul li:nth-of-type(1) {
+          width: 100%;
+          background-color: #AFAFAF;
+          color: #5F5F5F; }
+        section#safety ul li:nth-of-type(2) {
+          width: 95%; }
+        section#safety ul li:nth-of-type(3) {
+          width: 85%; }
+        section#safety ul li:nth-of-type(4) {
+          width: 82%; }
+        section#safety ul li:nth-of-type(5) {
+          width: 75%; }
+        section#safety ul li:nth-of-type(6) {
+          width: 65%; }
+        section#safety ul li:nth-of-type(7) {
+          width: 55%; }
+        section#safety ul li:nth-of-type(8) {
+          width: 52%; }
+    section#safety .col-6 {
+      padding-left: 0 !important;
+      padding-right: 0 !important; }
+    section#safety .safety-div {
+      padding: 2rem 0.5rem 0.1rem 0.5rem; }
+    section#safety .stat {
+      background-color: #EDEDED; }
+  section#congestion {
+    padding: 0;
+    background-image: url("../img/traffic.jpg");
+    background-size: cover;
+    background-color: #9FD592;
+    background-blend-mode: multiply; }
+    section#congestion .congestion-info {
+      background-color: #50AD55;
+      padding: 2rem 0.5rem; }
+  section#funding {
+    padding: 0; }
+    section#funding img {
+      width: 100%; }
+    section#funding .funding-IMG {
+      display: flex;
+      align-items: center;
+      height: 100; }
+    section#funding .funding-info {
+      -webkit-box-shadow: 6px 0px 11px 0px #b5b5b5;
+      -moz-box-shadow: 6px 0px 11px 0px #b5b5b5;
+      box-shadow: 6px 0px 11px 0px #b5b5b5; }
 
 #mainNav {
   background-color: #50AD55;
   position: absolute;
   z-index: 4;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   text-align: right; }
   #mainNav li {
@@ -127,14 +208,13 @@ section {
   #mainNav .li-casing {
     background-color: #85BE5B;
     padding: 0.2rem 0 0.2rem 2rem;
-    width: 55%;
+    width: 60%;
     display: flex;
+    flex-direction: row;
     text-align: left;
     align-self: flex-end;
     border-radius: 40px 0 0 40px;
     margin-bottom: 1.7rem; }
-    #mainNav .li-casing .active {
-      padding-right: 10% !important; }
     #mainNav .li-casing:nth-of-type(1) {
       background-color: #1F8425; }
     #mainNav .li-casing:nth-of-type(2) {
@@ -173,6 +253,8 @@ section {
     right: -1rem;
     bottom: 0;
     z-index: 1; }
+    .relative .header-img.mission {
+      bottom: 50px; }
 
 .card {
   margin: 0.35rem 0;
@@ -185,7 +267,7 @@ section {
     display: flex;
     align-items: center; }
     .card .features-icon img {
-      width: 5.5rem;
+      width: 4rem;
       padding-right: 0.5rem; }
 
 .carousel .carousel-indicators {
