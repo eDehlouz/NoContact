@@ -39,7 +39,7 @@
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/creative.css" rel="stylesheet">
+  <link href="css/creative-test.css" rel="stylesheet">
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script type='text/javascript' src='libraries/unitegallery-master/source/unitegallery/js/ug-common-libraries.js'></script>
@@ -65,7 +65,7 @@
   <script type='text/javascript' src='libraries/unitegallery-master/source/unitegallery/js/ug-api.js'></script>
 
   <link rel='stylesheet' href='libraries/unitegallery-master/source/unitegallery/css/unite-gallery.css' type='text/css' />
-  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/custom.css"> -->
   <script type='text/javascript' src='libraries/unitegallery-master/source/unitegallery/themes/default/ug-theme-default.js'></script>
   <link rel='stylesheet' href='libraries/unitegallery-master/source/unitegallery/themes/default/ug-theme-default.css' type='text/css' />
   <script type="text/javascript" src="../cdnjs.cloudflare.com/ajax/libs/mediaelement/2.18.1/mediaelement.min.js"></script>
@@ -100,49 +100,69 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item js-scroll-trigger active "> <a class="nav-link js-scroll-trigger " href="index.html">Home</a>
+          <div class="li-casing">
+          <li class="nav-item js-scroll-trigger active ">
+            <a class="nav-link js-scroll-trigger " href="">Home</a>
           </li>
+          </div>
+          <div class="li-casing">
           <li class="nav-item ">
-            <a class="nav-link " href="our-mission.html">OUR MISSION</a>
+            <a class="nav-link " href="">OUR MISSION</a>
           </li>
+          </div>
+          <div class="li-casing">
           <li class="nav-item ">
             <a class="nav-link js-scroll-trigger " href="">CHECK PLATE</a>
           </li>
+          </div>
+          <div class="li-casing">
           <li class="nav-item ">
-            <a class="nav-link js-scroll-trigger " href="faq.html">FAQ</a>
+            <a class="nav-link js-scroll-trigger " href="">DOWLOADS</a>
           </li>
-
+          </div>
+          <div class="li-casing">
+          <li class="nav-item ">
+            <a class="nav-link js-scroll-trigger " href="">FAQ</a>
+          </li>
+          </div>
         </ul>
+
       </div>
     </div>
   </nav>
 
 
-  <header class="masthead home text-white d-flex">
+  <header>
+    <div class="container font-w">
+      <!-- <div class="row padding-tb-10"> -->
+      <!-- <div class="col-md-12">
+          <div class="col-10 "> -->
+      <div class="header-elements">
 
-    <div class="container front-content  my-auto">
-      <div class="row padding-tb-10">
-        <div class="col-md-12">
-          <div class="col-10 ">
-            <h1 class="title-msg">OUR DEDICATION TO CREATING A SAFER PARANAQUE</h1>
-          </div>
-          <div class="col-8 padding-tb-20 desktop">
-            <p class="font-w intro-text ">Welcome to the no contact apprehension site of Paranaque City. This website is dedicatied to the No contact Apprehension Program of Paranaque City, our prokect mission, why it being implemented and the
-              benefits of this venture. If you are here to verify a notice of violation or check for one, click below.</p>
-          </div>
-          <div class="col-lg-10 ">
-            <button type="button" class="btn btn-outline-light" onclick="window.location.href = '#nov';">Check Notice</button>
-            <button type="button" class="btn-right btn btn-outline-light" onclick="window.location.href = '#plate';">Check Plate No.</button>
-            <a href="index2.html">TEST MOBILE SITE LINK</a>
-          </div>
-        </div>
+
+        <h1 class="title-msg">OUR DEDICATION TO CREATING A SAFER PARANAQUE</h1>
+        <!-- </div> -->
+        <!-- <div class="col-8 padding-tb-20 desktop"> -->
+        <p class="font-w intro-text ">Welcome to the no contact apprehension site of Paranaque City. This website is dedicatied to the No contact Apprehension Program of Paranaque City, our prokect mission, why it being implemented and the
+          benefits of this venture. If you are here to verify a notice of violation or check for one, click below.</p>
+        <!-- </div>
+          <div class="col-lg-10 "> -->
+        <button type="button" class="btn btn-outline-light" onclick="window.location.href = '#nov';">Check Notice</button>
+        <button type="button" class="btn-right btn btn-outline-light" onclick="window.location.href = '#plate';">Check Plate No.</button>
+        <!-- </div>
+        </div> -->
+        <!-- </div> -->
       </div>
     </div>
     </div>
   </header>
 
   <section id=mobhead>
-    <div class="container ">
+    <div class="relative">
+      <img class="header-img" src="img/HPImage.png" alt="Home Page Image">
+    </div>
+
+    <div class="container">
       <div class="mobile">
         <p class="">Welcome to the no contact apprehension site of Paranaque City. This website is dedicatied to the No contact Apprehension Program of Paranaque City, our prokect mission, why it being implemented and the
           benefits of this venture. If you are here to verify a notice of violation or check for one, click below.</p>
@@ -152,123 +172,155 @@
 
   <section id="features">
 
-
-    <div class="div-wrapper">
+    <div class="relative">
       <img class="header-img" src="img/HPImage.png" alt="Home Page Image">
-
     </div>
 
-    <div class="container featureBox">
+    <div class="container features-div">
 
 
-      <h1 class="subTitle padding-b-subTitle">WHAT SHOULD I DO IF I GET<br>A NOTICE OF VIOLATION?</h1>
+      <h2 class="font-w padding-b-subTitle">WHAT SHOULD I DO IF I GET A NOTICE OF VIOLATION?</h2>
 
-      <!-- <div class="container"> -->
-        <div class="row">
 
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <img class="featIcon float-l" src="img/Icon 1.png" alt="search icon">
-                <div class="card-items">
-                  <h5 class="card-title">1. SEARCH</h5>
-                  <p class="card-text">Enter your notice of violation in our search below</p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <div class="features-icon">
+                    <img src="img/Icon 1.png" alt="search icon">
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="card-items">
+                    <h3 class="card-title">1. SEARCH</h3>
+                    <p class="card-text">Enter your notice of violation in our search below</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <img class="featIcon float-l" src="img/Icon 2.png" alt="search icon">
-                <div class="card-items">
-                  <h5 class="card-title">2. VERIFY</h5>
-                  <p class="card-text">The first thing you should do is to look at the video of the violation to determine Whether it is your vehicle.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <img class="featIcon float-l" src="img/Icon 3.png" alt="search icon">
-                <div class="card-items">
-                  <h5 class="card-title">3. VISIT</h5>
-                  <p class="card-text">Once you have determined that it is indeed your vehicle, you may go to the Traggic and Parking Management Office</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <img class="featIcon float-l" src="img/Icon 4.png" alt="search icon">
-                <div class="card-items">
-                  <h5 class="card-title">4. EXEMPTION</h5>
-                  <p class="card-text">If you were giving way to emergency vehicules, an exemption would apply. Refer to FAQs or the help center for further questions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
-      <!-- </div> -->
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <div class="features-icon">
+                    <img class="featIcon float-l" src="img/Icon 3.png" alt="search icon">
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="card-items">
+                    <h3 class="card-title">2. VERIFY</h3>
+                    <p class="card-text">The first thing you should do is to look at the video of the violation to determine Whether it is your vehicle.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <div class="features-icon">
+                    <img src="img/Icon 2.png" alt="search icon">
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="card-items">
+                    <h3 class="card-title">3. VISIT</h3>
+                    <p class="card-text">Once you have determined that it is indeed your vehicle, you may go to the Traggic and Parking Management Office</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <div class="features-icon">
+                    <img src="img/Icon 4.png" alt="search icon">
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="card-items">
+                    <h3 class="card-title">4. EXEMPTION</h3>
+                    <p class="card-text">If you were giving way to emergency vehicules, an exemption would apply. Refer to FAQs or the help center for further questions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <section id="nov">
 
-
-    <div class=" general">
-      <div class="form-info color-primary">
-
-        <h1>NOTICE OF <br>VIOLATION</h1>
-        <p class="noticeText">If you have received a Notice of Violation please enter the Notice of Violation Number and your PIN Number on the right.</p>
-        <p class="noticeText">These information is located at the upper right hand side of your Notice of Violation.</p>
-        <p class="noticeText">Otherwise click to check plate no. bellow to see if you have a notice.</p>
-        <button type="button" class="btn btn-outline-light" onclick="window.location.href = '#cpn';">Check Plate No.</button>
-
+    <section id="nov-info">
+      <div class="container font-w">
+        <div class="form-info">
+          <h2>NOTICE OF <br>VIOLATION</h2>
+          <p class="noticeText">If you have received a Notice of Violation please enter the Notice of Violation Number and your PIN Number on the right.</p>
+          <p class="noticeText">These information is located at the upper right hand side of your Notice of Violation.</p>
+          <p class="noticeText">Otherwise click to check plate no. bellow to see if you have a notice.</p>
+          <button type="button" class="btn btn-outline-light" onclick="window.location.href = '#cpn';">Check Plate No.</button>
+        </div>
       </div>
-      <div class="form-input" style="">
+    </section>
+
+    <section id="nov-form">
+      <div class="container">
+      <div class="form-input">
         <div class="panel panel-default">
-
-
           <form class="panel-body nov-form" target="#nov_hiddenRecaptcha" action="https://nocontact.paranaquecity.net/api-nov" method="POST" data-target="#nov-gallery">
             <input type="hidden" name="_token" value="S1ZJi12PGLLlEqiIHGNRwDJ1u19RyvXSe92j2cnn">
 
             <div class="padding-tb-10">
               <div class=" ">
-                <span class="font-color-primary">ENTER VIOLATION NUMBER</span>
+                <span>ENTER VIOLATION NUMBER</span>
                 <input type="text" class="form-control" name="nov" id="nov" required>
               </div>
             </div>
             <div class=" padding-tb-10">
               <div class="">
-                <span class="font-color-primary">ENTER PIN CODE</span>
+                <span>ENTER PIN CODE</span>
                 <input type="text" class="form-control" name="pin" id="pin" required>
               </div>
             </div>
             <div class="padding-tb-10">
               <div class="">
-                <div class="g-recaptcha-nov" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc" data-expired-callback="NovExpired" id="RecaptchaNov"></div>
+                <!-- <div class="g-recaptcha-nov" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc" id="RecaptchaNov"></div>
                 <input type="hidden" class="hiddenRecaptcha" name="nov_hiddenRecaptcha" id="nov_hiddenRecaptcha">
-                <div class="g-recaptcha" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc"></div>
+                <div class="g-recaptcha" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc"></div> -->
+                <img src="img/recaptcha.png" alt="reCAPTCHA placeholder" style="width: 250px;">
               </div>
             </div>
             <div class="padding-tb-10">
               <div class="">
-                <button class="btn submit color-primary" type="submit">SEARCH</button>
+                <button class="btn" type="submit">SEARCH</button>
               </div>
             </div>
+
           </form>
         </div>
       </div>
-    </div>
+      </div>
 
 
+    </section>
   </section>
 
   <!-- <div class="container">
@@ -294,65 +346,10 @@
     </div>
   </div> -->
 
-  <section id="cpn">
-
-    <div class="general">
-      <div class="form-info color-secondary">
-
-        <h1>CHECK YOUR <br>PLATE NO.</h1>
-        <p class="noticeText">If you just want to check whether you have a violation or not please your plate no. on the right.</p>
-        <p class="noticeText">Otherwise click to check your notice of violation below</p>
-        <button type="button" class="btn btn-outline-light" onclick="window.location.href = '#nov';">Check Plate No.</button>
-
-      </div>
-
-      <div class="form-input" style="">
-        <div class="panel panel-default">
-
-
-          <form class="panel-body nov-form" target="#nov_hiddenRecaptcha" action="https://nocontact.paranaquecity.net/api-nov" method="POST" data-target="#nov-gallery">
-            <input type="hidden" name="_token" value="S1ZJi12PGLLlEqiIHGNRwDJ1u19RyvXSe92j2cnn">
-
-            <div class="padding-tb-10">
-              <div class=" ">
-                <span>ENTER PLATE NUMBER OR CONDUCTION STICKER</span>
-                <input type="text" class="form-control" name="cpn" id="cpn" required>
-              </div>
-            </div>
-            <div class="padding-tb-10">
-              <div class="recaptcha">
-                <div class="g-recaptcha-plate" data-expired-callback="PlateExpired" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc" id="RecaptchaNov"></div>
-                <input type="hidden" class="hiddenRecaptcha" name="nov_hiddenRecaptcha" id="nov_hiddenRecaptcha">
-                <div class="g-recaptcha" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc"></div>
-              </div>
-            </div>
-            <div class="padding-tb-10">
-              <div class="">
-                <button class="btn submit color-secondary" type="submit">SEARCH</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- <div class="col-lg-8 margin-b-10">
-    <div class="panel panel-default">
-      <div class="panel-body">
-
-        <div id="plate-gallery" style="display: none">
-
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <section id="news">
     <div class="container">
 
-      <h1 class="subTitle">LATEST NEWS & UPDATES</h1>
+      <h2 class="font-w">LATEST NEWS & UPDATES</h2>
 
       <div id="carouselControls" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval=15000>
         <ol class="carousel-indicators">
@@ -368,11 +365,9 @@
 
               <div class="card-body">
                 <div class="card-padding">
-                  <h4><b>The BusinessMirror</b></h4>
-                  <h5>Parañaque starts contactless traffic apprehension scheme</h5>
+                  <h3><b>The BusinessMirror</b></h3>
+                  <h4>Parañaque starts contactless traffic apprehension scheme</h4>
                   <p>Parañaque City has started implementing its own contactless traffic-apprehension system similar to those in first-world countries, such as Singapore, Hong Kong, Australia and the United States. </p>
-                  <p>Paranaque City Mayor Edwin Olivares said their system uses the latest high-repetition cameras that immediately detect traffic violations committed by motorists and even pedestrians. This is the country’s first digital, unmanned
-                    and contactless traffic-apprehension system. The system aims to smoothen traffic flow by managing traffic violations committed by motorists.</p>
 
                   <button type="button" class="btn btn-success" onclick="window.open('https://businessmirror.com.ph/2018/02/14/paranaque-starts-contactless-traffic-apprehension-scheme','_blank')" name="button">Read More</button>
                 </div>
@@ -383,11 +378,9 @@
             <div class="card press">
               <div class="card-body">
 
-                <h4><b>ABS CBN NEWS</b></h4>
-                <h5>No-contact apprehension, sinimulan sa Parañaque</h5>
+                <h3><b>ABS CBN NEWS</b></h3>
 
-
-                <iframe width="560" height="315" style="display:block; margin: 0 auto; border: .25px solid grey;" src="https://www.youtube.com/embed/CZdebzGRv-g?controls=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                <iframe width="245" height="137" style="display:block; margin: 0 auto; border: .25px solid grey;" src="https://www.youtube.com/embed/CZdebzGRv-g?controls=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; "
                   allowfullscreen></iframe><br>
 
                 <button type="button" class="btn btn-success" onclick="window.open('https://news.abs-cbn.com/video/news/02/14/18/no-contact-apprehension-sinimulan-sa-paraaque','_blank')" name="button">Read More</button>
@@ -398,13 +391,9 @@
           <div class="carousel-item">
             <div class="card press">
               <div class="card-body">
-                <h4><b>Carmidi INSIDER</b></h4>
-                <h5>Parañaque’s No Contact Apprehension Cuts Traffic Violation Cases by 20%</h5>
+                <h3><b>Carmidi INSIDER</b></h3>
+                <h4>Parañaque’s No Contact Apprehension Cuts Traffic Violation Cases by 20%</h4>
                 <p>The ‘no contact apprehension’ policy in Parañaque City has cut the traffic violation cases by around 20 percent, the chief of the city traffic management office said.
-                </p>
-                <p>Inaugurated last March, the Paranaque City government, through a public-private partnership, already has five cameras installed around the Sucat-Kabihasnan Road and some major intersections to catch erring motorists.
-                </p>
-                <p>Paranaque’s Traffic Parking Management Office (TPMO) Chief Teddy Barandino said that the no contact apprehension system was of great assistance to their efforts in catching erring motorists...
                 </p>
 
                 <button type="button" class="btn btn-success" onclick="window.open('https://www.carmudi.com.ph/journal/paranaques-no-contact-apprehension-cuts-traffic-violation-cases-20/','_blank')" name="button">Read More</button>
@@ -436,7 +425,7 @@
 
 
       <div class="row">
-        <div class="col-lg-2 col-md-3">
+        <div class="col-4">
           <h6 class="footer-text">|THIS SITE</h6>
 
           <a class="  footer-text" href="index.html">HOME</a><br>
@@ -446,7 +435,7 @@
           <a class="  footer-text" href="index.html#cpn">CHECK PLATE NO.</a><br>
 
         </div>
-        <div class=" col-lg-2 col-md-3">
+        <div class=" col-4">
           <h6 class="footer-text ">|USER INFO</h6>
 
           <a class="  footer-text" href="">PRIVACY POLICY</a><br>
@@ -454,7 +443,7 @@
           <a class="  footer-text" href="">DOWNLOADS</a><br>
 
         </div>
-        <div class="col-lg-2 col-md-3">
+        <div class="col-4">
           <h6 class="footer-text ">|HELP CENTER</h6>
 
           <a class="  footer-text">CONTACT INFO</a><br>
@@ -463,10 +452,9 @@
           <a class="  footer-text">ADDRESS</a><br>
 
         </div>
-        <div class="col-lg-4 col-md-1">
-        </div>
-        <div class="col-md-2">
 
+
+        <div class="relative">
           <img src="img/Logo BnW@2x.png" alt="Footer Logo" style="position:absolute; right:0; bottom:-10px;">
         </div>
       </div>

@@ -1,3 +1,6 @@
+.font-w {
+  color: white; }
+
 body, html {
   width: 100%;
   height: 100%; }
@@ -5,8 +8,46 @@ body, html {
 body {
   font-family: "Lato", sans-serif; }
 
+h1 {
+  font-size: 1.6rem;
+  font-weight: 900; }
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding-bottom: 1rem; }
+
+h3 {
+  font-size: 1rem;
+  font-weight: 900; }
+
+h4 {
+  font-size: 0.95rem;
+  font-weight: 700; }
+
+p {
+  font-size: 15px; }
+
+header, #mainNav {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
 header {
-  max-height: 95%; }
+  height: 400px;
+  background-color: #50AD55;
+  padding-top: 4rem;
+  color: white; }
+  header .container {
+    height: 100%;
+    position: relative;
+    z-index: 2; }
+    header .container .header-elements {
+      position: absolute;
+      width: 300px;
+      bottom: 0;
+      padding-bottom: 15%; }
+  header .intro-text {
+    display: none; }
 
 footer {
   background-color: #5F5F5F;
@@ -16,22 +57,142 @@ footer {
     color: #AFAFAF !important; }
 
 input {
-  width: 50%;
-  margin: 1.2rem auto; }
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem; }
 
 section {
-  padding: 8rem 0;
-  height: 995px; }
-  section #nov, section #cpn {
+  padding: 3rem 1rem; }
+  section#mobhead {
+    text-align: center;
+    color: #50AD55; }
+  section#features {
+    background-color: #50AD55;
+    color: #5F5F5F; }
+    section#features .relative {
+      display: none; }
+  section#nov {
     padding: 0; }
-  section #safety, section #funding {
+    section#nov #nov-info {
+      background-color: #1F8425; }
+    section#nov #nov-form {
+      color: #50AD55;
+      font-weight: 700; }
+      section#nov #nov-form .form-control {
+        border-color: #AFAFAF;
+        border-radius: 2px;
+        background-color: #EDEDED; }
+      section#nov #nov-form .btn {
+        background-color: #1F8425;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem; }
+  section#news {
+    background-color: #85BE5B; }
+  section#safety, section#funding {
     height: auto; }
 
 #mainNav {
-  position: relative;
-  z-index: 2; }
-  #mainNav .navbar-brand {
+  background-color: #50AD55;
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: right; }
+  #mainNav li {
     font-weight: 700;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: white; }
+  #mainNav button {
+    z-index: 6; }
+  #mainNav .navbar-brand {
+    width: 65%; }
+    #mainNav .navbar-brand .logo {
+      width: 100%; }
+  #mainNav .navbar-toggler {
+    border-style: none;
+    outline-style: none; }
+  #mainNav .navbar-collapse {
+    position: absolute;
+    height: 1000vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    top: 0;
+    padding-top: 4rem;
+    z-index: 5; }
+  #mainNav .collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none; }
+  #mainNav .li-casing {
+    background-color: #85BE5B;
+    padding: 0.2rem 0 0.2rem 2rem;
+    width: 55%;
+    display: flex;
+    text-align: left;
+    align-self: flex-end;
+    border-radius: 40px 0 0 40px;
+    margin-bottom: 1.7rem; }
+    #mainNav .li-casing .active {
+      padding-right: 10% !important; }
+    #mainNav .li-casing:nth-of-type(1) {
+      background-color: #1F8425; }
+    #mainNav .li-casing:nth-of-type(2) {
+      background-color: #50AD55; }
+    #mainNav .li-casing:nth-of-type(3) {
+      background-color: #85BE5B; }
+    #mainNav .li-casing:nth-of-type(4) {
+      background-color: #BFC364; }
+    #mainNav .li-casing:nth-of-type(5) {
+      background-color: #9FD592; }
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  margin-top: 1.5em;
+  border-radius: 1px;
+  font-size: 13px;
+  font-weight: 700;
+  border-width: medium;
+  color: white; }
+  .btn:hover {
+    background-color: white;
+    color: #AFAFAF; }
+
+.relative {
+  position: relative;
+  width: 100%;
+  width: 100%; }
+  .relative .header-img {
+    position: absolute;
+    max-height: 350px;
+    right: -1rem;
+    bottom: 0;
+    z-index: 1; }
+
+.card {
+  margin: 0.35rem 0;
+  border-radius: 2px;
+  box-shadow: #366d39 0.2em 0.2em 0.3em; }
+  .card .card-title {
+    margin-bottom: 0.3rem; }
+  .card .features-icon {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    .card .features-icon img {
+      width: 5.5rem;
+      padding-right: 0.5rem; }
+
+.carousel .carousel-indicators {
+  bottom: -40px; }
+  .carousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 40px; }
 
 /*# sourceMappingURL=creative-test.css.map */

@@ -1,6 +1,8 @@
 $color-primary: #50AD55
 $color-secondary: #85BE5B
 
+.font-w
+  color: white
 
 body, html
   width: 100%
@@ -9,8 +11,47 @@ body, html
 body
   font-family: 'Lato', sans-serif
 
+h1
+  font-size: 1.6rem
+  font-weight: 900
+
+h2
+  font-size: 1.2rem
+  font-weight: 900
+  padding-bottom: 1rem
+
+h3
+  font-size: 1rem
+  font-weight: 900
+
+h4
+  font-size: 0.95rem
+  font-weight: 700
+
+p
+  font-size: 15px
+
+header, #mainNav
+  padding-left: 1rem
+  padding-right: 1rem
+
 header
-  max-height: 95%
+  height: 400px
+  background-color: $color-primary
+  padding-top: 4rem
+  color: white
+  .container
+    height: 100%
+    position: relative
+    z-index: 2
+    .header-elements
+      position: absolute
+      width: 300px
+      bottom: 0
+      padding-bottom: 15%
+  .intro-text
+    display: none
+
 
 footer
   background-color: #5F5F5F
@@ -20,23 +61,148 @@ footer
     color: #AFAFAF !important
 
 input
-  width: 50%
-  margin: 1.2rem auto
+  margin-top: .5rem
+  margin-bottom: 1.2rem
 
 section
-  padding: 8rem 0
-  height: 995px
-  #nov, #cpn
+  padding: 3rem 1rem
+  &#mobhead
+    text-align: center
+    color: $color-primary
+  &#features
+    background-color: $color-primary
+    color: #5F5F5F
+    .relative
+      display: none
+  &#nov
     padding: 0
-  #safety, #funding
+    #nov-info
+      background-color: #1F8425
+    #nov-form
+      color: $color-primary
+      font-weight: 700
+      .form-control
+        border-color: #AFAFAF
+        border-radius: 2px
+        background-color: #EDEDED
+      .btn
+        background-color: #1F8425
+        padding-top: .6rem
+        padding-bottom: .6rem
+  &#news
+    background-color: $color-secondary
+
+  &#safety, &#funding
     height: auto
 
 #mainNav
-  position: relative
-  z-index: 2
-  .navbar-brand
+  background-color: $color-primary
+  position: absolute
+  z-index: 4
+  left: 50%
+  transform: translateX(-50%)
+  width: 100%
+  text-align: right
+  li
     font-weight: 700
     text-transform: uppercase
+    color: white
+  button
+    z-index: 6
+  .navbar-brand
+    width: 65%
+    .logo
+      width: 100%
+  .navbar-toggler
+    border-style: none
+    outline-style: none
+  .navbar-collapse
+    position: absolute
+    height: 1000vh
+    width: 100vw
+    background-color: rgba(0, 0, 0, 0.50)
+    right: 0
+    top: 0
+    padding-top: 4rem
+    z-index: 5
+  .collapsing
+    -webkit-transition: none
+    transition: none
+    display: none
+  .li-casing
+    background-color: $color-secondary
+    padding: .2rem 0 .2rem 2rem
+    width: 55%
+    display: flex
+    text-align: left
+    align-self: flex-end
+    border-radius: 40px 0 0 40px
+    margin-bottom: 1.7rem
+    .active
+      padding-right: 10% !important
+    &:nth-of-type(1)
+      background-color: #1F8425
+    &:nth-of-type(2)
+      background-color: #50AD55
+    &:nth-of-type(3)
+      background-color: #85BE5B
+    &:nth-of-type(4)
+      background-color: #BFC364
+    &:nth-of-type(5)
+      background-color: #9FD592
+
+.btn
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 150px
+  padding-top: .35rem
+  padding-bottom: .35rem
+  margin-top: 1.5em
+  border-radius: 1px
+  font-size: 13px
+  font-weight: 700
+  border-width: medium
+  color: white
+  &:hover
+    background-color: white
+    color: #AFAFAF
+
+.relative
+  position: relative
+  width: 100%
+  width: 100%
+  .header-img
+    position: absolute
+    max-height: 350px
+    right: -1rem
+    bottom: 0
+    z-index: 1
+
+.card
+  margin: .35rem 0
+  border-radius: 2px
+  box-shadow: #366d39 0.2em 0.2em 0.3em
+  .card-title
+    margin-bottom: .3rem
+  .features-icon
+    height: 100%
+    display: flex
+    align-items: center
+    img
+      width: 5.5rem
+      padding-right: .5rem
+
+.carousel
+  .carousel-indicators
+    bottom: -40px
+    li
+      width: 10px
+      height: 10px
+      border-radius: 40px
+
+
+
 
 
 

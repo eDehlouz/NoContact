@@ -1,4 +1,9 @@
 /* TESTING */
+
+header .row{
+  width: 900px;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -34,7 +39,6 @@
 
 /* ++++++++++++++++++++++++++++++++ */
 .front-content {
-  /* max-width: 100%; */
   position: relative;
   z-index: 2;
 }
