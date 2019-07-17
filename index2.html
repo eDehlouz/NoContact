@@ -101,29 +101,29 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <div class="li-casing">
-          <li class="nav-item js-scroll-trigger active ">
-            <a class="nav-link js-scroll-trigger " href="">Home</a>
-          </li>
+            <li class="nav-item js-scroll-trigger active ">
+              <a class="nav-link js-scroll-trigger " href="index2.html">Home</a>
+            </li>
           </div>
           <div class="li-casing">
-          <li class="nav-item ">
-            <a class="nav-link " href="mission2.html">OUR MISSION</a>
-          </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="mission2.html">OUR MISSION</a>
+            </li>
           </div>
           <div class="li-casing">
-          <li class="nav-item ">
-            <a class="nav-link js-scroll-trigger " href="">CHECK PLATE</a>
-          </li>
+            <li class="nav-item ">
+              <a class="nav-link js-scroll-trigger " href="plate.html">CHECK PLATE</a>
+            </li>
           </div>
           <div class="li-casing">
-          <li class="nav-item ">
-            <a class="nav-link js-scroll-trigger " href="">DOWLOADS</a>
-          </li>
+            <li class="nav-item ">
+              <a class="nav-link js-scroll-trigger " href="downlods.html">DOWLOADS</a>
+            </li>
           </div>
           <div class="li-casing">
-          <li class="nav-item ">
-            <a class="nav-link js-scroll-trigger " href="">FAQ</a>
-          </li>
+            <li class="nav-item ">
+              <a class="nav-link js-scroll-trigger " href="">FAQ</a>
+            </li>
           </div>
         </ul>
 
@@ -139,7 +139,7 @@
         <p class="font-w intro-text ">Welcome to the no contact apprehension site of Paranaque City. This website is dedicatied to the No contact Apprehension Program of Paranaque City, our prokect mission, why it being implemented and the
           benefits of this venture. If you are here to verify a notice of violation or check for one, click below.</p>
         <button type="button" class="btn btn-outline-light" onclick="window.location.href = '#nov';">Check Notice</button>
-        <button type="button" class="btn-right btn btn-outline-light" onclick="window.location.href = '#plate';">Check Plate No.</button>
+        <button type="button" class="btn-right btn btn-outline-light" onclick="window.location.href = 'plate.html';">Check Plate No.</button>
       </div>
     </div>
     </div>
@@ -152,7 +152,7 @@
 
     <div class="container">
       <div class="mobile">
-        <p class="">Welcome to the no contact apprehension site of Paranaque City. This website is dedicatied to the No contact Apprehension Program of Paranaque City, our prokect mission, why it being implemented and the
+        <p class="">Welcome to the No Contact Apprehension site of Paranaque City. This website is dedicatied to the No Contact Apprehension Program of Paranaque City, our prokect mission, why it being implemented and the
           benefits of this venture. If you are here to verify a notice of violation or check for one, click below.</p>
       </div>
     </div>
@@ -165,12 +165,10 @@
     </div>
 
     <div class="container features-div">
-
-
-      <h2 class="font-w padding-b-subTitle">WHAT SHOULD I DO IF I GET A NOTICE OF VIOLATION?</h2>
-
+      <h2 class="font-w">WHAT SHOULD I DO IF I GET A NOTICE OF VIOLATION?</h2>
 
       <div class="row">
+
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
@@ -256,60 +254,71 @@
   </section>
 
   <section id="nov">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <section id="nov-info">
 
-    <section id="nov-info">
-      <div class="container font-w">
-        <div class="form-info">
-          <h2>NOTICE OF <br>VIOLATION</h2>
-          <p class="noticeText">If you have received a Notice of Violation please enter the Notice of Violation Number and your PIN Number on the right.</p>
-          <p class="noticeText">These information is located at the upper right hand side of your Notice of Violation.</p>
-          <p class="noticeText">Otherwise click to check plate no. bellow to see if you have a notice.</p>
-          <button type="button" class="btn btn-outline-light" onclick="window.location.href = '#cpn';">Check Plate No.</button>
+
+            <div class="container font-w">
+
+              <div class="form-info">
+                <h2>NOTICE OF <br>VIOLATION</h2>
+                <p class="noticeText">If you have received a Notice of Violation please enter the Notice of Violation Number and your PIN Number on the right.</p>
+                <!-- <p class="noticeText">These information is located at the upper right hand side of your Notice of Violation.</p> -->
+                <p class="noticeText">Otherwise click to check plate no. bellow to see if you have a notice.</p>
+                <button type="button" class="btn btn-outline-light" onclick="window.location.href = 'plate.html';">Check Plate No.</button>
+              </div>
+
+            </div>
+
+          </section>
         </div>
-      </div>
-    </section>
+        <div class="col-md-6">
+          <section id="nov-form">
+            <div class="container">
+              <div class="form-input">
+                <div class="panel panel-default">
+                  <form class="panel-body nov-form" target="#nov_hiddenRecaptcha" action="https://nocontact.paranaquecity.net/api-nov" method="POST" data-target="#nov-gallery">
+                    <input type="hidden" name="_token" value="S1ZJi12PGLLlEqiIHGNRwDJ1u19RyvXSe92j2cnn">
 
-    <section id="nov-form">
-      <div class="container">
-      <div class="form-input">
-        <div class="panel panel-default">
-          <form class="panel-body nov-form" target="#nov_hiddenRecaptcha" action="https://nocontact.paranaquecity.net/api-nov" method="POST" data-target="#nov-gallery">
-            <input type="hidden" name="_token" value="S1ZJi12PGLLlEqiIHGNRwDJ1u19RyvXSe92j2cnn">
 
-            <div class="padding-tb-10">
-              <div class=" ">
-                <span>ENTER VIOLATION NUMBER</span>
-                <input type="text" class="form-control" name="nov" id="nov" required>
-              </div>
-            </div>
-            <div class=" padding-tb-10">
-              <div class="">
-                <span>ENTER PIN CODE</span>
-                <input type="text" class="form-control" name="pin" id="pin" required>
-              </div>
-            </div>
-            <div class="padding-tb-10">
-              <div class="">
-                <!-- <div class="g-recaptcha-nov" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc" id="RecaptchaNov"></div>
+                    <div class="form-item">
+                      <span>ENTER VIOLATION NUMBER</span>
+                      <input type="text" class="form-control" name="nov" id="nov" required>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                  <span>ENTER PIN CODE</span>
+                  <input type="text" class="form-control" name="pin" id="pin" required>
+                </div>
+
+
+                <div class="">
+                  <!-- <div class="g-recaptcha-nov" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc" id="RecaptchaNov"></div>
                 <input type="hidden" class="hiddenRecaptcha" name="nov_hiddenRecaptcha" id="nov_hiddenRecaptcha">
                 <div class="g-recaptcha" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc"></div> -->
-                <img src="img/recaptcha.png" alt="reCAPTCHA placeholder" style="width: 250px;">
-              </div>
-            </div>
-            <div class="padding-tb-10">
-              <div class="">
-                <button class="btn" type="submit">SEARCH</button>
-              </div>
-            </div>
+                  <img src="img/recaptcha.png" alt="reCAPTCHA placeholder" style="width: 250px;">
+                </div>
 
-          </form>
+
+                <div class="">
+                  <button class="btn" type="submit">SEARCH</button>
+                </div>
+
+
+                </form>
+              </div>
+            </div>
         </div>
-      </div>
-      </div>
 
 
-    </section>
   </section>
+  </div>
+  </div>
+  </section>
+
 
   <!-- <div class="container">
     <div class="col-lg-8 margin-b-10">
@@ -336,7 +345,6 @@
 
   <section id="news">
     <div class="container">
-
       <h2 class="font-w">LATEST NEWS & UPDATES</h2>
 
       <div id="carouselControls" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval=15000>
@@ -367,11 +375,10 @@
               <div class="card-body">
 
                 <h3><b>ABS CBN NEWS</b></h3>
+                <h4>No-contact apprehension, sinimulan sa Parañaque</h4>
 
-                <iframe width="245" height="137" style="display:block; margin: 0 auto; border: .25px solid grey;" src="https://www.youtube.com/embed/CZdebzGRv-g?controls=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; "
-                  allowfullscreen></iframe><br>
-
-                <button type="button" class="btn btn-success" onclick="window.open('https://news.abs-cbn.com/video/news/02/14/18/no-contact-apprehension-sinimulan-sa-paraaque','_blank')" name="button">Read More</button>
+                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/CZdebzGRv-g" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <button type="button" class="btn btn-success"
+                  onclick="window.open('https://news.abs-cbn.com/video/news/02/14/18/no-contact-apprehension-sinimulan-sa-paraaque','_blank')" name="button">Read More</button>
 
               </div>
             </div>
@@ -402,8 +409,8 @@
 
 
       </div>
-
     </div>
+
   </section>
 
 
@@ -413,7 +420,7 @@
 
 
       <div class="row">
-        <div class="col-4">
+        <div class="col-md-3">
           <h6 class="footer-text">|THIS SITE</h6>
 
           <a class="  footer-text" href="index.html">HOME</a><br>
@@ -423,7 +430,7 @@
           <a class="  footer-text" href="index.html#cpn">CHECK PLATE NO.</a><br>
 
         </div>
-        <div class=" col-4">
+        <div class=" col-md-3">
           <h6 class="footer-text ">|USER INFO</h6>
 
           <a class="  footer-text" href="">PRIVACY POLICY</a><br>
@@ -431,7 +438,7 @@
           <a class="  footer-text" href="">DOWNLOADS</a><br>
 
         </div>
-        <div class="col-4">
+        <div class="col-md-3">
           <h6 class="footer-text ">|HELP CENTER</h6>
 
           <a class="  footer-text">CONTACT INFO</a><br>

@@ -1,5 +1,6 @@
 $color-primary: #50AD55
 $color-secondary: #85BE5B
+$font-mobhead-size-tablet: 1.4rem
 
 .font-w
   color: white
@@ -7,16 +8,22 @@ $color-secondary: #85BE5B
 .font-g
   color: $color-primary
 
+
 body, html
   width: 100%
   height: 100%
 
+
 body
   font-family: 'Lato', sans-serif
+  min-width: 320px
 
 h1
   font-size: 1.6rem
   font-weight: 900
+  -webkit-text-shadow: #366d39 0.1em 0.1em 0.2em
+  -moz-text-shadow: #366d39 0.1em 0.1em 0.2em
+  text-shadow: #366d39 0.1em 0.1em 0.2em
 
 h2
   font-size: 1.2rem
@@ -31,21 +38,28 @@ h4
   font-size: 0.95rem
   font-weight: 700
 
+h5
+  font-size: 0.85rem
+  font-weight: 700
+
 p
-  font-size: 14px
+  font-size: 0.9rem
 
 a
-  font-size: 10px
+  font-size: 0.6rem
 
 header, #mainNav
-  padding-left: 1rem
-  padding-right: 1rem
+  padding-left: 1.5rem
+  padding-right: 1.5rem
+  min-width: 320px
 
 header
   height: 400px
   background-color: $color-primary
   padding-top: 4rem
   color: white
+  &.missionhead
+    height: 320px
   .container
     height: 100%
     position: relative
@@ -56,9 +70,14 @@ header
       bottom: 0
       padding-bottom: 15%
       &.mission
-        padding-bottom: 40%
+        top: 50%
+        transform: translateY(-50%)
+        width: 40%
   .intro-text
     display: none
+
+
+
 
 
 footer
@@ -73,121 +92,14 @@ input
   margin-bottom: 1.2rem
 
 section
-  padding: 3rem 1rem
-  &#mobhead
-    text-align: center
-    color: $color-primary
-  &#features
-    background-color: $color-primary
-    color: #5F5F5F
-    .relative
-      display: none
-    .card-body
-      height: 176px
-      display: flex
-      align-items: center
-  &#nov
-    padding: 0
-    #nov-info
-      background-color: #1F8425
-    #nov-form
-      color: $color-primary
-      font-weight: 700
-      .form-control
-        border-color: #AFAFAF
-        border-radius: 2px
-        background-color: #EDEDED
-      .btn
-        background-color: #1F8425
-        padding-top: .6rem
-        padding-bottom: .6rem
-  &#news
-    background-color: $color-secondary
-  &#maps
-    padding: 0
-    .map-selector
-      background-color: $color-secondary
-      padding: 3rem 1.5rem
-    button:nth-of-type(1)
-      margin-top: 0
-  &#safety
-    padding: 0
-    ul
-      list-style-type: none
-      position: absolute
-      /* bottom: 670px; *
-      top: 50%
-      transform: translateY(-50%)
-      z-index: 1
-      padding-left: 0
-      width: 90%
-      li
-        background-color: #1F8425
-        text-align: right
-        margin: .7rem 0
-        font-size: 14px
-        padding: 0.2rem 1rem .2rem 0
-        border-radius: 0 50px 50px 0
-        color: white
-        font-style: italic
-        &:nth-of-type(1)
-          width: 100%
-          background-color: #AFAFAF
-          color: #5F5F5F
-        &:nth-of-type(2)
-          width: 95%
-        &:nth-of-type(3)
-          width: 85%
-        &:nth-of-type(4)
-          width: 82%
-        &:nth-of-type(5)
-          width: 75%
-        &:nth-of-type(6)
-          width: 65%
-        &:nth-of-type(7)
-          width: 55%
-        &:nth-of-type(8)
-          width: 52%
-    .col-6
-      padding-left: 0 !important
-      padding-right: 0 !important
-    .safety-div
-      padding: 2rem .5rem .1rem .5rem
-    .stat
-      background-color: #EDEDED
-  &#congestion
-    padding: 0
-    background-image: url("../img/traffic.jpg")
-    background-size: cover
-    background-color: #9FD592
-    background-blend-mode: multiply
-    .congestion-info
-      background-color: $color-primary
-      padding: 2rem .5rem
-  &#funding
-    padding: 0
-    img
-      width: 100%
-    .funding-IMG
-      display: flex
-      align-items: center
-      height: 100
-    .funding-info
-      -webkit-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
-      -moz-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
-      box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
-
-
-
-
-
+  padding: 3rem 1.5rem
 
 #mainNav
   background-color: $color-primary
+  &.altNav
+    background-color: $color-secondary
   position: absolute
   z-index: 4
-  // left: 50%
-  // transform: translateX(-50%)
   width: 100%
   text-align: right
   li
@@ -219,13 +131,13 @@ section
   .li-casing
     background-color: $color-secondary
     padding: .2rem 0 .2rem 2rem
-    width: 60%
+    width: 50%
     display: flex
     flex-direction: row
     text-align: left
     align-self: flex-end
     border-radius: 40px 0 0 40px
-    margin-bottom: 1.7rem
+    margin-bottom: 1.4rem
     &:nth-of-type(1)
       background-color: #1F8425
     &:nth-of-type(2)
@@ -237,10 +149,183 @@ section
     &:nth-of-type(5)
       background-color: #9FD592
 
+
+
+#mobhead
+  text-align: center
+  color: $color-primary
+
+#features
+  background-color: $color-primary
+  color: #5F5F5F
+  .relative
+    display: none
+  .card-body
+    height: 176px
+    display: flex
+    align-items: center
+
+#nov, #cpn
+  padding: 0
+  .col-md-6
+    padding-left: 0
+    padding-right: 0
+  .container
+    margin-right: 0
+    margin-left: 0
+
+#nov-info, #cpn-info
+  background-color: #1F8425
+
+#nov-form, #cpn-form
+  color: $color-primary
+  font-weight: 700
+  .form-control
+    border-color: #AFAFAF
+    border-radius: 2px
+    background-color: #EDEDED
+    padding: .375rem .75rem !important
+  .btn
+    background-color: #1F8425
+    padding-top: .6rem
+    padding-bottom: .6rem
+
+#cpn
+  padding-top: 3rem
+
+#cpn-info
+  background-color: $color-primary
+  padding-top: 4rem
+  padding-bottom: 2rem
+  h2
+    padding-bottom: .5rem
+  p
+    margin-bottom: .5rem
+    width: 80%
+  button
+    margin-top: .8rem
+
+#cpn-form
+  padding-top: 2rem
+  padding-bottom: 2rem
+  .btn
+    background-color: $color-primary
+
+
+#news
+  background-color: $color-secondary
+  padding: auto 0
+
+#maps
+  padding: 0
+  .map-selector
+    background-color: $color-secondary
+    @extend section
+    button
+      margin-top: 0
+      width: 49%
+      &:nth-of-type(1)
+        float: left
+        margin-right: 2%
+
+#safety
+  padding: 0
+  .safety-div
+    @extend section
+    -webkit-box-shadow: 0px 0px 80px -21px rgba(175,175,175,1)
+    -moz-box-shadow: 0px 0px 80px -21px rgba(175,175,175,1)
+    box-shadow: 0px 0px 80px -21px rgba(160,160,160,1)
+  ul
+    list-style-type: none
+      // position: absolute
+      // /* bottom: 670px; *
+      // top: 50%
+      // transform: translateY(-50%)
+    z-index: 1
+    padding-left: 0
+    width: 90%
+    li
+      background-color: #1F8425
+      text-align: right
+      margin: .5rem 0
+      font-size: 13px
+      padding: 0.1rem 1rem .1rem 0
+      border-radius: 0 50px 50px 0
+      color: white
+      font-style: italic
+      &:nth-of-type(1)
+        width: 100%
+        background-color: #AFAFAF
+        color: #5F5F5F
+      &:nth-of-type(2)
+        width: 95%
+      &:nth-of-type(3)
+        width: 85%
+      &:nth-of-type(4)
+        width: 82%
+      &:nth-of-type(5)
+        width: 75%
+      &:nth-of-type(6)
+        width: 65%
+      &:nth-of-type(7)
+        width: 55%
+      &:nth-of-type(8)
+        width: 52%
+  .col-6
+    padding-left: 0 !important
+    padding-right: 0 !important
+  .stat
+    background-color: #EDEDED
+
+#congestion
+  padding: 0
+  background-image: url("../img/traffic.jpg")
+  background-size: cover
+  background-color: #9FD592
+  background-blend-mode: multiply
+  .congestion-info
+    background-color: $color-primary
+    padding: 2rem .5rem
+#funding
+  padding: 0
+  img
+    width: 100%
+  .funding-IMG
+    display: flex
+    align-items: center
+    height: 100
+  .funding-info
+    -webkit-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
+    -moz-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
+    box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
+
+#downloads-header
+  padding-top: 4rem
+  padding-bottom: 1.5rem
+  background-color: $color-secondary
+  .downl
+    padding-top: 4rem
+    h2
+      font-size: 1.1rem
+    p
+      width: 95%
+#download
+  padding-top: 1.5rem
+  width: 90%
+  .btn
+    background-color: $color-secondary
+    width: 100%
+    margin-top: .5rem
+    font-weight: 400
+    padding: .2rem auto
+  h5
+    color: #AFAFAF
+    padding-top: 1rem
+
+
+
+
 .btn
-  display: flex
-  flex-direction: column
-  align-items: center
   width: 150px
   padding-top: .35rem
   padding-bottom: .35rem
@@ -250,9 +335,9 @@ section
   font-weight: 700
   border-width: medium
   color: white
-  &:hover
-    background-color: white
-    color: #AFAFAF
+  // &:hover
+  //   background-color: white
+  //   color: #AFAFAF
 
 .relative
   position: relative
@@ -261,17 +346,15 @@ section
   .header-img
     position: absolute
     max-height: 350px
-    right: -1rem
+    right: -1.5rem
     bottom: 0
     z-index: 1
     &.mission
-      bottom: 50px
-
+      bottom: 48px
+      max-height: 280px
 
 .card
   margin: .35rem 0
-  border-radius: 2px
-  box-shadow: #366d39 0.2em 0.2em 0.3em
   .card-title
     margin-bottom: .3rem
   .features-icon
@@ -281,21 +364,208 @@ section
     img
       width: 4rem
       padding-right: .5rem
+  &.press
+    height: 345px
+    width: 90%
+    margin: 0 auto
+    padding-top: .5rem
+    padding-bottom: .5rem
+    border-style: none
+    .card-body
+      padding: 1.5rem
+
 
 .carousel
   .carousel-indicators
-    bottom: -40px
+    bottom: -45px
     li
-      width: 10px
-      height: 10px
+      width: 15px
+      height: 15px
+      margin: auto .25rem
       border-radius: 40px
+
+.carousel-control-next, .carousel-control-prev
+  display: none
+
 
 
 
 
 @media (min-width:320px) /* smartphones, iPhone, portrait 480x320 phones */
 @media (min-width:481px) /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width: 576px)
+  .container
+      max-width: 641px
 @media (min-width:641px) /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  h1
+    font-size: 2.6rem
+  h2
+    font-size: 1.6rem
+    padding-bottom: 1rem
+  h3
+    font-size: 1rem
+  h4
+    font-size: 0.95rem
+    font-weight: 700
+  p
+    font-size: 1rem
+    font-weight: 400
+  a
+    font-size: 0.6rem
+
+  header, #mainNav
+    padding-left: 2rem
+    padding-right: 2rem
+
+  header
+    height: 37rem
+    padding-top: 4rem
+    .header-elements
+      position: absolute
+      width: 450px !important
+      bottom: 0
+      padding-bottom: 5% !important
+      display: flex
+      flex-direction: column
+    .btn
+      text-align: center
+      font-size: 1.1rem
+      font-weight: 400
+
+  section
+    padding: 3.7rem 2rem
+
+  #mainNav
+    padding-top: 1.5rem
+    .navbar-brand
+      width: 55%
+    .navbar-collapse
+      padding-top: 7rem
+    .li-casing
+      padding: 0.8rem 0 0.8rem 3rem
+      width: 45%
+      a
+        font-size: 1.35rem
+        font-weight: 300
+
+  #mobhead
+    background-image: url("../img/funky-lines.png")
+    .mobile
+      width: 550px
+      margin: 0 auto
+    p
+      font-size: $font-mobhead-size-tablet
+
+  #features
+    background-image: url("../img/funky-lines.png")
+    background-blend-mode: multiply
+    h2
+      width: 60%
+    .card-body
+      margin: auto .5rem
+      height: auto
+      display: block
+
+  #nov
+    .form-info
+      padding-left: 2rem
+      padding-right: 2rem
+    .form-input
+      display: flex
+      flex-direction: column
+      align-content: center
+      text-align: center
+      input
+        height: 40px
+    .btn
+      background-color: #1F8425
+      margin-right: 0
+    .container
+      padding-right: 0
+      padding-left: 0
+      margin-right: 0 !important
+      margin-left: 0 !important
+      max-width: 100%
+    .row
+      margin-left: 0
+      margin-right: 0
+
+  #news
+    background-color: white
+    background-image: url("../img/funky-lines.png")
+    h2
+      color: $color-primary
+    .carousel-inner
+      -webkit-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
+      -moz-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
+      box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
+      width: 70%
+      margin: 0 auto
+      background-color: white
+    .card
+      width: 80%
+      background-color: transparent
+      .press
+    li
+      background-color: #AFAFAF
+      &.active
+        background-color: #5F5F5F
+
+  .relative
+    .header-img
+      max-height: 560px
+      right: -2rem
+      bottom: -13px
+      &.mission
+        bottom: 48px
+        max-height: 280px
+
+  .card
+    .card-title
+      margin-bottom: 1rem
+    .features-icon
+      align-items: flex-end
+      img
+        width: 6rem
+        margin: 0 auto
+    .card-body
+
+    &.press
+      height: 400p
+
+  .btn
+    font-size: 1rem
+    margin-right: 1rem
+    width: 200px
+    padding-top: .5rem
+    padding-bottom: .5rem
+
+  .carousel-control-next, .carousel-control-prev
+    display: block
+
+
 @media (min-width:961px) /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width:1025px) /* big landscape tablets, laptops, and desktops */
 @media (min-width:1281px) /* hi-res laptops and desktops */
+
+// @media (min-width: 641px)
+// header .container
+//     height: 100%
+//     position: relative
+//     z-index: 2
+//
+// header .container
+//     height: 100%
+//     position: relative
+//     z-index: 2
+//
+// .font-w
+//     color: white
+//
+// @media (min-width: 768px)
+// .container
+//     max-width: 720px
+//
+// @media (min-width: 576px)
+// .container
+//     max-width: 540px
