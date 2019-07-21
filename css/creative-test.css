@@ -4,6 +4,9 @@
 .font-g {
   color: #50AD55; }
 
+.bg-color2 {
+  background-color: #85BE5B; }
+
 body, html {
   width: 100%;
   height: 100%; }
@@ -14,15 +17,12 @@ body {
 
 h1 {
   font-size: 1.6rem;
-  font-weight: 900;
-  -webkit-text-shadow: #366d39 0.1em 0.1em 0.2em;
-  -moz-text-shadow: #366d39 0.1em 0.1em 0.2em;
-  text-shadow: #366d39 0.1em 0.1em 0.2em; }
+  font-weight: 900; }
 
 h2 {
   font-size: 1.2rem;
   font-weight: 900;
-  padding-bottom: 1rem; }
+  padding-bottom: 0.5rem; }
 
 h3 {
   font-size: 1rem;
@@ -37,10 +37,11 @@ h5 {
   font-weight: 700; }
 
 p {
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem; }
 
 a {
-  font-size: 0.6rem; }
+  font-size: 0.9rem; }
 
 header, #mainNav {
   padding-left: 1.5rem;
@@ -48,34 +49,56 @@ header, #mainNav {
   min-width: 320px; }
 
 header {
-  height: 400px;
+  height: 26rem;
   background-color: #50AD55;
   padding-top: 4rem;
   color: white; }
+  header h1 {
+    -webkit-text-shadow: 0.1em 0.1em 0.2em rgba(181, 181, 181, 0.5);
+    -moz-text-shadow: 0.1em 0.1em 0.2em rgba(181, 181, 181, 0.5);
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.55); }
+  header .intro-text {
+    display: none; }
   header.missionhead {
-    height: 320px; }
+    height: 330px;
+    padding-top: 4rem; }
+  header.faq-header {
+    height: 270px; }
+  header.downloads-header {
+    height: 300px; }
+  header.faq-header h1, header.downloads-header h1 {
+    font-size: 1.1rem;
+      font-size--webkit-text-shadow: none;
+      font-size--moz-text-shadow: none;
+    text-shadow: none; }
+  header.faq-header p, header.downloads-header p {
+    width: 95%; }
   header .container {
     height: 100%;
     position: relative;
     z-index: 2; }
-    header .container .header-elements {
-      position: absolute;
-      width: 300px;
-      bottom: 0;
-      padding-bottom: 15%; }
-      header .container .header-elements.mission {
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40%; }
-  header .intro-text {
-    display: none; }
+  header .header-elements {
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    padding-bottom: 15%; }
+    header .header-elements.mission {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40%; }
 
 footer {
+  padding: 1.5rem !important;
   background-color: #5F5F5F;
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  color: #AFAFAF !important; }
+  footer h4 {
+    font-weight: 400; }
   footer a {
-    font-size: 13px;
+    font-size: 0.8rem;
     color: #AFAFAF !important; }
+  footer .footer-elements {
+    padding-bottom: 1rem; }
 
 input {
   margin-top: 0.5rem;
@@ -107,7 +130,7 @@ section, #maps .map-selector, #safety .safety-div {
     outline-style: none; }
   #mainNav .navbar-collapse {
     position: absolute;
-    height: 1000vh;
+    height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
     right: 0;
@@ -127,7 +150,7 @@ section, #maps .map-selector, #safety .safety-div {
     text-align: left;
     align-self: flex-end;
     border-radius: 40px 0 0 40px;
-    margin-bottom: 1.4rem; }
+    margin-bottom: 1rem; }
     #mainNav .li-casing:nth-of-type(1) {
       background-color: #1F8425; }
     #mainNav .li-casing:nth-of-type(2) {
@@ -138,6 +161,9 @@ section, #maps .map-selector, #safety .safety-div {
       background-color: #BFC364; }
     #mainNav .li-casing:nth-of-type(5) {
       background-color: #9FD592; }
+    #mainNav .li-casing .active {
+      font-weight: 900;
+      font-size: 0.8rem; }
 
 #mobhead {
   text-align: center;
@@ -149,7 +175,7 @@ section, #maps .map-selector, #safety .safety-div {
   #features .relative {
     display: none; }
   #features .card-body {
-    height: 176px;
+    min-height: 176px;
     display: flex;
     align-items: center; }
 
@@ -213,6 +239,14 @@ section, #maps .map-selector, #safety .safety-div {
       #maps .map-selector button:nth-of-type(1) {
         float: left;
         margin-right: 2%; }
+  #maps img {
+    width: 100vw; }
+  #maps .map-nia {
+    display: none; }
+  #maps .btn-nia:active .map-nia {
+    display: block; }
+  #maps .btn-nia:active .map-santos {
+    display: none; }
 
 #safety {
   padding: 0; }
@@ -260,26 +294,26 @@ section, #maps .map-selector, #safety .safety-div {
 
 #congestion {
   padding: 0;
+  height: 100%;
   background-image: url("../img/traffic.jpg");
   background-size: cover;
   background-color: #9FD592;
   background-blend-mode: multiply; }
+  #congestion .congestion-div {
+    background-color: #50AD55; }
   #congestion .congestion-info {
-    background-color: #50AD55;
-    padding: 2rem 0.5rem; }
+    padding: 2rem 0.5rem;
+    height: 50%; }
 
-#funding {
-  padding: 0; }
-  #funding img {
-    width: 100%; }
-  #funding .funding-IMG {
-    display: flex;
-    align-items: center;
-    height: 100; }
-  #funding .funding-info {
-    -webkit-box-shadow: 6px 0px 11px 0px #b5b5b5;
-    -moz-box-shadow: 6px 0px 11px 0px #b5b5b5;
-    box-shadow: 6px 0px 11px 0px #b5b5b5; }
+#funding .funding-info {
+  float: left; }
+#funding .funding-IMG {
+  position: relative;
+  right: 20px;
+  display: flex;
+  align-items: center; }
+#funding img {
+  width: 130px; }
 
 #downloads-header {
   padding-top: 4rem;
@@ -305,6 +339,28 @@ section, #maps .map-selector, #safety .safety-div {
     color: #AFAFAF;
     padding-top: 1rem; }
 
+#faq h4, #faq p {
+  color: #5F5F5F; }
+#faq button {
+  width: 100%;
+  border-style: none;
+  text-align: left; }
+  #faq button:active, #faq button:visited, #faq button:focus {
+    text-decoration: none;
+    outline: none; }
+  #faq button:hover {
+    text-decoration: none; }
+  #faq button.btn-link {
+    padding: 0; }
+#faq .card {
+  border-radius: 2px;
+  border-style: none;
+  -webkit-box-shadow: 6px 0px 11px 0px rgba(181, 181, 181, 0.5);
+  -moz-box-shadow: 6px 0px 11px 0px rgba(181, 181, 181, 0.5);
+  box-shadow: 6px 0px 11px 0px rgba(181, 181, 181, 0.5); }
+#faq .card-header, #faq .card-body {
+  padding: 0.2rem 0.5rem; }
+
 .btn {
   width: 150px;
   padding-top: 0.35rem;
@@ -318,11 +374,10 @@ section, #maps .map-selector, #safety .safety-div {
 
 .relative {
   position: relative;
-  width: 100%;
   width: 100%; }
   .relative .header-img {
     position: absolute;
-    max-height: 350px;
+    height: 350px;
     right: -1.5rem;
     bottom: 0;
     z-index: 1; }
@@ -332,6 +387,9 @@ section, #maps .map-selector, #safety .safety-div {
 
 .card {
   margin: 0.35rem 0; }
+  .card .card-header {
+    background-color: white !important;
+    border-bottom: none; }
   .card .card-title {
     margin-bottom: 0.3rem; }
   .card .features-icon {
@@ -362,12 +420,24 @@ section, #maps .map-selector, #safety .safety-div {
 .carousel-control-next, .carousel-control-prev {
   display: none; }
 
+@media (max-width: 350px) {
+  header {
+    height: 23.5rem; }
+    header .header-elements {
+      width: 250px; }
+
+  #features img {
+    position: relative;
+    right: 10px; }
+
+  #funding .funding-IMG {
+    right: 35px; } }
 @media (min-width: 576px) {
   .container {
     max-width: 641px; } }
 @media (min-width: 641px) {
   h1 {
-    font-size: 2.6rem; }
+    font-size: 2.8rem; }
 
   h2 {
     font-size: 1.6rem;
@@ -394,13 +464,20 @@ section, #maps .map-selector, #safety .safety-div {
   header {
     height: 37rem;
     padding-top: 4rem; }
+    header.missionhead {
+      height: 34rem;
+      padding-top: 4rem; }
     header .header-elements {
       position: absolute;
-      width: 450px !important;
+      width: 500px;
       bottom: 0;
       padding-bottom: 5% !important;
       display: flex;
       flex-direction: column; }
+      header .header-elements.mission {
+        width: 20%;
+        top: 55%;
+        transform: translateY(-45%); }
     header .btn {
       text-align: center;
       font-size: 1.1rem;
@@ -427,6 +504,8 @@ section, #maps .map-selector, #safety .safety-div {
     #mobhead .mobile {
       width: 550px;
       margin: 0 auto; }
+      #mobhead .mobile.mission {
+        width: 100%; }
     #mobhead p {
       font-size: 1.4rem; }
 
@@ -436,13 +515,10 @@ section, #maps .map-selector, #safety .safety-div {
     #features h2 {
       width: 60%; }
     #features .card-body {
-      margin: auto 0.5rem;
-      height: auto;
-      display: block; }
+      min-height: 147px; }
+    #features img {
+      margin: auto 0 auto auto; }
 
-  #nov .form-info {
-    padding-left: 2rem;
-    padding-right: 2rem; }
   #nov .form-input {
     display: flex;
     flex-direction: column;
@@ -462,6 +538,12 @@ section, #maps .map-selector, #safety .safety-div {
   #nov .row {
     margin-left: 0;
     margin-right: 0; }
+
+  #nov-info {
+    height: 100%; }
+    #nov-info .form-info {
+      padding-left: 2rem;
+      padding-right: 2rem; }
 
   #news {
     background-color: white;
@@ -484,12 +566,12 @@ section, #maps .map-selector, #safety .safety-div {
         background-color: #5F5F5F; }
 
   .relative .header-img {
-    max-height: 560px;
+    height: 540px !important;
     right: -2rem;
     bottom: -13px; }
     .relative .header-img.mission {
-      bottom: 48px;
-      max-height: 280px; }
+      bottom: 59px;
+      max-height: 500px; }
 
   .card .card-title {
     margin-bottom: 1rem; }
