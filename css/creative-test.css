@@ -13,7 +13,7 @@ body, html {
 
 body {
   font-family: "Lato", sans-serif;
-  min-width: 320px; }
+  min-width: 20rem; }
 
 h1 {
   font-size: 1.6rem;
@@ -46,7 +46,7 @@ a {
 header, #mainNav {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  min-width: 320px; }
+  min-width: 20rem; }
 
 header {
   height: 26rem;
@@ -54,9 +54,9 @@ header {
   padding-top: 4rem;
   color: white; }
   header h1 {
-    -webkit-text-shadow: 0.1em 0.1em 0.2em rgba(181, 181, 181, 0.5);
-    -moz-text-shadow: 0.1em 0.1em 0.2em rgba(181, 181, 181, 0.5);
-    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.55); }
+    -webkit-text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+    -moz-text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5); }
   header .intro-text {
     display: none; }
   header .container {
@@ -65,7 +65,7 @@ header {
     z-index: 2; }
   header .header-elements {
     position: absolute;
-    width: 300px;
+    width: 18.75rem;
     bottom: 0;
     padding-bottom: 15%; }
     header .header-elements.mission {
@@ -74,17 +74,17 @@ header {
       width: 40%; }
 
 .missionhead {
-  height: 330px;
+  height: 20.6rem;
   padding-top: 4rem; }
 
 .faq-header {
-  height: 270px; }
+  height: 16.9rem; }
 
 .downloads-header {
-  height: 300px; }
+  height: 18.75rem; }
 
 .cpn-header {
-  height: 360px; }
+  height: 22.5rem; }
 
 .faq-header h1, .downloads-header h1, .cpn-header h1 {
   font-size: 1.2rem;
@@ -99,16 +99,26 @@ header {
 footer {
   padding: 1.5rem !important;
   background-color: #5F5F5F;
-  padding: 3rem 0;
   color: #AFAFAF !important; }
   footer h4 {
-    font-weight: 400; }
+    font-weight: 400;
+    padding-left: 2px;
+    border-left: 3px solid; }
   footer a {
     font-size: 0.8rem;
     color: #AFAFAF !important; }
+  footer img {
+    position: relative;
+    width: 90%; }
+  footer .col-6 {
+    padding-right: 0; }
 
-.footer-elements {
-  padding-bottom: 1rem; }
+.footer-elements:nth-of-type(1) {
+  order: -3; }
+.footer-elements:nth-of-type(2) {
+  order: -1; }
+.footer-elements:nth-of-type(3) {
+  order: -2; }
 
 input {
   margin-top: 0.5rem;
@@ -190,7 +200,7 @@ section, .map-selector, .safety-div {
   #features .relative {
     display: none; }
   #features .card-body {
-    min-height: 176px;
+    min-height: 11rem;
     display: flex;
     align-items: center; }
 
@@ -213,7 +223,8 @@ section, .map-selector, .safety-div {
     border-color: #AFAFAF;
     border-radius: 2px;
     background-color: #EDEDED;
-    padding: 0.375rem 0.75rem !important; }
+    padding: 0.375rem 0.75rem !important;
+    width: 70%; }
   #nov-form .btn, #cpn-form .btn {
     background-color: #1F8425;
     padding-top: 0.6rem;
@@ -231,19 +242,22 @@ section, .map-selector, .safety-div {
 
 #maps {
   padding: 0; }
-  #maps img {
-    width: 100vw; }
   #maps .relative {
     display: none; }
 
 .map-selector {
+  padding: 1.5rem;
   background-color: #85BE5B; }
   .map-selector button {
     margin-top: 0;
-    width: 49%; }
+    width: 49%;
+    font-size: 0.8rem; }
     .map-selector button:nth-of-type(1) {
       float: left;
       margin-right: 2%; }
+
+.map-img {
+  width: 100%; }
 
 #safety {
   padding: 0; }
@@ -256,7 +270,7 @@ section, .map-selector, .safety-div {
       background-color: #1F8425;
       text-align: right;
       margin: 0.5rem 0;
-      font-size: 13px;
+      font-size: 0.8rem;
       padding: 0.1rem 1rem 0.1rem 0;
       border-radius: 0 50px 50px 0;
       color: white;
@@ -291,10 +305,14 @@ section, .map-selector, .safety-div {
 #congestion {
   padding: 0;
   height: 100%;
+  max-height: auto;
   background-image: url("../img/traffic.jpg");
   background-size: cover;
   background-color: #9FD592;
   background-blend-mode: multiply; }
+  #congestion .row {
+    margin-left: 0;
+    margin-right: 0; }
 
 .congestion-info {
   background-color: #50AD55;
@@ -302,14 +320,17 @@ section, .map-selector, .safety-div {
   height: 50%; }
 
 #funding img {
-  width: 130px; }
+  width: 8.125rem; }
 
 .funding-info {
-  float: left; }
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .funding-IMG {
   position: relative;
-  right: 20px;
+  right: 1.2rem;
   display: flex;
   align-items: center; }
 
@@ -341,7 +362,8 @@ section, .map-selector, .safety-div {
     text-decoration: none;
     outline: none; }
   #faq button:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    cursor: pointer; }
   #faq button.btn-link {
     padding: 0; }
 #faq .card {
@@ -355,14 +377,14 @@ section, .map-selector, .safety-div {
   padding: 0.2rem 0.8rem; }
 
 .btn {
-  width: 150px;
+  width: 9.4rem;
   padding-top: 0.35rem;
   padding-bottom: 0.35rem;
-  margin-top: 1.5em;
+  margin-top: 1em;
   border-radius: 1px;
-  font-size: 13px;
+  font-size: 0.8;
   font-weight: 700;
-  border-width: medium;
+  border-width: 3px;
   color: white; }
 
 .relative {
@@ -370,13 +392,13 @@ section, .map-selector, .safety-div {
   width: 100%; }
   .relative .header-img {
     position: absolute;
-    height: 350px;
+    height: 21.9rem;
     right: -1.5rem;
     bottom: 0;
     z-index: 1; }
     .relative .header-img.mission {
-      bottom: 48px;
-      max-height: 280px; }
+      bottom: 3rem;
+      max-height: 17.5rem; }
 
 .card {
   margin: 0.35rem 0; }
@@ -393,7 +415,7 @@ section, .map-selector, .safety-div {
       width: 4rem;
       padding-right: 0.5rem; }
   .card.press {
-    height: 345px;
+    height: 21.6rem;
     width: 90%;
     margin: 0 auto;
     padding-top: 0.5rem;
@@ -402,13 +424,13 @@ section, .map-selector, .safety-div {
     .card.press .card-body {
       padding: 1.5rem; }
 
-.carousel .carousel-indicators {
-  bottom: -45px; }
-  .carousel .carousel-indicators li {
+.carousel-indicators {
+  bottom: -3rem; }
+  .carousel-indicators li {
     width: 15px;
     height: 15px;
     margin: auto 0.25rem;
-    border-radius: 40px; }
+    border-radius: 2.5rem; }
 
 .carousel-control-next, .carousel-control-prev {
   display: none; }
@@ -417,15 +439,27 @@ section, .map-selector, .safety-div {
   header {
     height: 23.5rem; }
     header .header-elements {
-      width: 250px; }
+      width: 15.625rem; }
 
   #features img {
     position: relative;
     right: 10px; }
 
   #funding .funding-IMG {
-    right: 35px; } }
-@media (min-width: 641px) {
+    right: 2.2rem; } }
+@media (min-width: 481px) {
+  .cpn-header {
+    height: 25rem; }
+
+  .downloads-header {
+    height: 22rem; }
+
+  #features .card-body {
+    min-height: 7.5rem; } }
+@media (min-width: 576px) {
+  #nov .container {
+    max-width: 100vw; } }
+@media (min-width: 768px) {
   h1 {
     font-size: 2.8rem; }
 
@@ -458,7 +492,7 @@ section, .map-selector, .safety-div {
     padding-top: 4rem; }
     header .header-elements {
       position: absolute;
-      width: 500px;
+      width: 31.25rem;
       bottom: 0;
       padding-bottom: 5% !important;
       display: flex;
@@ -477,13 +511,13 @@ section, .map-selector, .safety-div {
     padding-top: 4rem; }
 
   .cpn-header {
-    height: 550px; }
+    height: 34.36rem; }
 
   .downloads-header {
-    height: 480px; }
+    height: 30rem; }
 
   .faq-header {
-    height: 400px; }
+    height: 25rem; }
 
   .faq-header h1, .downloads-header h1, .cpn-header h1 {
     font-size: 2.8rem;
@@ -520,13 +554,31 @@ section, .map-selector, .safety-div {
   button:focus {
     outline: none; }
 
+  footer {
+    padding: 3rem 0 !important; }
+    footer h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding-bottom: 0; }
+    footer a {
+      font-size: 1rem; }
+    footer img {
+      width: 100%; }
+
+  .footer-elements:nth-of-type(1) {
+    order: -3; }
+  .footer-elements:nth-of-type(2) {
+    order: -2; }
+  .footer-elements:nth-of-type(3) {
+    order: -1; }
+
   #mobhead {
     background-image: url("../img/funky-lines.png"); }
     #mobhead p {
       font-size: 1.4rem; }
 
   .mobile {
-    width: 550px;
+    width: 34.38rem;
     margin: 0 auto; }
     .mobile.mission {
       width: 100%; }
@@ -537,14 +589,18 @@ section, .map-selector, .safety-div {
     #features h2 {
       width: 60%; }
     #features .card-body {
-      min-height: 147px;
-      padding-top: 2rem;
-      padding-bottom: 2rem; }
+      min-height: 9.19rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem; }
     #features .card-title {
       margin-bottom: 0; }
     #features img {
       margin: auto 0 auto auto; }
 
+  #nov .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-content: center; }
   #nov .form-input {
     display: flex;
     flex-direction: column;
@@ -552,6 +608,8 @@ section, .map-selector, .safety-div {
     text-align: center; }
     #nov .form-input input {
       height: 40px; }
+  #nov .form-control {
+    width: 100%; }
   #nov .btn {
     background-color: #1F8425;
     margin-right: 0; }
@@ -600,7 +658,8 @@ section, .map-selector, .safety-div {
 
   #news {
     background-color: white;
-    background-image: url("../img/funky-lines.png"); }
+    background-image: url("../img/funky-lines.png");
+    padding-bottom: 5rem; }
     #news h2 {
       color: #50AD55; }
     #news .carousel-inner {
@@ -621,21 +680,21 @@ section, .map-selector, .safety-div {
   .map-selector {
     position: absolute;
     right: 0;
-    padding: 1.5rem 0.5rem 1.5rem 1.5rem;
-    margin-top: 1rem;
-    margin-right: 1rem;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); }
     .map-selector button {
-      width: 90%; }
+      width: 100%; }
       .map-selector button:nth-of-type(1) {
         float: none;
         margin-right: 0;
         margin-bottom: 1rem; }
 
   #safety ul {
-    width: 50vw; }
+    width: 49vw; }
     #safety ul li {
       margin: 1.3rem 0;
       font-size: 1.3rem;
@@ -672,16 +731,13 @@ section, .map-selector, .safety-div {
 
   #congestion {
     padding: 0;
-    height: 80%; }
-
-  .congestion-div {
-    position: absolute;
-    width: 50%;
-    height: 80%;
-    right: 0; }
+    height: auto;
+    max-height: auto !important; }
+    #congestion .row {
+      height: 50%; }
 
   .congestion-info {
-    padding: 1.5rem;
+    padding: 3.7rem 1.5rem;
     height: 100%;
     background-color: #50AD55;
     width: auto; }
@@ -739,12 +795,12 @@ section, .map-selector, .safety-div {
     color: #5F5F5F; }
 
   .relative .header-img {
-    height: 540px !important;
+    height: 33.75rem !important;
     right: -2rem;
     bottom: -13px; }
     .relative .header-img.mission {
-      bottom: 59px;
-      max-height: 500px; }
+      bottom: 3.688rem;
+      max-height: 31.25rem; }
 
   .card .card-title {
     margin-bottom: 1rem; }
@@ -754,7 +810,7 @@ section, .map-selector, .safety-div {
       width: 6rem;
       margin: 0 auto; }
   .card.press {
-    height: 600px;
+    height: 37.5rem;
     width: 100%;
     margin: 0 auto;
     padding-top: 0.5rem;
@@ -773,6 +829,9 @@ section, .map-selector, .safety-div {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem; }
 
+  .carousel-indicators {
+    bottom: -3.5rem; }
+
   .carousel-control-next, .carousel-control-prev {
     display: flex; }
 
@@ -781,7 +840,7 @@ section, .map-selector, .safety-div {
 
   .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23afafaf' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); } }
-@media (min-width: 991px) {
+@media (min-width: 992px) {
   h1 {
     font-size: 3.5rem; }
 
@@ -806,9 +865,9 @@ section, .map-selector, .safety-div {
     font-size: 1.4rem; }
 
   header {
-    height: 90%;
+    height: 50rem;
     background-color: #50AD55;
-    padding-top: 3rem;
+    padding-top: 6rem;
     color: white; }
     header .intro-text {
       display: block;
@@ -819,20 +878,52 @@ section, .map-selector, .safety-div {
       z-index: 2; }
     header .header-elements {
       position: absolute;
-      width: 70%;
+      width: 70% !important;
       bottom: 7%;
       padding-bottom: 15%; }
+      header .header-elements .title-header {
+        width: 40%; }
+      header .header-elements .intro-header {
+        -webkit-text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+        -moz-text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5); }
       header .header-elements.mission {
-        top: 50%;
+        top: 40%;
         transform: translateY(-50%);
         width: 40%; }
 
   .missionhead {
-    height: 90%;
+    height: 80%;
     padding-top: 4rem; }
+
+  footer {
+    padding: 3rem 2rem !important; }
+    footer h4 {
+      font-size: 1;
+      font-weight: 600;
+      padding-bottom: 0; }
+    footer a {
+      font-size: 1rem; }
+    footer img {
+      width: 45%; }
+
+  .footer-logo {
+    display: flex;
+    justify-content: flex-end; }
+
+  .footer-elements:nth-of-type(1) {
+    order: -3; }
+  .footer-elements:nth-of-type(2) {
+    order: -2; }
+  .footer-elements:nth-of-type(3) {
+    order: -1; }
 
   #mainNav {
     position: relative; }
+    #mainNav.altNav, #mainNav.cpn-nav {
+      -webkit-box-shadow: 0px 14px 19px 0px rgba(0, 0, 0, 0.33);
+      -moz-box-shadow: 0px 14px 19px 0px rgba(0, 0, 0, 0.33);
+      box-shadow: 0px 14px 19px 0px rgba(0, 0, 0, 0.33); }
 
   .navbar-brand {
     width: 35%; }
@@ -857,7 +948,7 @@ section, .map-selector, .safety-div {
     .li-casing:nth-of-type(1), .li-casing:nth-of-type(2), .li-casing:nth-of-type(3), .li-casing:nth-of-type(4), .li-casing:nth-of-type(5) {
       background-color: transparent; }
     .li-casing a {
-      font-size: 1.2rem; }
+      font-size: 1rem; }
 
   #features {
     background-color: white;
@@ -865,7 +956,7 @@ section, .map-selector, .safety-div {
     #features .relative {
       display: block; }
     #features .card-body {
-      min-height: 241px;
+      min-height: 15.06rem;
       display: flex;
       align-items: center;
       padding-top: 1rem;
@@ -881,7 +972,169 @@ section, .map-selector, .safety-div {
     right: -2rem;
     bottom: -40px; }
     .relative .header-img.mission {
-      bottom: 59px;
-      max-height: 500px; } }
+      bottom: 3.69rem;
+      max-height: 31.25rem; }
+
+  #nov {
+    height: 100%; }
+    #nov h2 {
+      font-size: 2.8rem; }
+    #nov .row {
+      height: 100%; }
+    #nov .form-control {
+      width: 100%; }
+    #nov .container {
+      height: 100%;
+      display: flex;
+      align-items: center; }
+
+  #maps .relative {
+    display: block; }
+    #maps .relative .header-img {
+      bottom: 0;
+      right: 0;
+      max-height: 50rem; }
+
+  .map-selector {
+    padding: 1rem 1.5rem;
+    margin-top: 3rem;
+    margin-right: 3rem;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); }
+    .map-selector button {
+      width: 100%; }
+
+  #funding img {
+    width: 70%; }
+  #funding .relative {
+    display: contents; }
+
+  .row.cpn, .row.downl {
+    height: 89.8vh;
+    min-height: 490px; }
+
+  .cpn-header, .downloads-header {
+    height: 100%;
+    padding-bottom: 3rem; }
+    .cpn-header .header-elements, .downloads-header .header-elements {
+      position: initial;
+      width: 100% !important;
+      height: 100%;
+      display: flex;
+      justify-content: center; }
+      .cpn-header .header-elements h1, .downloads-header .header-elements h1 {
+        width: 100%; }
+
+  #cpn-form {
+    height: 100%; }
+    #cpn-form .container {
+      height: 100%; }
+    #cpn-form .form-input {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+    #cpn-form .form-control {
+      width: 100%; }
+
+  #download {
+    height: 100%; }
+    #download .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #download .container h5, #download .container .btn {
+        width: 100%; } }
+@media (min-width: 1200px) {
+  header, .missionhead {
+    height: 89.3vh; }
+
+  header .header-elements.mission {
+    top: 45%; }
+
+  section, .map-selector, .safety-div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+    section#faq, #faq.map-selector, #faq.safety-div {
+      height: auto;
+      width: 1200px;
+      margin: auto auto; }
+
+  footer a {
+    font-size: 1rem;
+    color: #AFAFAF !important; }
+  footer img {
+    position: relative;
+    width: 30%; }
+
+  #nov .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50vw; }
+  #nov .form-input {
+    width: 30vw; }
+
+  .relative {
+    position: relative;
+    width: 100%; }
+    .relative .header-img {
+      position: absolute;
+      height: 21.9rem;
+      right: -1.5rem;
+      bottom: 5.3rem;
+      z-index: 1; }
+      .relative .header-img.mission {
+        bottom: 3rem;
+        max-height: 17.5rem; }
+
+  #maps {
+    display: block;
+    height: auto;
+    background-color: #F5F5F5; }
+    #maps .relative {
+      display: block; }
+      #maps .relative .header-img {
+        height: 960px !important;
+        max-height: 60rem; }
+
+  .map-selector {
+    height: auto;
+    padding: 3rem 2.5rem;
+    margin-top: 4rem;
+    margin-right: 20%; }
+    .map-selector button {
+      width: 100%; }
+
+  .maps {
+    height: auto;
+    width: 1220px;
+    margin: 0rem auto; }
+
+  #congestion {
+    height: 100%; }
+    #congestion .row {
+      height: auto;
+      max-height: 90%;
+      margin-right: 5%;
+      margin-left: 5%; }
+
+  .congestion-info {
+    padding: 5rem; }
+
+  .cpn-header .header-elements, .downloads-header .header-elements {
+    padding-left: 20%;
+    padding-right: 20%; }
+    .cpn-header .header-elements h1, .downloads-header .header-elements h1 {
+      width: 60%; }
+    .cpn-header .header-elements p, .downloads-header .header-elements p {
+      width: 80%; } }
 
 /*# sourceMappingURL=creative-test.css.map */
