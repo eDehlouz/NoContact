@@ -158,10 +158,10 @@ section, .map-selector, .safety-div {
   background-color: rgba(0, 0, 0, 0.5);
   right: 0;
   top: 0;
-  padding-top: 4rem;
   z-index: 5; }
 
 .menu {
+  padding-top: 4.2rem;
   height: 100vh;
   max-height: 300vh; }
 
