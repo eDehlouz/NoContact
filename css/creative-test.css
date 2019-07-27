@@ -13,7 +13,8 @@ body, html {
 
 body {
   font-family: "Lato", sans-serif;
-  min-width: 20rem; }
+  min-width: 20rem;
+  color: #5F5F5F; }
 
 h1 {
   font-size: 1.6rem;
@@ -153,7 +154,6 @@ section, .map-selector, .safety-div {
 
 .navbar-collapse {
   position: absolute;
-  height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
   right: 0;
@@ -161,10 +161,9 @@ section, .map-selector, .safety-div {
   padding-top: 4rem;
   z-index: 5; }
 
-.collapsing {
-  -webkit-transition: none;
-  transition: none;
-  display: none; }
+.menu {
+  height: 100vh;
+  max-height: 300vh; }
 
 .li-casing {
   background-color: #85BE5B;
@@ -194,11 +193,12 @@ section, .map-selector, .safety-div {
   text-align: center;
   color: #50AD55; }
 
+.relative.screen-lg {
+  display: none; }
+
 #features {
   background-color: #50AD55;
   color: #5F5F5F; }
-  #features .relative {
-    display: none; }
   #features .card-body {
     min-height: 11rem;
     display: flex;
@@ -458,7 +458,17 @@ section, .map-selector, .safety-div {
     min-height: 7.5rem; } }
 @media (min-width: 576px) {
   #nov .container {
-    max-width: 100vw; } }
+    max-width: 100vw; }
+
+  .form-info, .form-input {
+    max-width: 504px;
+    margin: 0.5rem auto 0;
+    padding-right: 30%; }
+    .form-info p, .form-input p {
+      font-size: 1rem; }
+
+  #nov-form .form-control {
+    width: 100%; } }
 @media (min-width: 768px) {
   h1 {
     font-size: 2.8rem; }
@@ -519,11 +529,11 @@ section, .map-selector, .safety-div {
   .faq-header {
     height: 25rem; }
 
-  .faq-header h1, .downloads-header h1, .cpn-header h1 {
+  .faq-header h1, .downloads-header h1, .cpn-header h1, #nav h1 {
     font-size: 2.8rem;
     width: 50%;
     padding-bottom: 1rem; }
-  .faq-header p, .downloads-header p, .cpn-header p {
+  .faq-header p, .downloads-header p, .cpn-header p, #nav p {
     width: 100%; }
 
   section, .map-selector, .safety-div {
@@ -622,6 +632,13 @@ section, .map-selector, .safety-div {
   #nov .row {
     margin-left: 0;
     margin-right: 0; }
+
+  .form-info, .form-input {
+    max-width: 100%;
+    margin: auto;
+    padding-right: 0; }
+    .form-info p, .form-input p {
+      font-size: 1.4rem; }
 
   #nov-info {
     height: 100%; }
@@ -795,7 +812,7 @@ section, .map-selector, .safety-div {
     color: #5F5F5F; }
 
   .relative .header-img {
-    height: 33.75rem !important;
+    height: 33.75rem;
     right: -2rem;
     bottom: -13px; }
     .relative .header-img.mission {
@@ -823,7 +840,7 @@ section, .map-selector, .safety-div {
       justify-content: center; }
 
   .btn {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-right: 1rem;
     width: 200px;
     padding-top: 0.5rem;
@@ -865,7 +882,8 @@ section, .map-selector, .safety-div {
     font-size: 1.4rem; }
 
   header {
-    height: 50rem;
+    height: 87.3vh;
+    min-height: 650px;
     background-color: #50AD55;
     padding-top: 6rem;
     color: white; }
@@ -880,7 +898,8 @@ section, .map-selector, .safety-div {
       position: absolute;
       width: 70% !important;
       bottom: 7%;
-      padding-bottom: 15%; }
+      padding-bottom: 15%;
+      display: block; }
       header .header-elements .title-header {
         width: 40%; }
       header .header-elements .intro-header {
@@ -935,6 +954,9 @@ section, .map-selector, .safety-div {
     background-color: transparent;
     padding-top: 0; }
 
+  .menu {
+    height: auto; }
+
   .li-casing {
     background-color: transparent;
     padding: 0;
@@ -950,11 +972,12 @@ section, .map-selector, .safety-div {
     .li-casing a {
       font-size: 1rem; }
 
+  .relative.screen-lg {
+    display: block; }
+
   #features {
     background-color: white;
     color: #5F5F5F; }
-    #features .relative {
-      display: block; }
     #features .card-body {
       min-height: 15.06rem;
       display: flex;
@@ -968,9 +991,9 @@ section, .map-selector, .safety-div {
     display: none; }
 
   .relative .header-img {
-    height: 850px !important;
-    right: -2rem;
-    bottom: -40px; }
+    height: 45rem;
+    right: 0;
+    bottom: -6rem; }
     .relative .header-img.mission {
       bottom: 3.69rem;
       max-height: 31.25rem; }
@@ -1050,8 +1073,183 @@ section, .map-selector, .safety-div {
       #download .container h5, #download .container .btn {
         width: 100%; } }
 @media (min-width: 1200px) {
+  h1 {
+    font-size: 3.5rem; }
+
+  h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem; }
+
+  h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem; }
+
+  h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding-bottom: 1rem; }
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 400; }
+
+  a {
+    font-size: 1.4rem; }
+
+  header {
+    height: 85vh; }
+    header .header-elements.mission {
+      top: 35%; }
+    header .header-elements .title-header {
+      width: 100%; }
+    header .header-elements .intro-text {
+      width: 80%; }
+    header p {
+      font-size: 1.4rem; }
+    header h1 {
+      padding-bottom: 1rem; }
+
+  .cpn-header .header-elements, .downloads-header .header-elements {
+    padding-left: 25%;
+    padding-right: 10%; }
+    .cpn-header .header-elements h1, .downloads-header .header-elements h1 {
+      width: 75%; }
+    .cpn-header .header-elements p, .downloads-header .header-elements p {
+      width: 80%; }
+
+  .faq-header {
+    height: 25rem;
+    min-height: auto; }
+
+  section, .map-selector, .safety-div {
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+    section#faq, #faq.map-selector, #faq.safety-div {
+      height: auto;
+      width: 1200px;
+      margin: auto auto; }
+    section#news, #news.map-selector, #news.safety-div {
+      height: auto; }
+    section .map-selector, .map-selector .map-selector, .safety-div .map-selector {
+      min-height: 0; }
+
+  footer a {
+    font-size: 1rem;
+    color: #AFAFAF !important; }
+  footer img {
+    position: relative;
+    width: 30%; }
+
+  #nov .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50vw; }
+  #nov .form-info {
+    padding-left: 20%;
+    padding-right: 10%; }
+  #nov .form-input {
+    width: 30vw; }
+
+  .relative {
+    position: relative;
+    width: 100%; }
+    .relative .header-img {
+      position: absolute;
+      right: 0;
+      bottom: -5.4rem;
+      z-index: 1; }
+      .relative .header-img.mission {
+        bottom: 3rem;
+        max-height: 17.5rem; }
+
+  #maps {
+    display: block;
+    height: auto;
+    background-color: #F5F5F5; }
+    #maps .relative {
+      display: block; }
+      #maps .relative .header-img {
+        height: 60rem !important; }
+
+  .map-selector {
+    height: auto;
+    padding: 3rem 2.5rem;
+    margin-top: 3rem;
+    margin-right: 18%; }
+    .map-selector button {
+      width: 100%; }
+
+  .maps {
+    height: auto;
+    width: 1000px;
+    margin: 0rem auto; }
+
+  #safety .relative {
+    padding-top: auto; }
+  #safety .safety-div {
+    width: 40%;
+    height: auto;
+    margin-left: 10%;
+    position: relative;
+    z-index: -1;
+    background-color: white;
+    padding: 3rem !important; }
+  #safety .stat-div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: -2; }
+  #safety ul {
+    width: 98vw; }
+    #safety ul li {
+      margin: 1.3rem 0;
+      font-size: 1.3rem;
+      padding: 0.5rem 1.5rem 0.5rem 0; }
+      #safety ul li:nth-of-type(1) {
+        width: 98%; }
+      #safety ul li:nth-of-type(2) {
+        width: 90%; }
+      #safety ul li:nth-of-type(3) {
+        width: 80%; }
+      #safety ul li:nth-of-type(4) {
+        width: 77%; }
+      #safety ul li:nth-of-type(5) {
+        width: 70%; }
+      #safety ul li:nth-of-type(6) {
+        width: 65%; }
+      #safety ul li:nth-of-type(7) {
+        width: 61%; }
+      #safety ul li:nth-of-type(8) {
+        width: 59%; }
+  #safety p:nth-of-type(2) {
+    margin-bottom: 1.5rem; }
+  #safety a {
+    font-size: 1.2rem; }
+
+  #congestion {
+    height: auto; }
+    #congestion .row {
+      height: 90%;
+      margin: 4% auto;
+      max-height: 90%;
+      margin-right: 10%;
+      margin-left: 5%; }
+
+  .congestion-info {
+    padding: 3rem; }
+
+  .card.press {
+    height: 32rem; } }
+@media (min-width: 1200px) and (min-height: 900px) {
   header, .missionhead {
-    height: 89.3vh; }
+    height: 89.3vh;
+    min-height: 800px; }
 
   header .header-elements.mission {
     top: 45%; }
@@ -1086,10 +1284,10 @@ section, .map-selector, .safety-div {
     position: relative;
     width: 100%; }
     .relative .header-img {
+      height: 55rem;
       position: absolute;
-      height: 21.9rem;
-      right: -1.5rem;
-      bottom: 5.3rem;
+      right: 0;
+      bottom: -7rem;
       z-index: 1; }
       .relative .header-img.mission {
         bottom: 3rem;
@@ -1102,8 +1300,7 @@ section, .map-selector, .safety-div {
     #maps .relative {
       display: block; }
       #maps .relative .header-img {
-        height: 960px !important;
-        max-height: 60rem; }
+        height: 60rem !important; }
 
   .map-selector {
     height: auto;
@@ -1136,5 +1333,7 @@ section, .map-selector, .safety-div {
       width: 60%; }
     .cpn-header .header-elements p, .downloads-header .header-elements p {
       width: 80%; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+  zoom: 80%; }
 
 /*# sourceMappingURL=creative-test.css.map */

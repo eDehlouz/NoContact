@@ -20,6 +20,7 @@ body, html
 body
   font-family: 'Lato', sans-serif
   min-width: 20rem
+  color: #5F5F5F
 
 h1
   font-size: 1.6rem
@@ -70,7 +71,7 @@ header
     height: 100%
     position: relative
     z-index: 2
-  .header-elements
+  .header-elements,
     position: absolute
     width: 18.75rem
     bottom: 0
@@ -93,7 +94,7 @@ header
 .cpn-header
   height: 22.5rem
 
-.faq-header, .downloads-header, .cpn-header
+.faq-header, .downloads-header, .cpn-header,
   h1
     font-size: 1.2rem
     -webkit-text-shadow: none
@@ -163,17 +164,21 @@ section
   outline-style: none
 .navbar-collapse
   position: absolute
-  height: 100vh
+
   width: 100vw
   background-color: rgba(0, 0, 0, 0.50)
   right: 0
   top: 0
   padding-top: 4rem
   z-index: 5
-.collapsing
-  -webkit-transition: none
-  transition: none
-  display: none
+  &.collapsing
+    // background: rgba(0, 0, 0, 0.50)
+    // -webkit-transition: none
+    // transition: none
+    // display: none
+.menu
+  height: 100vh
+  max-height: 300vh
 .li-casing
   background-color: $color-secondary
   padding: .2rem 0 .2rem 2rem
@@ -202,11 +207,13 @@ section
   text-align: center
   color: $color-primary
 
+.relative.screen-lg
+  display: none
+
 #features
   background-color: $color-primary
   color: #5F5F5F
-  .relative
-    display: none
+
   .card-body
     min-height: 11rem
     display: flex
@@ -483,6 +490,16 @@ section
   #nov
     .container
         max-width: 100vw
+  .form-info, .form-input
+    max-width: 504px
+    margin: .5rem auto 0
+    padding-right: 30%
+    p
+      font-size: 1rem
+  #nov-form
+    .form-control
+      width: 100%
+
 @media (min-width:768px) /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   h1
     font-size: 2.8rem
@@ -538,7 +555,7 @@ section
   .faq-header
     height: 25rem
 
-  .faq-header, .downloads-header, .cpn-header
+  .faq-header, .downloads-header, .cpn-header, #nav
     h1
       font-size: 2.8rem
       width: 50%
@@ -642,6 +659,12 @@ section
     .row
       margin-left: 0
       margin-right: 0
+  .form-info, .form-input
+    max-width: 100%
+    margin: auto
+    padding-right: 0
+    p
+      font-size: 1.4rem
 
   #nov-info
     height: 100%
@@ -819,7 +842,7 @@ section
 
   .relative
     .header-img
-      height: 33.75rem !important
+      height: 33.75rem
       right: -2rem
       bottom: -13px
       &.mission
@@ -848,7 +871,7 @@ section
         justify-content: center
 
   .btn
-    font-size: 1rem
+    font-size: 1.1rem
     margin-right: 1rem
     width: 200px
     padding-top: .5rem
@@ -887,7 +910,8 @@ section
     font-size: 1.4rem
 
   header
-    height: 50rem
+    height: 87.3vh
+    min-height: 650px
     background-color: $color-primary
     padding-top: 6rem
     color: white
@@ -903,6 +927,7 @@ section
       width: 70% !important
       bottom: 7%
       padding-bottom: 15%
+      display: block
       .title-header
         width: 40%
       .intro-header
@@ -954,6 +979,8 @@ section
     width: auto
     background-color: transparent
     padding-top: 0
+  .menu
+    height: auto
   .li-casing
     background-color: transparent
     padding: 0
@@ -969,11 +996,13 @@ section
     a
       font-size: 1rem
 
+  .relative.screen-lg
+    display: block
+
   #features
     background-color: white
     color: #5F5F5F
-    .relative
-      display: block
+
     .card-body
       min-height: 15.06rem
       display: flex
@@ -988,9 +1017,9 @@ section
 
   .relative
     .header-img
-      height: 850px !important
-      right: -2rem
-      bottom: -40px
+      height: 45rem
+      right: 0
+      bottom: -6rem
       &.mission
         bottom: 3.69rem
         max-height: 31.25rem
@@ -1074,10 +1103,192 @@ section
 @media only screen and (min-width:1025px) /* big landscape tablets, laptops, and desktops */
 @media (min-width:1200px) /* hi-res laptops and desktops */
 
+  h1
+    font-size: 3.5rem
+  h2
+    font-size: 2rem
+    padding-bottom: 1rem
+  h3
+    font-size: 1.5rem
+    padding-bottom: 1rem
+  h4
+    font-size: 1.4rem
+    font-weight: 700
+    padding-bottom: 1rem
+  p
+    font-size: 1.3rem
+    font-weight: 400
+  a
+    font-size: 1.4rem
+
+  header, .missionhead
+    // height: 60.3vh
+    // min-height: 700px
+
+  header
+    height: 85vh
+    .header-elements
+      &.mission
+        top: 35%
+      .title-header
+        width: 100%
+      .intro-text
+        width: 80%
+    p
+      font-size: 1.4rem
+    h1
+      padding-bottom: 1rem
+
+  .cpn-header, .downloads-header
+    .header-elements
+      padding-left: 25%
+      padding-right: 10%
+      h1
+        width: 75%
+      p
+        width: 80%
+  .faq-header
+    height: 25rem
+    min-height: auto
+
+  section
+    height: 100vh
+    min-height: 650px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    &#faq
+      height: auto
+      width: 1200px
+      margin: auto auto
+    &#news
+      height: auto
+    .map-selector
+      min-height: 0
+
+  footer
+    a
+      font-size: 1rem
+      color: #AFAFAF !important
+    img
+      position: relative
+      width: 30%
+
+  #nov
+    .col-md-6
+      display: flex
+      justify-content: center
+      align-content: center
+      width: 50vw
+    .form-info
+      padding-left: 20%
+      padding-right: 10%
+    .form-input
+      width: 30vw
+
+
+  .relative
+    position: relative
+    width: 100%
+    .header-img
+      position: absolute
+      right: 0
+      bottom: -5.4rem
+      z-index: 1
+      &.mission
+        bottom: 3rem
+        max-height: 17.5rem
+
+  #maps
+    display: block
+    height: auto
+    background-color: #F5F5F5
+    .relative
+      display: block
+      .header-img
+        height: 60rem !important
+  .map-selector
+    height: auto
+    padding: 3rem 2.5rem
+    margin-top: 3rem
+    margin-right: 18%
+    button
+      width: 100%
+  .maps
+    height: auto
+    width: 1000px
+    margin: 0rem auto
+
+  #safety
+    .relative
+      padding-top: auto
+    .safety-div
+      width: 40%
+      height: auto
+      margin-left: 10%
+      position: relative
+      z-index: -1
+      background-color: white
+      padding: 3rem !important
+    .stat-div
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
+      z-index: -2
+    ul
+      width: 98vw
+      li
+        margin: 1.3rem 0
+        font-size: 1.3rem
+        padding: 0.5rem 1.5rem .5rem 0
+        &:nth-of-type(1)
+          width: 98%
+        &:nth-of-type(2)
+          width: 90%
+        &:nth-of-type(3)
+          width: 80%
+        &:nth-of-type(4)
+          width: 77%
+        &:nth-of-type(5)
+          width: 70%
+        &:nth-of-type(6)
+          width: 65%
+        &:nth-of-type(7)
+          width: 61%
+        &:nth-of-type(8)
+          width: 59%
+    p:nth-of-type(2)
+      margin-bottom: 1.5rem
+    a
+      font-size: 1.2rem
+
+
+
+  #congestion
+    height: auto
+    .row
+      height: 90%
+      margin: 4% auto
+      max-height: 90%
+      margin-right: 10%
+      margin-left: 5%
+  .congestion-info
+    padding: 3rem
+
+
+
+  .card
+    &.press
+      height: 32rem
+
+@media (min-width:1200px) and (min-height:900px) /* hi-res laptops and desktops */
 
 
   header, .missionhead
     height: 89.3vh
+    min-height: 800px
 
   header
     .header-elements
@@ -1111,18 +1322,22 @@ section
       width: 50vw
     .form-input
       width: 30vw
+
+
   .relative
     position: relative
     width: 100%
     .header-img
+      height: 55rem
       position: absolute
-      height: 21.9rem
-      right: -1.5rem
-      bottom: 5.3rem
+      right: 0
+      bottom: -7rem
       z-index: 1
       &.mission
         bottom: 3rem
         max-height: 17.5rem
+
+
 
   #maps
     display: block
@@ -1131,8 +1346,7 @@ section
     .relative
       display: block
       .header-img
-        height: 960px !important
-        max-height: 60rem
+        height: 60rem !important
   .map-selector
     height: auto
     padding: 3rem 2.5rem
@@ -1197,3 +1411,9 @@ section
         width: 60%
       p
         width: 80%
+
+
+@media only screen and( -webkit-min-device-pixel-ratio: 1.25 ),only screen and( -o-min-device-pixel-ratio: 5/4 ),only screen and( min-resolution: 120dpi ),only screen and( min-resolution: 1.25dppx )
+
+@media only screen and( -webkit-min-device-pixel-ratio: 1.5 ),only screen and( min-resolution: 1.5dppx )
+  zoom: 80%
