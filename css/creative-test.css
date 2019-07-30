@@ -78,7 +78,7 @@ header {
   height: 20.6rem;
   padding-top: 4rem; }
 
-.faq-header {
+.faq-header, .privacy-header {
   height: 16.9rem; }
 
 .downloads-header {
@@ -87,14 +87,14 @@ header {
 .cpn-header {
   height: 22.5rem; }
 
-.faq-header h1, .downloads-header h1, .cpn-header h1 {
+.faq-header h1, .downloads-header h1, .cpn-header h1, .privacy-header h1 {
   font-size: 1.2rem;
   -webkit-text-shadow: none;
   -moz-text-shadow: none;
   text-shadow: none; }
-.faq-header p, .downloads-header p, .cpn-header p {
+.faq-header p, .downloads-header p, .cpn-header p, .privacy-header p {
   width: 95%; }
-.faq-header .header-elements, .downloads-header .header-elements, .cpn-header .header-elements {
+.faq-header .header-elements, .downloads-header .header-elements, .cpn-header .header-elements, .privacy-header .header-elements {
   padding-bottom: 10%; }
 
 footer {
@@ -187,7 +187,7 @@ section, .map-selector, .safety-div {
     background-color: #9FD592; }
   .li-casing .active {
     font-weight: 900;
-    font-size: 0.8rem; }
+    font-size: 0.9rem; }
 
 #mobhead {
   text-align: center;
@@ -342,12 +342,6 @@ section, .map-selector, .safety-div {
 #download {
   padding-top: 1.5rem;
   width: 90%; }
-  #download .btn {
-    background-color: #85BE5B;
-    width: 100%;
-    margin-top: 0.5rem;
-    font-weight: 400;
-    padding: 0.2rem auto; }
   #download h5 {
     color: #AFAFAF;
     padding-top: 1rem; }
@@ -376,16 +370,48 @@ section, .map-selector, .safety-div {
 #faq .card-header, #faq .card-body {
   padding: 0.2rem 0.8rem; }
 
+#privacy {
+  padding: 1.5rem; }
+  #privacy p, #privacy li {
+    font-size: 0.8rem; }
+
+.btn-div {
+  text-align: center;
+  margin-bottom: 2rem; }
+
+.privacy-info {
+  border-radius: 2px;
+  padding: 0.8rem;
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(181, 181, 181, 0.5);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(181, 181, 181, 0.5);
+  box-shadow: 0px 0px 11px 0px rgba(181, 181, 181, 0.5); }
+
 .btn {
   width: 9.4rem;
   padding-top: 0.35rem;
   padding-bottom: 0.35rem;
   margin-top: 1em;
-  border-radius: 1px;
+  border-radius: 2px;
   font-size: 0.8;
   font-weight: 700;
   border-width: 3px;
   color: white; }
+
+.btn-download {
+  background-color: #85BE5B;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  padding: 0.2rem auto !important; }
+
+.btn-privacy {
+  background-color: #50AD55;
+  font-size: 0.75rem;
+  font-weight: 400;
+  width: auto; }
+  .btn-privacy.btn {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem; }
 
 .relative {
   position: relative;
@@ -526,14 +552,14 @@ section, .map-selector, .safety-div {
   .downloads-header {
     height: 30rem; }
 
-  .faq-header {
+  .faq-header, .privacy-header {
     height: 25rem; }
 
-  .faq-header h1, .downloads-header h1, .cpn-header h1, #nav h1 {
+  .faq-header h1, .downloads-header h1, .cpn-header h1, #nav h1, .privacy-header h1 {
     font-size: 2.8rem;
     width: 50%;
     padding-bottom: 1rem; }
-  .faq-header p, .downloads-header p, .cpn-header p, #nav p {
+  .faq-header p, .downloads-header p, .cpn-header p, #nav p, .privacy-header p {
     width: 100%; }
 
   section, .map-selector, .safety-div {
@@ -778,15 +804,6 @@ section, .map-selector, .safety-div {
   #download {
     padding-top: 1.5rem;
     width: 90%; }
-    #download .btn {
-      background-color: #85BE5B;
-      width: 60%;
-      margin-top: 0;
-      margin-bottom: 0.8rem;
-      font-size: 1.2rem;
-      font-weight: 300;
-      padding-top: 0.8rem;
-      padding-bottom: 0.8rem; }
     #download h5 {
       margin-bottom: 1.2rem;
       margin-top: 0.8rem;
@@ -845,6 +862,17 @@ section, .map-selector, .safety-div {
     width: 200px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem; }
+    .btn.btn-privacy {
+      width: auto; }
+
+  .btn-download {
+    width: 60%;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem; }
 
   .carousel-indicators {
     bottom: -3.5rem; }
@@ -955,7 +983,8 @@ section, .map-selector, .safety-div {
     padding-top: 0; }
 
   .menu {
-    height: auto; }
+    height: auto;
+    padding: 0; }
 
   .li-casing {
     background-color: transparent;
@@ -1063,7 +1092,9 @@ section, .map-selector, .safety-div {
       width: 100%; }
 
   #download {
-    height: 100%; }
+    height: 100%;
+    width: 70%;
+    margin: 0 auto; }
     #download .container {
       height: 100%;
       display: flex;
@@ -1117,7 +1148,7 @@ section, .map-selector, .safety-div {
     .cpn-header .header-elements p, .downloads-header .header-elements p {
       width: 80%; }
 
-  .faq-header {
+  .faq-header, .privacy-header {
     height: 25rem;
     min-height: auto; }
 
@@ -1129,10 +1160,9 @@ section, .map-selector, .safety-div {
     justify-content: center;
     align-content: center; }
     section#faq, #faq.map-selector, #faq.safety-div {
-      height: auto;
       width: 1200px;
       margin: auto auto; }
-    section#news, #news.map-selector, #news.safety-div {
+    section#news, #news.map-selector, #news.safety-div, section#faq, #faq.map-selector, #faq.safety-div, section#privacy, #privacy.map-selector, #privacy.safety-div {
       height: auto; }
     section .map-selector, .map-selector .map-selector, .safety-div .map-selector {
       min-height: 0; }
@@ -1242,10 +1272,7 @@ section, .map-selector, .safety-div {
       margin-left: 5%; }
 
   .congestion-info {
-    padding: 3rem; }
-
-  .card.press {
-    height: 32rem; } }
+    padding: 3rem; } }
 @media (min-width: 1200px) and (min-height: 900px) {
   header, .missionhead {
     height: 89.3vh;
@@ -1335,5 +1362,16 @@ section, .map-selector, .safety-div {
       width: 80%; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
   zoom: 80%; }
+.result {
+  padding: 4rem;
+  height: 500px;
+  background: #85BE5B;
+  display: none; }
+
+.infraction-placeholder {
+  background-color: grey;
+  height: auto;
+  width: auto;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=creative-test.css.map */

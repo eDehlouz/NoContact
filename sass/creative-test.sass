@@ -85,7 +85,7 @@ header
   height: 20.6rem
   padding-top: 4rem
 
-.faq-header
+.faq-header, .privacy-header
   height: 16.9rem
 
 .downloads-header
@@ -94,7 +94,7 @@ header
 .cpn-header
   height: 22.5rem
 
-.faq-header, .downloads-header, .cpn-header,
+.faq-header, .downloads-header, .cpn-header, .privacy-header
   h1
     font-size: 1.2rem
     -webkit-text-shadow: none
@@ -201,7 +201,7 @@ section
     background-color: #9FD592
   .active
     font-weight: 900
-    font-size: 0.8rem
+    font-size: 0.9rem
 
 #mobhead
   text-align: center
@@ -363,12 +363,6 @@ section
 #download
   padding-top: 1.5rem
   width: 90%
-  .btn
-    background-color: $color-secondary
-    width: 100%
-    margin-top: .5rem
-    font-weight: 400
-    padding: .2rem auto
   h5
     color: #AFAFAF
     padding-top: 1rem
@@ -398,6 +392,21 @@ section
   .card-header, .card-body
     padding: .2rem .8rem
 
+#privacy
+  padding: 1.5rem
+  p, li
+    font-size: 0.8rem
+.btn-div
+  text-align: center
+  margin-bottom: 2rem
+.privacy-info
+  border-radius: 2px
+  padding: .8rem
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(181,181,181,.5)
+  -moz-box-shadow: 0px 0px 11px 0px rgba(181,181,181,.5)
+  box-shadow: 0px 0px 11px 0px rgba(181,181,181,.5)
+
+
 
 
 .btn
@@ -405,11 +414,27 @@ section
   padding-top: .35rem
   padding-bottom: .35rem
   margin-top: 1em
-  border-radius: 1px
+  border-radius: 2px
   font-size: 0.8
   font-weight: 700
   border-width: 3px
   color: white
+
+.btn-download
+  background-color: $color-secondary
+  width: 100%
+  margin-top: .5rem
+  font-weight: 400
+  padding: .2rem auto !important
+
+.btn-privacy
+  background-color: $color-primary
+  font-size: 0.75rem
+  font-weight: 400
+  width: auto
+  &.btn
+    padding-top: 0.6rem
+    padding-bottom: 0.6rem
 
 .relative
   position: relative
@@ -552,10 +577,10 @@ section
   .downloads-header
     height: 30rem
 
-  .faq-header
+  .faq-header, .privacy-header
     height: 25rem
 
-  .faq-header, .downloads-header, .cpn-header, #nav
+  .faq-header, .downloads-header, .cpn-header, #nav, .privacy-header
     h1
       font-size: 2.8rem
       width: 50%
@@ -805,15 +830,6 @@ section
   #download
     padding-top: 1.5rem
     width: 90%
-    .btn
-      background-color: $color-secondary
-      width: 60%
-      margin-top: 0
-      margin-bottom: 0.8rem
-      font-size: 1.2rem
-      font-weight: 300
-      padding-top: 0.8rem
-      padding-bottom: 0.8rem
     h5
       margin-bottom: 1.2rem
       margin-top: 0.8rem
@@ -876,6 +892,17 @@ section
     width: 200px
     padding-top: .5rem
     padding-bottom: .5rem
+    &.btn-privacy
+      width: auto
+
+  .btn-download
+    width: 60%
+    margin-top: 0
+    margin-bottom: 0.8rem
+    font-size: 1.2rem
+    font-weight: 300
+    padding-top: 0.8rem
+    padding-bottom: 0.8rem
 
   .carousel-indicators
     bottom: -3.5rem
@@ -981,6 +1008,7 @@ section
     padding-top: 0
   .menu
     height: auto
+    padding: 0
   .li-casing
     background-color: transparent
     padding: 0
@@ -1090,6 +1118,8 @@ section
       width: 100%
   #download
     height: 100%
+    width: 70%
+    margin: 0 auto
     .container
       height: 100%
       display: flex
@@ -1147,7 +1177,7 @@ section
         width: 75%
       p
         width: 80%
-  .faq-header
+  .faq-header, .privacy-header
     height: 25rem
     min-height: auto
 
@@ -1159,10 +1189,9 @@ section
     justify-content: center
     align-content: center
     &#faq
-      height: auto
       width: 1200px
       margin: auto auto
-    &#news
+    &#news, &#faq, &#privacy
       height: auto
     .map-selector
       min-height: 0
@@ -1279,9 +1308,7 @@ section
 
 
 
-  .card
-    &.press
-      height: 32rem
+
 
 @media (min-width:1200px) and (min-height:900px) /* hi-res laptops and desktops */
 
@@ -1417,3 +1444,18 @@ section
 
 @media only screen and( -webkit-min-device-pixel-ratio: 1.5 ),only screen and( min-resolution: 1.5dppx )
   zoom: 80%
+
+
+  // ____________________________________________________________________
+
+.result
+  padding: 4rem
+  height: 500px
+  background: $color-secondary
+  display: none
+
+.infraction-placeholder
+  background-color: grey
+  height: auto
+  width: auto
+  margin: 0 auto

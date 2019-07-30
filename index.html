@@ -25,6 +25,8 @@
 
   <title>No Contact Apprehension</title>
 
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -136,7 +138,7 @@
     <div class="container font-w">
       <div class="header-elements">
         <h1 class="title-msg">OUR DEDICATION TO CREATING A SAFER PARANAQUE</h1>
-        <p class="font-w intro-text ">Welcome to the no contact apprehension site of Paranaque City. This website is dedicatied to the No contact Apprehension Program of Paranaque City, our prokect mission, why it being implemented and the
+        <p class="font-w intro-text ">Welcome to the no contact apprehension site of Paranaque City. This website is dedicated to the No contact Apprehension Program of Paranaque City, our project's mission, why it being implemented and the
           benefits of this venture. If you are here to verify a notice of violation or check for one, click below.</p>
         <button type="button" class="btn btn-outline-light" onclick="window.location.href = '#nov';">Check Notice</button>
         <button type="button" class="btn-right btn btn-outline-light" onclick="window.location.href = 'plate.html';">Check Plate No.</button>
@@ -151,8 +153,8 @@
 
     <div class="container">
       <div class="mobile">
-        <p class="">Welcome to the No Contact Apprehension site of Paranaque City. This website is dedicatied to the No Contact Apprehension Program of Paranaque City, our prokect mission, why it being implemented and the
-          benefits of this venture. If you are here to verify a notice of violation or check for one, click below.</p>
+        <p class="">Welcome to the no contact apprehension site of Paranaque City. This website is dedicated to the No contact Apprehension Program of Paranaque City, our project's mission, why it being implemented and the
+          benefits of this venture. If you are here to verify a notice of violation or check for one, click above.</p>
       </div>
     </div>
   </section>
@@ -256,7 +258,14 @@
     </div>
   </section>
 
+  <div class="result" id="result">
+      <div class="infraction-placeholder">
+
+      </div>
+  </div>
+
   <section id="nov">
+
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -304,7 +313,7 @@
 
 
                 <div class="">
-                  <button class="btn" type="submit">SEARCH</button>
+                  <button class="btn btn-submit" type="submit">SEARCH</button>
                 </div>
 
 
@@ -318,6 +327,9 @@
   </div>
   </div>
   </section>
+
+
+
 
 
   <section id="news">
@@ -353,9 +365,10 @@
 
                 <h3><b>ABS CBN NEWS</b></h3>
                 <h4>No-contact apprehension, sinimulan sa Parañaque</h4>
-
-                <iframe width="100%" height="56%" src="https://www.youtube.com/embed/CZdebzGRv-g" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <button type="button" class="btn btn-success"
-                  onclick="window.open('https://news.abs-cbn.com/video/news/02/14/18/no-contact-apprehension-sinimulan-sa-paraaque','_blank')" name="button">Read More</button>
+                <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CZdebzGRv-g" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <button type="button" class="btn btn-success" onclick="window.open('https://news.abs-cbn.com/video/news/02/14/18/no-contact-apprehension-sinimulan-sa-paraaque','_blank')" name="button">Read More</button>
 
               </div>
             </div>
@@ -448,6 +461,7 @@
 
   <!-- Custom scripts for this template -->
   <!-- <script src="js/creative.min.js"></script> -->
+  <script src="js/custom.js"></script>
   <script type="text/javascript" src="js/custom069b.js?version=1.1"></script>
 
   <script type="text/javascript">
