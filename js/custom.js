@@ -11,12 +11,11 @@ $('.btn-nia').click(function(){
 
 
 /* To be added for the result*/
-
-$('.btn-submit').click(function(){
-  var resultDiv = $('.result').css('display');
-  if (resultDiv == "none"){
-    $('.result').toggle('slow');
-    window.location.href = '#result';
-    resultDiv = $('.result').css('display');
-  }
-});
+// $('.btn-submit').click(function(){
+//   var resultDiv = $('.result').css('display');
+//   if (resultDiv == "none"){
+//     $('.result').toggle('slow');
+//     window.location.href = '#result';
+//     resultDiv = $('.result').css('display');
+//   }
+// });
