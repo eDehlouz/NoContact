@@ -24,9 +24,9 @@ function PlateExpired()
 
 $(document).ready(function(){
 	// CaptchaCallback();
-	
-	
-	
+
+
+
 	$(".nov-form").on('submit', function(e){
 		e.preventDefault();
 		var target = $(this).attr('target');
@@ -37,11 +37,20 @@ $(document).ready(function(){
 		}
 		else{
 			submit($(this));
+      // $('.btn-submit').click(function(){
+      //   var resultDiv = $('.result').css('display');
+      //   if (resultDiv == "none"){
+      //     $('.result').toggle('slow');
+      //     window.location.href = '#result';
+      //     resultDiv = $('.result').css('display');
+      //   }
+      // });
+
 		}
-		
+
 	});
-	
-	
+
+
 	$(".plate-form").on('submit', function(e){
 		e.preventDefault();
 		if(grecaptcha.getResponse() == "")
@@ -52,7 +61,7 @@ $(document).ready(function(){
 			submit($(this));
 		}
 	});
-	
+
 	function submit(element)
 	{
 		var action = element.attr('action');
@@ -67,9 +76,9 @@ $(document).ready(function(){
 			success : 	function(result)
 			{
 				console.log(result);
-				
+
 				try
-				{	
+				{
 					result = JSON.parse(result);
 				}
 				catch(err)
@@ -109,9 +118,9 @@ $(document).ready(function(){
 						$(target).css('display','block');
 						$(target).html(result.inactive_message);
 					}
-					
+
 				}
-				
+
 				var reminder = '';
 				if(result.reminder != '')
 				{
@@ -120,7 +129,7 @@ $(document).ready(function(){
 
 				$(".reminder-div").html(reminder);
 
-				
+
 			},
 			error 	: 	function(err)
 			{
@@ -137,7 +146,7 @@ $(document).ready(function(){
 
 	function _mp4(url)
 	{
-		return '<img alt="Html5 Video"' + 
+		return '<img alt="Html5 Video"' +
                        'src="libraries/unitegallery-master/source/unitegallery/images/play-button-round.png"' +
                        'data-type="html5video"' +
                        'src="libraries/unitegallery-master/source/unitegallery/images/play-button-round.png"' +

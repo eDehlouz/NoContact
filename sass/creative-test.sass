@@ -110,26 +110,19 @@ footer
   background-color: #5F5F5F
   color: #AFAFAF !important
   h4
-    font-weight: 400
     padding-left: 2px
-    border-left: 3px solid
   a
-    font-size: 0.8rem
+    font-size: 0.7rem
     color: #AFAFAF !important
   img
-    position: relative
-    width: 90%
-  .col-6
-    padding-right: 0
+    display: none
+    align-items: center
+  .col-12
+    padding-bottom: 1rem
+  .row
+    text-align: center
 
 
-.footer-elements
-  &:nth-of-type(1)
-    order: -3
-  &:nth-of-type(2)
-    order: -1
-  &:nth-of-type(3)
-    order: -2
 
 input
   margin-top: .5rem
@@ -251,6 +244,9 @@ section
   .btn
     background-color: $color-primary
 
+.form-info
+  padding-right: 20%
+
 
 #news
   background-color: $color-secondary
@@ -261,6 +257,7 @@ section
   .relative
     display: none
 .map-selector
+  text-align: center
   padding: 1.5rem
   background-color: $color-secondary
   @extend section
@@ -370,6 +367,9 @@ section
 #faq
   h4, p
     color: #5F5F5F
+  h4
+    &:hover, &:active
+      color: #2F2F2F
   button
     width: 100%
     border-style: none
@@ -486,6 +486,13 @@ section
 .carousel-control-next, .carousel-control-prev
   display: none
 
+.result
+  padding: 4rem
+  height: 500px
+  background: $color-secondary
+  display: none
+
+
 
 @media (max-width:350px) /*smaller  smartphones, iPhone, portrait 480x320 phones */
 
@@ -506,6 +513,7 @@ section
     height: 25rem
   .downloads-header
     height: 22rem
+
 
   #features
     .card-body
@@ -619,18 +627,9 @@ section
       font-weight: 600
       padding-bottom: 0
     a
-      font-size: 1rem
+      font-size: 0.9rem
     img
       width: 100%
-
-  .footer-elements
-    &:nth-of-type(1)
-      order: -3
-    &:nth-of-type(2)
-      order: -2
-    &:nth-of-type(3)
-      order: -1
-
 
 
   #mobhead
@@ -746,20 +745,22 @@ section
         background-color: #5F5F5F
 
   .map-selector
-    position: absolute
-    right: 0
+    // position: absolute
+    // right: 0
     padding: 1rem 1.5rem
-    margin-top: 2rem
-    margin-right: 2rem
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
-    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
+    text-align: center
+    // margin-top: 2rem
+    // margin-right: 2rem
+    // -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
+    // -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
+    // box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
     button
-      width: 100%
+      width: 30%
+      font-weight: 400
       &:nth-of-type(1)
         float: none
-        margin-right: 0
-        margin-bottom: 1rem
+        margin-right: 1%
+
 
 
   #safety
@@ -972,24 +973,16 @@ section
 
   footer
     padding: 3rem 2rem  !important
-    h4
-      font-size: 1
-      font-weight: 600
-      padding-bottom: 0
     a
-      font-size: 1rem
+      font-size: 0.9rem
     img
-      width: 45%
+      width: auto
+      display: block
+    .row
+      text-align: left
   .footer-logo
-    display: flex
-    justify-content: flex-end
-  .footer-elements
-    &:nth-of-type(1)
-      order: -3
-    &:nth-of-type(2)
-      order: -2
-    &:nth-of-type(3)
-      order: -1
+    text-align: -webkit-right
+
 
 
   #mainNav
@@ -1074,14 +1067,13 @@ section
         max-height: 50rem
 
   .map-selector
-    padding: 1rem 1.5rem
-    margin-top: 3rem
-    margin-right: 3rem
+    background-color: #50AD55
+    // padding: 1rem 1.5rem
+    // margin-top: 3rem
+    // margin-right: 3rem
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
     -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
-    button
-      width: 100%
 
   #funding
     img
@@ -1194,15 +1186,16 @@ section
     &#news, &#faq, &#privacy
       height: auto
     .map-selector
-      min-height: 0
+      height: auto
+      min-height: auto
+
 
   footer
     a
-      font-size: 1rem
+      font-size: 0.9rem
       color: #AFAFAF !important
     img
       position: relative
-      width: 30%
 
   #nov
     .col-md-6
@@ -1238,12 +1231,11 @@ section
       .header-img
         height: 60rem !important
   .map-selector
-    height: auto
-    padding: 3rem 2.5rem
-    margin-top: 3rem
-    margin-right: 18%
+    // height: auto
+    // padding: 3rem 2.5rem
+    // margin-top: 3rem
+    // margin-right: 18%
     button
-      width: 100%
   .maps
     height: auto
     width: 1000px
@@ -1335,11 +1327,9 @@ section
 
   footer
     a
-      font-size: 1rem
+      font-size: 0.9rem
       color: #AFAFAF !important
-    img
-      position: relative
-      width: 30%
+
 
   #nov
     .col-md-6
@@ -1375,12 +1365,10 @@ section
       .header-img
         height: 60rem !important
   .map-selector
-    height: auto
-    padding: 3rem 2.5rem
-    margin-top: 4rem
-    margin-right: 20%
-    button
-      width: 100%
+    // height: auto
+    // padding: 3rem 2.5rem
+    // margin-top: 4rem
+    // margin-right: 20%
   .maps
     height: auto
     width: 1220px
@@ -1447,15 +1435,3 @@ section
 
 
   // ____________________________________________________________________
-
-.result
-  padding: 4rem
-  height: 500px
-  background: $color-secondary
-  display: none
-
-.infraction-placeholder
-  background-color: grey
-  height: auto
-  width: auto
-  margin: 0 auto
