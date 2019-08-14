@@ -57,9 +57,9 @@ header, #mainNav
   min-width: 20rem
 
 header
-  height: 26rem
+  height: 22rem
   background-color: $color-primary
-  padding-top: 4rem
+  padding-top: 7rem
   color: white
   h1
     -webkit-text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5)
@@ -72,29 +72,33 @@ header
     position: relative
     z-index: 2
   .header-elements,
-    position: absolute
+    // position: absolute
     width: 18.75rem
-    bottom: 0
-    padding-bottom: 15%
+    // bottom: 0
+    // padding-bottom: 7%
     &.mission
-      top: 50%
-      transform: translateY(-50%)
+      // position: relative
+      // top: 42%
+      // transform: translateY(-50%)
       width: 40%
 
 .missionhead
-  height: 20.6rem
-  padding-top: 4rem
+  height: 17.6rem
+  // padding-top: 5rem
 
 .faq-header, .privacy-header
-  height: 16.9rem
+  height: 12.9rem
 
 .downloads-header
-  height: 18.75rem
+  height: 16.5rem
+  .container
+    height: 80%
 
 .cpn-header
-  height: 22.5rem
+  height: 18.5rem
 
 .faq-header, .downloads-header, .cpn-header, .privacy-header
+  padding-top: 5rem
   h1
     font-size: 1.2rem
     -webkit-text-shadow: none
@@ -137,7 +141,7 @@ section
   background-color: $color-primary
   &.altNav
     background-color: $color-secondary
-  position: absolute
+  position: relative
   z-index: 4
   width: 100%
   text-align: right
@@ -147,6 +151,9 @@ section
     color: white
   button
     z-index: 6
+
+.navbar:default
+  border: 0
 
 .navbar-brand
   width: 65%
@@ -206,11 +213,15 @@ section
 #features
   background-color: $color-primary
   color: #5F5F5F
-
+  .card
+    height: 10rem
+    justify-content: center
   .card-body
-    min-height: 11rem
-    display: flex
-    align-items: center
+    // min-height: 11rem
+    display: grid
+    // align-items: center
+  .col-9
+    margin: auto 0
 
 #nov, #cpn
   padding: 0
@@ -232,9 +243,10 @@ section
     border-radius: 2px
     background-color: #EDEDED
     padding: .375rem .75rem !important
-    width: 70%
+    width: 310px
+    text-align: center
+
   .btn
-    background-color: #1F8425
     padding-top: .6rem
     padding-bottom: .6rem
 
@@ -262,12 +274,18 @@ section
   background-color: $color-secondary
   @extend section
   button
-    margin-top: 0
-    width: 49%
+    margin-top: .5rem
+    // margin-bottom: .5rem
+    width: 200px
     font-size: 0.8rem
-    &:nth-of-type(1)
-      float: left
-      margin-right: 2%
+    // &:nth-of-type(1)
+    //   margin-bottom: .5rem
+      // float: none
+      // margin-right: 2%
+  .subButton
+    margin-top: 0
+    border-top: none
+    border-radius: 0
 .map-img
   width: 100%
 
@@ -394,19 +412,17 @@ section
 
 #privacy
   padding: 1.5rem
-  p, li
+  p, li, a
     font-size: 0.8rem
 .btn-div
   text-align: center
   margin-bottom: 2rem
 .privacy-info
   border-radius: 2px
-  padding: .8rem
+  padding: 1.5rem
   -webkit-box-shadow: 0px 0px 11px 0px rgba(181,181,181,.5)
   -moz-box-shadow: 0px 0px 11px 0px rgba(181,181,181,.5)
   box-shadow: 0px 0px 11px 0px rgba(181,181,181,.5)
-
-
 
 
 .btn
@@ -419,6 +435,14 @@ section
   font-weight: 700
   border-width: 3px
   color: white
+
+.btn-success
+  background-color: #1F8425
+  border-color: #1F8425
+  &:hover
+    background-color: #1c7522
+    border-color: #1c7522
+
 
 .btn-download
   background-color: $color-secondary
@@ -473,24 +497,56 @@ section
     .card-body
       padding: 1.5rem
 
+#carouselNews
+  padding-top: 3rem
+
+.carousel-item
+  height: 250px
+  text-align: center
+  width: 90%
+  margin: auto
+
+.carousel.carousel-fade .carousel-item
+    opacity: 0
+    transition: opacity ease-out 1.5s
 
 
-.carousel-indicators
-  bottom: -3rem
-  li
-    width: 15px
-    height: 15px
-    margin: auto .25rem
-    border-radius: 2.5rem
+.carousel.carousel-fade .carousel-item.active
+    opacity: 1 !important
+
+// .carousel-indicators
+//   bottom: -3rem
+//   li
+//     width: 15px
+//     height: 15px
+//     margin: auto .25rem
+//     border-radius: 2.5rem
 
 .carousel-control-next, .carousel-control-prev
-  display: none
+
+
+.carousel-control-next
+  right: -30px
+
+.carousel-control-prev
+  left: -30px
+
+.carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right
+  transform: none
+  -webkit-transform: none
+
 
 .result
   padding: 4rem
   height: 500px
   background: $color-secondary
   display: none
+
+#nov-gallery
+  img
+    max-height: -webkit-fill-available
+    width: auto
+    margin: 0 auto
 
 
 
@@ -533,9 +589,13 @@ section
     .form-control
       width: 100%
 
-@media (min-width:768px) /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:768px)  /* IPAD */
+
+
+
+@media (min-width:768px)  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   h1
-    font-size: 2.8rem
+    font-size: 44.8px
   h2
     font-size: 1.6rem
     padding-bottom: 1rem
@@ -547,17 +607,17 @@ section
     font-weight: 700
     padding-bottom: 1rem
   p
-    font-size: 1.4rem
+    font-size: 1rem
     font-weight: 400
   a
-    font-size: 1.4rem
+    font-size: 1rem
 
   header, #mainNav
     padding-left: 2rem
     padding-right: 2rem
 
   header
-    height: 37rem
+    height: 31rem
     padding-top: 4rem
     .header-elements
       position: absolute
@@ -568,7 +628,7 @@ section
       flex-direction: column
       &.mission
         width: 20%
-        top: 55%
+        top: 41%
         transform: translateY(-45%)
     .btn
       text-align: center
@@ -576,29 +636,30 @@ section
       font-weight: 400
 
   .missionhead
-    height: 34rem
+    height: 53vh
     padding-top: 4rem
 
   .cpn-header
-    height: 34.36rem
+    height: 45vh
 
   .downloads-header
-    height: 30rem
+    height: 45vh
 
   .faq-header, .privacy-header
     height: 25rem
+    min-height: auto
 
   .faq-header, .downloads-header, .cpn-header, #nav, .privacy-header
     h1
       font-size: 2.8rem
-      width: 50%
+      width: 65%
       padding-bottom: 1rem
     p
       width: 100%
 
 
   section
-    padding: 3.7rem 2rem
+    padding: 5rem 2rem
 
   #mainNav
     padding-top: 1.5rem
@@ -611,12 +672,12 @@ section
   .li-casing
     padding: 0.8rem 0 0.8rem 3rem
     width: 45%
-    a
-      font-size: 1.35rem
-      font-weight: 300
-    .active
-      font-weight: 400
-      font-size: 1.4rem
+    // a
+    //   font-size: 1.1rem
+    //   font-weight: 300
+    .nav-link
+      font-size: 1.1rem
+
   button:focus
     outline: none
 
@@ -635,7 +696,7 @@ section
   #mobhead
     background-image: url("../img/funky-lines.png")
     p
-      font-size: $font-mobhead-size-tablet
+      font-size: 1rem
   .mobile
     width: 34.38rem
     margin: 0 auto
@@ -651,7 +712,7 @@ section
     .card-body
       min-height: 9.19rem
       padding-top: 1rem
-      padding-bottom: 1rem
+      padding-bottom: .5rem
     .card-title
       margin-bottom: 0
     img
@@ -669,11 +730,10 @@ section
       text-align: center
       input
         height: 40px
+    h2
+      font-size: 2.8rem
     .form-control
       width: 100%
-    .btn
-      background-color: #1F8425
-      margin-right: 0
     .container
       padding-right: 0
       padding-left: 0
@@ -687,14 +747,17 @@ section
     max-width: 100%
     margin: auto
     padding-right: 0
-    p
-      font-size: 1.4rem
+    // p
+    //   font-size: 1.4rem
 
   #nov-info
     height: 100%
+    width: -webkit-fill-available
     .form-info
       padding-left: 2rem
       padding-right: 2rem
+    .container
+      display: flex
 
   #nov-form, #cpn-form
     font-weight: 400
@@ -705,7 +768,6 @@ section
       padding: .375rem .75rem !important
       margin: 1rem 0 1.5rem
     .btn
-      background-color: #1F8425
       padding-top: .6rem
       padding-bottom: .6rem
       margin: 1rem 0
@@ -729,12 +791,16 @@ section
     h2
       color: $color-primary
     .carousel-inner
-      -webkit-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
-      -moz-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
-      box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
+      // -webkit-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
+      // -moz-box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
+      // box-shadow: 6px 0px 11px 0px rgba(181,181,181,1)
       width: 80%
       margin: 0 auto
-      background-color: white
+      // background-color: white
+
+    .carousel-item
+      width: 100%
+      height: max-content
     .card
       width: 80%
       background-color: transparent
@@ -743,6 +809,9 @@ section
       background-color: #AFAFAF
       &.active
         background-color: #5F5F5F
+
+  #carouselNews
+    padding: 10% 0 5%
 
   .map-selector
     // position: absolute
@@ -755,11 +824,15 @@ section
     // -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
     // box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
     button
-      width: 30%
+      width: 200px
       font-weight: 400
       &:nth-of-type(1)
         float: none
         margin-right: 1%
+
+
+  .container
+    height: 100%
 
 
 
@@ -856,14 +929,22 @@ section
       font-size: 1.4rem
       color: #5F5F5F
 
+  .privacy-info
+    padding: 3rem
+    h4
+      padding-top: 1rem
+
+
+
+
 
   .relative
     .header-img
       height: 33.75rem
       right: -2rem
-      bottom: -13px
+      bottom: 13px
       &.mission
-        bottom: 3.688rem
+        bottom: 4.9rem
         max-height: 31.25rem
 
   .card
@@ -916,36 +997,35 @@ section
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23afafaf' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
 
 
-
 @media (min-width:992px) /* tablet, landscape iPad, lo-res laptops ands desktops */
 
   h1
-    font-size: 3.5rem
+    font-size: 3.3rem
   h2
     font-size: 1.6rem
     padding-bottom: 1rem
   h3
     font-size: 1.5rem
-    padding-bottom: 1rem
+    padding-bottom: .5rem
   h4
     font-size: 1.4rem
     font-weight: 700
-    padding-bottom: 1rem
+    padding-bottom: .5rem
   p
-    font-size: 1.4rem
+    font-size: 1rem
     font-weight: 400
   a
-    font-size: 1.4rem
+    font-size: 1rem
 
   header
-    height: 87.3vh
     min-height: 650px
+    height: 89vh
     background-color: $color-primary
     padding-top: 6rem
     color: white
     .intro-text
       display: block
-      width: 100%
+      width: 80%
     .container
       height: 100%
       position: relative
@@ -963,13 +1043,21 @@ section
         -moz-text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5)
         text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5)
       &.mission
-        top: 40%
-        transform: translateY(-50%)
+        // top: 40%
+        // transform: translateY(-50%)
         width: 40%
 
+  .downloads-header .container
+    height: 100%
+
+  section
+    min-height: 900px
+
+  .map-selector
+    min-height: auto
   .missionhead
-    height: 80%
-    padding-top: 4rem
+    height: 89vh
+    padding-top: 9rem
 
   footer
     padding: 3rem 2rem  !important
@@ -1014,8 +1102,6 @@ section
     margin-bottom: 0
     &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5)
       background-color: transparent
-    a
-      font-size: 1rem
 
   .relative.screen-lg
     display: block
@@ -1025,7 +1111,7 @@ section
     color: #5F5F5F
 
     .card-body
-      min-height: 15.06rem
+      min-height: 11.5rem
       display: flex
       align-items: center
       padding-top: 1rem
@@ -1038,7 +1124,8 @@ section
 
   .relative
     .header-img
-      height: 45rem
+      height: 94vh
+      min-height: 780px
       right: 0
       bottom: -6rem
       &.mission
@@ -1067,6 +1154,8 @@ section
         max-height: 50rem
 
   .map-selector
+    position: relative
+    z-index: 1
     background-color: #50AD55
     // padding: 1rem 1.5rem
     // margin-top: 3rem
@@ -1081,9 +1170,9 @@ section
     .relative
       display: contents
 
-  .row.cpn, .row.downl
-    height: 89.8vh
-    min-height: 490px
+  // .row.cpn, .row.downl
+  //   height: 89.8vh
+  //   min-height: 490px
   .cpn-header, .downloads-header
     height: 100%
     padding-bottom: 3rem
@@ -1121,12 +1210,17 @@ section
       h5, .btn
         width: 100%
 
+@media (min-width: 992px) and (min-height: 1200px)
+  header
+
+  .missionhead
+    height: 45vh
 
 @media only screen and (min-width:1025px) /* big landscape tablets, laptops, and desktops */
 @media (min-width:1200px) /* hi-res laptops and desktops */
 
   h1
-    font-size: 3.5rem
+    font-size: 3.3rem
   h2
     font-size: 2rem
     padding-bottom: 1rem
@@ -1138,28 +1232,24 @@ section
     font-weight: 700
     padding-bottom: 1rem
   p
-    font-size: 1.3rem
+    font-size: 1rem
     font-weight: 400
   a
-    font-size: 1.4rem
+    font-size: 1rem
 
   header, .missionhead
     // height: 60.3vh
     // min-height: 700px
 
   header
-    height: 85vh
+    // height: 89vh
     .header-elements
-      &.mission
-        top: 35%
+      // &.mission
+      //   top: 42%
       .title-header
         width: 100%
       .intro-text
-        width: 80%
-    p
-      font-size: 1.4rem
-    h1
-      padding-bottom: 1rem
+        width: 60%
 
   .cpn-header, .downloads-header
     .header-elements
@@ -1183,7 +1273,7 @@ section
     &#faq
       width: 1200px
       margin: auto auto
-    &#news, &#faq, &#privacy
+    &#faq, &#privacy
       height: auto
     .map-selector
       height: auto
@@ -1216,7 +1306,7 @@ section
     .header-img
       position: absolute
       right: 0
-      bottom: -5.4rem
+      bottom: -6.4rem
       z-index: 1
       &.mission
         bottom: 3rem
@@ -1302,130 +1392,54 @@ section
 
 
 
-@media (min-width:1200px) and (min-height:900px) /* hi-res laptops and desktops */
-
-
-  header, .missionhead
-    height: 89.3vh
-    min-height: 800px
-
-  header
-    .header-elements
-      &.mission
-        top: 45%
-
-  section
-    height: 100vh
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-content: center
-    &#faq
-      height: auto
-      width: 1200px
-      margin: auto auto
-
-  footer
-    a
-      font-size: 0.9rem
-      color: #AFAFAF !important
-
-
-  #nov
-    .col-md-6
-      display: flex
-      justify-content: center
-      align-content: center
-      width: 50vw
-    .form-input
-      width: 30vw
-
-
-  .relative
-    position: relative
-    width: 100%
-    .header-img
-      height: 55rem
-      position: absolute
-      right: 0
-      bottom: -7rem
-      z-index: 1
-      &.mission
-        bottom: 3rem
-        max-height: 17.5rem
-
-
-
-  #maps
-    display: block
-    height: auto
-    background-color: #F5F5F5
-    .relative
-      display: block
-      .header-img
-        height: 60rem !important
-  .map-selector
-    // height: auto
-    // padding: 3rem 2.5rem
-    // margin-top: 4rem
-    // margin-right: 20%
-  .maps
-    height: auto
-    width: 1220px
-    margin: 0rem auto
-
-  // #safety
-  //   ul
-  //     width: 49vw
-  //     li
-  //       margin: 1.3rem 0
-  //       font-size: 1.3rem
-  //       padding: 0.5rem 1.5rem .5rem 0
-  //       &:nth-of-type(1)
-  //         width: 90%
-  //       &:nth-of-type(2)
-  //         width: 85%
-  //       &:nth-of-type(3)
-  //         width: 75%
-  //       &:nth-of-type(4)
-  //         width: 72%
-  //       &:nth-of-type(5)
-  //         width: 65%
-  //       &:nth-of-type(6)
-  //         width: 55%
-  //       &:nth-of-type(7)
-  //         width: 45%
-  //       &:nth-of-type(8)
-  //         width: 42%
-  //   p:nth-of-type(2)
-  //     margin-bottom: 1.5rem
-  //   a
-  //     font-size: 1.2rem
-  // .stat-div
-  //   position: absolute
-  //   top: 50%
-  //   transform: translateY(-50%)
-  //   left: 50%
-  // .safety-div
-  //   width: 50%
-
-  #congestion
-    height: 100%
-    .row
-      height: auto
-      max-height: 90%
-      margin-right: 5%
-      margin-left: 5%
-  .congestion-info
-    padding: 5rem
-  .cpn-header, .downloads-header
-    .header-elements
-      padding-left: 20%
-      padding-right: 20%
-      h1
-        width: 60%
-      p
-        width: 80%
+// @media (min-width:1200px) and (min-height:900px) /* hi-res laptops and desktops */
+//
+//
+//   header, .missionhead
+//     height: 89.3vh
+//     min-height: 800px
+//
+//   header
+//     .header-elements
+//       &.mission
+//         top: 45%
+//
+//   section
+//     &#faq
+//       height: auto
+//
+//
+//
+//   .relative
+//     position: relative
+//     width: 100%
+//     .header-img
+//       height: 55rem
+//       position: absolute
+//       bottom: -7rem
+//
+//   .maps
+//     height: auto
+//     width: 1220px
+//     margin: 0rem auto
+//
+//
+//   #congestion
+//     height: 100%
+//     .row
+//       height: auto
+//       margin-right: 5%
+//       margin-left: 5%
+//   .congestion-info
+//     padding: 5rem
+//   .cpn-header, .downloads-header
+//     .header-elements
+//       padding-left: 20%
+//       padding-right: 20%
+//       h1
+//         width: 60%
+//       p
+//         width: 80%
 
 
 @media only screen and( -webkit-min-device-pixel-ratio: 1.25 ),only screen and( -o-min-device-pixel-ratio: 5/4 ),only screen and( min-resolution: 120dpi ),only screen and( min-resolution: 1.25dppx )
