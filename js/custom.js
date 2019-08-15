@@ -1,3 +1,7 @@
+$('.btn-nov').click(function() {
+$("html, body").animate({ scrollTop: $('#nov').offset().top }, 1000);
+});
+
 $('.btn-santos').click(function() {
   $('.map-img').attr('src', 'img/Maps D.Santos-01.png');
 });

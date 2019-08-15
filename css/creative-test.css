@@ -128,7 +128,7 @@ section, .map-selector, .safety-div {
   #mainNav.altNav {
     background-color: #85BE5B; }
   #mainNav li {
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
     color: white; }
   #mainNav button {
@@ -180,8 +180,7 @@ section, .map-selector, .safety-div {
   .li-casing:nth-of-type(5) {
     background-color: #9FD592; }
   .li-casing .active {
-    font-weight: 900;
-    font-size: 0.9rem; }
+    font-weight: 400; }
 
 #mobhead {
   text-align: center;
@@ -238,7 +237,8 @@ section, .map-selector, .safety-div {
 
 #news {
   background-color: #85BE5B;
-  padding: auto 0; }
+  padding: auto 0;
+  color: white; }
 
 #maps {
   padding: 0; }
@@ -562,18 +562,15 @@ section, .map-selector, .safety-div {
 
   header {
     height: 31rem;
-    padding-top: 4rem; }
+    padding-top: 9rem; }
     header .header-elements {
-      position: absolute;
       width: 31.25rem;
       bottom: 0;
       padding-bottom: 5% !important;
       display: flex;
       flex-direction: column; }
       header .header-elements.mission {
-        width: 20%;
-        top: 41%;
-        transform: translateY(-45%); }
+        width: 20%; }
     header .btn {
       text-align: center;
       font-size: 1.1rem;
@@ -581,7 +578,7 @@ section, .map-selector, .safety-div {
 
   .missionhead {
     height: 53vh;
-    padding-top: 4rem; }
+    padding-top: 9rem; }
 
   .cpn-header {
     height: 45vh; }
@@ -591,7 +588,8 @@ section, .map-selector, .safety-div {
 
   .faq-header, .privacy-header {
     height: 25rem;
-    min-height: auto; }
+    min-height: auto;
+    padding-top: 15rem; }
 
   .faq-header h1, .downloads-header h1, .cpn-header h1, #nav h1, .privacy-header h1 {
     font-size: 2.8rem;
@@ -731,12 +729,20 @@ section, .map-selector, .safety-div {
     padding-bottom: 5rem; }
     #news h2 {
       color: #50AD55; }
+    #news h3 {
+      color: #5F5F5F; }
+    #news h4 {
+      color: #5F5F5F; }
+    #news p {
+      color: #5F5F5F; }
     #news .carousel-inner {
       width: 80%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      padding: 6rem 2rem; }
     #news .carousel-item {
       width: 100%;
-      height: max-content; }
+      height: max-content;
+      text-align: left; }
     #news .card {
       width: 80%;
       background-color: transparent; }
@@ -746,7 +752,7 @@ section, .map-selector, .safety-div {
         background-color: #5F5F5F; }
 
   #carouselNews {
-    padding: 10% 0 5%; }
+    padding: 12vh 0; }
 
   .map-selector {
     padding: 1rem 1.5rem;
@@ -943,7 +949,7 @@ section, .map-selector, .safety-div {
     min-height: 650px;
     height: 89vh;
     background-color: #50AD55;
-    padding-top: 6rem;
+    padding-top: 18rem;
     color: white; }
     header .intro-text {
       display: block;
@@ -953,7 +959,6 @@ section, .map-selector, .safety-div {
       position: relative;
       z-index: 2; }
     header .header-elements {
-      position: absolute;
       width: 70% !important;
       bottom: 7%;
       padding-bottom: 15%;
@@ -971,14 +976,16 @@ section, .map-selector, .safety-div {
     height: 100%; }
 
   section, .map-selector, .safety-div {
-    min-height: 900px; }
+    min-height: 850px; }
+    section#cpn-form, #cpn-form.map-selector, #cpn-form.safety-div, section#download, #download.map-selector, #download.safety-div {
+      min-height: 0; }
 
   .map-selector {
     min-height: auto; }
 
   .missionhead {
     height: 89vh;
-    padding-top: 9rem; }
+    padding-top: 18rem; }
 
   footer {
     padding: 3rem 2rem !important; }
@@ -995,6 +1002,8 @@ section, .map-selector, .safety-div {
 
   #mainNav {
     position: relative; }
+    #mainNav li {
+      font-weight: 300; }
     #mainNav.altNav, #mainNav.cpn-nav {
       -webkit-box-shadow: 0px 14px 19px 0px rgba(0, 0, 0, 0.33);
       -moz-box-shadow: 0px 14px 19px 0px rgba(0, 0, 0, 0.33);
@@ -1030,9 +1039,14 @@ section, .map-selector, .safety-div {
   .relative.screen-lg {
     display: block; }
 
+  #mobhead {
+    display: none; }
+
   #features {
     background-color: white;
     color: #5F5F5F; }
+    #features h2 {
+      width: 45%; }
     #features .card-body {
       min-height: 11.5rem;
       display: flex;
@@ -1041,9 +1055,10 @@ section, .map-selector, .safety-div {
       padding-bottom: 1rem; }
     #features .font-w {
       color: #50AD55; }
-
-  #mobhead {
-    display: none; }
+    #features .feature-all {
+      margin: 13vh 0; }
+    #features .feature-element {
+      margin-bottom: 1rem; }
 
   .relative .header-img {
     height: 94vh;
@@ -1123,7 +1138,10 @@ section, .map-selector, .safety-div {
       justify-content: center;
       align-items: center; }
       #download .container h5, #download .container .btn {
-        width: 100%; } }
+        width: 100%; }
+
+  .cpn.row, .downl.row {
+    height: 89vh; } }
 @media (min-width: 992px) and (min-height: 1200px) {
   .missionhead {
     height: 45vh; } }
@@ -1220,7 +1238,7 @@ section, .map-selector, .safety-div {
     #maps .relative {
       display: block; }
       #maps .relative .header-img {
-        height: 60rem !important; }
+        max-height: 60rem; }
 
   .maps {
     height: auto;
