@@ -138,13 +138,10 @@ input
 section
   padding: 3rem 1.5rem
 
-// section, footer
-//   max-width: 1400px
-//   margin: auto
-
 
 #toTop
-  display: none
+  display: none !important
+  z-index: 7
 
 #mainNav
   background-color: $color-primary
@@ -158,9 +155,6 @@ section
     font-weight: 400
     text-transform: uppercase
     color: white
-    // -webkit-text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5)
-    // -moz-text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5)
-    // text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5)
   button
     z-index: 6
 
@@ -529,7 +523,7 @@ section
     position: absolute
     height: 21.9rem
     right: -1.5rem
-    bottom: 0
+    bottom: 13px
     z-index: 1
     &.mission
       bottom: 3rem
@@ -915,6 +909,12 @@ section
     left: 50%
   .safety-div
     width: 50%
+  .safety-img
+    position: absolute
+    right: 0
+  .half-graph
+    width: 600px
+    padding: 0
 
   .safety-info, .congestion-info, .funding-info, .funding-IMG
     padding: 3rem 2rem
@@ -1002,7 +1002,7 @@ section
     .header-img
       height: 36rem
       right: -2rem
-      bottom: 13px
+      bottom: 23px
       &.mission
         bottom: 5rem
         max-height: 36rem
@@ -1143,6 +1143,7 @@ section
     text-align: -webkit-right
 
   #toTop
+    display: block !important
     position: fixed
     bottom: 10px
     right: 10px
@@ -1223,7 +1224,7 @@ section
       height: 94vh
       min-height: 780px
       right: 0
-      bottom: -7rem
+      bottom: -5.3rem
       &.mission
         bottom: 3.69rem
         max-height: 31.25rem
@@ -1472,6 +1473,8 @@ section
   #safety
     height: 750px
     background-image: url(../img/funky-lines.png)
+    a
+      font-size: 1rem
     .safety-div
       width: 40%
       height: auto
@@ -1481,13 +1484,8 @@ section
       background-color: white
       padding: 3rem !important
     .info-element
-      width: 450px
       margin-left: auto
       background: white
-      padding: 4rem 3rem
-      -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5)
-      -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5)
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5)
     .col-md-6:nth-of-type(1)
       -webkit-box-shadow: none
       -moz-box-shadow: none
@@ -1495,30 +1493,49 @@ section
       background: none
     .safety-img
       height: auto
-      position: absolute
-      bottom: 0
+      bottom: 24px
+      right: 0
 
-    a
-      font-size: 1rem
 
   .half-graph
     display: none
   .full-graph
     display: block
-    width: 90%
+    width: 2500px
     margin-right: auto
 
   #congestion
     height: 750px
     .row
-      height: 90%
-      max-height: 90%
+      height: 100%
   .congestion-info
-    padding: 4rem 3rem
+    height: auto
     width: 450px
+    padding: 0
+    background: none
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    margin: auto 0
+    .info-element
+      margin-right: auto
+      background: $color-primary
 
   #funding
     height: 750px
+    img
+      width: 21rem
+
+  .funding-info
+    background: none
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    .info-element
+      background: white
+      margin-left: auto
+  .funding-IMG
+    background: none
 
   .relative
     position: relative
@@ -1526,11 +1543,18 @@ section
     .header-img
       position: absolute
       right: 0
-      bottom: -6.4rem
+      bottom: -5.3rem
       z-index: 1
       &.mission
         bottom: 3rem
         max-height: 17.5rem
+
+  .info-element
+    width: 450px
+    padding: 4rem 3rem
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5)
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5)
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5)
 
 @media (min-width: 1200px) and (max-height: 750px)
   header
@@ -1579,6 +1603,18 @@ section
   .form-info
     max-width: 700px
     padding-right: 20rem
+
+  #safety
+    .safety-img
+      bottom: 23px
+  .full-graph
+    width: 2700px
+
+  .info-element
+    width: 550px
+
+  #safety, #congestion, #funding
+    height: 900px
 
 @media (min-width: 1400px) and (max-height: 750px)
   header, .missionhead

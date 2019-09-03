@@ -120,7 +120,8 @@ section, .safety-div {
   padding: 3rem 1.5rem; }
 
 #toTop {
-  display: none; }
+  display: none !important;
+  z-index: 7; }
 
 #mainNav {
   background-color: #50AD55;
@@ -478,7 +479,7 @@ section, .safety-div {
     position: absolute;
     height: 21.9rem;
     right: -1.5rem;
-    bottom: 0;
+    bottom: 13px;
     z-index: 1; }
     .relative .header-img.mission {
       bottom: 3rem;
@@ -848,6 +849,14 @@ section, .safety-div {
   .safety-div {
     width: 50%; }
 
+  .safety-img {
+    position: absolute;
+    right: 0; }
+
+  .half-graph {
+    width: 600px;
+    padding: 0; }
+
   .safety-info, .congestion-info, .funding-info, .funding-IMG {
     padding: 3rem 2rem; }
 
@@ -929,7 +938,7 @@ section, .safety-div {
   .relative .header-img {
     height: 36rem;
     right: -2rem;
-    bottom: 13px; }
+    bottom: 23px; }
     .relative .header-img.mission {
       bottom: 5rem;
       max-height: 36rem; }
@@ -1065,6 +1074,7 @@ section, .safety-div {
     text-align: -webkit-right; }
 
   #toTop {
+    display: block !important;
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -1147,7 +1157,7 @@ section, .safety-div {
     height: 94vh;
     min-height: 780px;
     right: 0;
-    bottom: -7rem; }
+    bottom: -5.3rem; }
     .relative .header-img.mission {
       bottom: 3.69rem;
       max-height: 31.25rem; }
@@ -1362,6 +1372,8 @@ section, .safety-div {
   #safety {
     height: 750px;
     background-image: url(../img/funky-lines.png); }
+    #safety a {
+      font-size: 1rem; }
     #safety .safety-div {
       width: 40%;
       height: auto;
@@ -1371,13 +1383,8 @@ section, .safety-div {
       background-color: white;
       padding: 3rem !important; }
     #safety .info-element {
-      width: 450px;
       margin-left: auto;
-      background: white;
-      padding: 4rem 3rem;
-      -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); }
+      background: white; }
     #safety .col-md-6:nth-of-type(1) {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
@@ -1385,31 +1392,51 @@ section, .safety-div {
       background: none; }
     #safety .safety-img {
       height: auto;
-      position: absolute;
-      bottom: 0; }
-    #safety a {
-      font-size: 1rem; }
+      bottom: 24px;
+      right: 0; }
 
   .half-graph {
     display: none; }
 
   .full-graph {
     display: block;
-    width: 90%;
+    width: 2500px;
     margin-right: auto; }
 
   #congestion {
     height: 750px; }
     #congestion .row {
-      height: 90%;
-      max-height: 90%; }
+      height: 100%; }
 
   .congestion-info {
-    padding: 4rem 3rem;
-    width: 450px; }
+    height: auto;
+    width: 450px;
+    padding: 0;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin: auto 0; }
+    .congestion-info .info-element {
+      margin-right: auto;
+      background: #50AD55; }
 
   #funding {
     height: 750px; }
+    #funding img {
+      width: 21rem; }
+
+  .funding-info {
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+    .funding-info .info-element {
+      background: white;
+      margin-left: auto; }
+
+  .funding-IMG {
+    background: none; }
 
   .relative {
     position: relative;
@@ -1417,11 +1444,18 @@ section, .safety-div {
     .relative .header-img {
       position: absolute;
       right: 0;
-      bottom: -6.4rem;
+      bottom: -5.3rem;
       z-index: 1; }
       .relative .header-img.mission {
         bottom: 3rem;
-        max-height: 17.5rem; } }
+        max-height: 17.5rem; }
+
+  .info-element {
+    width: 450px;
+    padding: 4rem 3rem;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); } }
 @media (min-width: 1200px) and (max-height: 750px) {
   header {
     padding-top: 11rem; } }
@@ -1459,7 +1493,19 @@ section, .safety-div {
 
   .form-info {
     max-width: 700px;
-    padding-right: 20rem; } }
+    padding-right: 20rem; }
+
+  #safety .safety-img {
+    bottom: 23px; }
+
+  .full-graph {
+    width: 2700px; }
+
+  .info-element {
+    width: 550px; }
+
+  #safety, #congestion, #funding {
+    height: 900px; } }
 @media (min-width: 1400px) and (max-height: 750px) {
   header, .missionhead {
     padding-top: 11rem; } }
