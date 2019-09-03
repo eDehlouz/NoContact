@@ -120,8 +120,21 @@ section, .safety-div {
   padding: 3rem 1.5rem; }
 
 #toTop {
-  display: none !important;
-  z-index: 7; }
+  opacity: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: none;
+  margin: 0;
+  z-index: -1; }
+  #toTop.btn-info {
+    width: auto !important;
+    background-color: #AFAFAF;
+    border-color: #AFAFAF; }
+    #toTop.btn-info:hover {
+      background-color: #9FD592;
+      border-color: #9FD592; }
 
 #mainNav {
   background-color: #50AD55;
@@ -217,7 +230,7 @@ section, .safety-div {
   padding: 0; }
 
 .form-info {
-  padding: 3rem 1.5rem; }
+  padding: 5rem 1.5rem 3rem; }
 
 #nov-info, #cpn-info {
   background-color: #1F8425; }
@@ -230,7 +243,7 @@ section, .safety-div {
   padding-left: 0; }
 
 #nov-form .container {
-  padding: 3rem 1.5rem; }
+  padding: 3rem 1.5rem 5rem; }
 
 #nov-form, #cpn-form {
   color: #50AD55;
@@ -289,7 +302,7 @@ section, .safety-div {
 
 #carouselNews {
   margin-top: 2rem;
-  height: 240px; }
+  height: auto; }
 
 #maps {
   padding: 0; }
@@ -544,16 +557,23 @@ section, .safety-div {
 
 @media (max-width: 350px) {
   header {
-    height: 23.5rem; }
+    height: 20.5rem; }
     header .header-elements {
       width: 15.625rem; }
 
   #features img {
     position: relative;
     right: 10px; }
+  #features h3 {
+    font-size: 1.05rem; }
+  #features .card {
+    height: 10.2rem; }
 
   #funding .funding-IMG {
-    right: 2.2rem; } }
+    right: 2.2rem; }
+
+  .form-control {
+    width: 100% !important; } }
 @media (max-width: 481px) {
   .features-icon img {
     width: 4rem !important; } }
@@ -788,7 +808,8 @@ section, .safety-div {
     #news h3 {
       color: #5F5F5F;
       margin: 0;
-      padding: 0.5rem 0; }
+      padding: 0.5rem 0;
+      width: 100%; }
     #news h4 {
       color: #5F5F5F;
       font-size: 1.2rem; }
@@ -1074,20 +1095,8 @@ section, .safety-div {
     text-align: -webkit-right; }
 
   #toTop {
-    display: block !important;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    cursor: pointer;
-    display: none;
-    margin: 0; }
-    #toTop.btn-info {
-      width: auto !important;
-      background-color: #AFAFAF;
-      border-color: #AFAFAF; }
-      #toTop.btn-info:hover {
-        background-color: #9FD592;
-        border-color: #9FD592; }
+    opacity: initial;
+    z-index: 5; }
 
   .toTop-icon {
     width: 34px;
