@@ -1,33 +1,39 @@
+$(document).ready(function(){
+      $('body').append('<div id="toTop" class="btn btn-info btn-toTop"><img src="img/arrow-up.png" class="toTop-icon"></div>');
+    	$(window).scroll(function () {
+			if ($(this).scrollTop() != 0) {
+				$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+			}
+		});
+    $('#toTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+});
+
+
 $('.btn-nov').click(function() {
 $("html, body").animate({ scrollTop: $('#nov').offset().top }, 1000);
 });
 
 $('.btn-santos').click(function() {
-  $('.map-img').attr('src', 'img/Maps D.Santos-01.png');
-});
+  $('.btn-nia').removeClass("active");
+  $('.btn-santos').addClass("active");
+  $('#carouselSantos').css('display', 'block');
+  $('#carouselNIA').css('display', 'none');
 
-$('.btn-santos1').click(function() {
-  $('.map-img').attr('src', 'img/Maps D.Santos-02.png');
 });
-$('.btn-santos2').click(function() {
-  $('.map-img').attr('src', 'img/Maps D.Santos-03.png');
-});
-$('.btn-santos3').click(function(){
-    $('.map-img').attr('src', 'img/Maps D.Santos-04.png');
-    });
-    $('.btn-santos4').click(function(){
-        $('.map-img').attr('src', 'img/Maps D.Santos-05.png');
-        });
 
 $('.btn-nia').click(function() {
-  $('.map-img').attr('src', 'img/Maps NIA-06.png');
+  $('.btn-santos').removeClass("active");
+  $('.btn-nia').addClass("active");
+  $('#carouselSantos').css('display', 'none');
+  $('#carouselNIA').css('display', 'block');
+
 });
-$('.btn-nia1').click(function() {
-  $('.map-img').attr('src', 'img/Maps NIA-07.png');
-});
-$('.btn-nia2').click(function() {
-  $('.map-img').attr('src', 'img/Maps NIA-08.png');
-});
+
 
 
 /* To be added for the result*/

@@ -29,6 +29,9 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+
 
   <!-- Custom fonts for this template -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -212,7 +215,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 feature-element">
           <div class="card">
             <div class="card-body">
               <div class="row">
@@ -232,7 +235,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 feature-element">
           <div class="card">
             <div class="card-body">
               <div class="row">
@@ -257,24 +260,25 @@
   </section>
 
   <div class="result" id="result">
-        <div class="panel panel-default">
-          <div class="panel-body">
+        <div class="panel panel-default container">
+          <img src="img/resultPH.png" alt="">
+          <!-- <div class="panel-body">
             <div id="nov-gallery" style="display:none;">
               <img alt="Preview Image 1" src="../www.mearto.com/assets/no-image-83a2b680abc7af87cfff7777d0756fadb9f9aecd5ebda5d34f8139668e0fc842.png" alt="img30">
               <img alt="Html5 Video" src="libraries/unitegallery-master/source/unitegallery/images/play-button-round.png" data-type="html5video" src="libraries/unitegallery-master/source/unitegallery/images/play-button-round.png" data-videomp4="https://www.youtube.com/watch?v=WKHF2n5ZOF8"
                 data-description="">
             </div>
-          </div>
+          </div> -->
         </div>
 
   </div>
 
   <section id="nov">
-    <div class="row">
+
     <div class="container">
       <div class="row">
-        <div class="col-md-6 nov-info">
-          <section id="nov-info">
+        <div class="col-lg-6 nov-info">
+          <div id="nov-info">
 
 
             <div class="container font-w">
@@ -289,10 +293,10 @@
 
             </div>
 
-          </section>
+          </div>
         </div>
-        <div class="col-md-6">
-          <section id="nov-form">
+        <div class="col-lg-6 padding-fix">
+          <div id="nov-form">
             <div class="container">
               <div class="form-input">
                 <div class="panel panel-default">
@@ -328,10 +332,10 @@
         </div>
 
 
-  </section>
   </div>
   </div>
   </div>
+
   </section>
 
 
@@ -345,6 +349,7 @@
       <div id="carouselNews" class="carousel slide carousel-fade" data-interval="10000" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
+
       <h3><b>Parañaque starts contactless traffic apprehension scheme</b></h3>
       <h4><i>The BusinessMirror</i></h4>
       <p>Parañaque City has started implementing its own contactless traffic-apprehension system similar to those in first-world countries, such as Singapore, Hong Kong, Australia and the United States. </p>
@@ -371,72 +376,10 @@
   </a>
 </div>
 
-      <!-- <div id="carouselControls" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval=15000>
-        <ol class="carousel-indicators">
-          <li data-target="#carouselControls" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselControls" data-slide-to="1"></li>
-          <li data-target="#carouselControls" data-slide-to="2"></li>
-        </ol>
-
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-
-            <div class="card press">
-
-              <div class="card-body">
-                <div class="card-padding">
-                  <h3><b>The BusinessMirror</b></h3>
-                  <h4>Parañaque starts contactless traffic apprehension scheme</h4>
-                  <p>Parañaque City has started implementing its own contactless traffic-apprehension system similar to those in first-world countries, such as Singapore, Hong Kong, Australia and the United States. </p>
-
-                  <button type="button" class="btn btn-success" onclick="window.open('https://businessmirror.com.ph/2018/02/14/paranaque-starts-contactless-traffic-apprehension-scheme','_blank')" name="button">Read More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="card press">
-              <div class="card-body">
-
-                <h3><b>ABS CBN NEWS</b></h3>
-                <h4>No-contact apprehension, sinimulan sa Parañaque</h4>
-                <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CZdebzGRv-g" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <button type="button" class="btn btn-success" onclick="window.open('https://news.abs-cbn.com/video/news/02/14/18/no-contact-apprehension-sinimulan-sa-paraaque','_blank')" name="button">Read More</button>
-
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="card press">
-              <div class="card-body">
-                <h3><b>Carmidi INSIDER</b></h3>
-                <h4>Parañaque’s No Contact Apprehension Cuts Traffic Violation Cases by 20%</h4>
-                <p>The ‘no contact apprehension’ policy in Parañaque City has cut the traffic violation cases by around 20 percent, the chief of the city traffic management office said.
-                </p>
-
-                <button type="button" class="btn btn-success" onclick="window.open('https://www.carmudi.com.ph/journal/paranaques-no-contact-apprehension-cuts-traffic-violation-cases-20/','_blank')" name="button">Read More</button>
-
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-
-
-
-      </div> -->
     </div>
 
   </section>
+
 
 
   <footer id="footer">

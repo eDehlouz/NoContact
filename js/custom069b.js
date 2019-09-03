@@ -1,4 +1,4 @@
-var loader = '<div class="margin-tb-3-6"><div class="cssload-container"><div class="cssload-whirlpool"></div></div>/div>';
+var loader = '<div class="margin-tb-3-6"><div class="cssload-container"><div class="cssload-whirlpool"></div></div></div>';
 var CaptchaCallback = function() {
     var widgetId1;
     var widgetId2;
