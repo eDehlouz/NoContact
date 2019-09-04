@@ -1,22 +1,19 @@
-$(document).ready(function(){
-      $('body').append('<div id="toTop" class="btn btn-info btn-toTop"><img src="img/arrow-up.png" class="toTop-icon"></div>');
-    	$(window).scroll(function () {
-			if ($(this).scrollTop() != 0) {
-				$('#toTop').fadeIn();
-			} else {
-				$('#toTop').fadeOut();
-			}
-		});
-    $('#toTop').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
-        return false;
-    });
+$(".navbar-toggler-icon").click(function(e) {
+  $('html, body').css({
+    overflow: 'hidden',
+    height: '100%'
+  });
 });
 
 
 $('.btn-nov').click(function() {
-$("html, body").animate({ scrollTop: $('#nov').offset().top }, 1000);
+  $("html, body").animate({
+    scrollTop: $('#nov').offset().top
+  }, 1000);
 });
+
+
+
 
 $('.btn-santos').click(function() {
   $('.btn-nia').removeClass("active");
@@ -34,9 +31,24 @@ $('.btn-nia').click(function() {
 
 });
 
+$(document).ready(function() {
+  $('body').append('<div id="toTop" class="btn btn-info btn-toTop"><img src="img/arrow-up.png" class="toTop-icon"></div>');
+  $(window).scroll(function() {
+    if ($(this).scrollTop() != 0) {
+      $('#toTop').fadeIn();
+    } else {
+      $('#toTop').fadeOut();
+    }
+  });
+  $('#toTop').click(function() {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 600);
+    return false;
+  });
+});
 
-
-/* To be added for the result*/
+/* To be added for the result if captcha is vaidated*/
 $('.btn-submit').click(function() {
   var resultDiv = $('.result').css('display');
   if (resultDiv == "none") {

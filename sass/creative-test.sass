@@ -75,20 +75,13 @@ header
     height: 100%
     position: relative
     z-index: 2
-  .header-elements,
-    // position: absolute
+  .header-elements
     width: 18.75rem
-    // bottom: 0
-    // padding-bottom: 7%
     &.mission
-      // position: relative
-      // top: 42%
-      // transform: translateY(-50%)
       width: 40%
 
 .missionhead
   height: 17.6rem
-  // padding-top: 5rem
 
 .faq-header, .privacy-header
   height: 12.9rem
@@ -106,15 +99,12 @@ header
   padding-bottom: 2rem
   height: auto
   h1
-    // font-size: 1.2rem
     -webkit-text-shadow: none
     -moz-text-shadow: none
     text-shadow: none
     width: 70%
   p
     width: 95%
-  // .header-elements
-  //   padding-bottom: 10%
 
 footer
   padding: 1.5rem  !important
@@ -191,13 +181,8 @@ section
   background-color: rgba(0, 0, 0, 0.50)
   right: 0
   top: 0
-
   z-index: 5
-  &.collapsing
-    // background: rgba(0, 0, 0, 0.50)
-    // -webkit-transition: none
-    // transition: none
-    // display: none
+
 .menu
   padding-top: 4.2rem
   height: 100vh
@@ -239,14 +224,12 @@ section
     height: 10rem
     justify-content: center
   .card-body
-    // min-height: 11rem
     display: grid
-    // align-items: center
   .row
     width: -webkit-fill-available
   .card-items
     height: -webkit-fill-available
-    padding-top: 1rem
+    padding: 1rem 0
   .features-icon
     height: 100%
     display: flex
@@ -255,9 +238,6 @@ section
       width: 5rem
       padding-right: .5rem
       margin: auto 0 auto auto
-
-#nov, #cpn
-  padding: 0
 
 
 
@@ -269,6 +249,8 @@ section
     font-size: 1.6rem
     width: 60%
 
+#nov, #cpn
+  padding: 0
 
 .nov-info
   padding-right: 0
@@ -301,9 +283,44 @@ section
       color: $color-primary
       border-color: $color-primary
 
+.result
+  padding: 4rem 2rem
+  height: auto
+  max-height: 100%
+  background: #5F5F5F
+  display: none
+  color: white
+.reminder-div
+  padding-top: 1rem
+  text-align: left
+.btn-result
+  &:hover
+    color: #5F5F5F
+.panel-title
+  h2
+    text-align: left
+    padding-bottom: 1rem
+    color: #F57F21
 
-// .form-info
-//   padding-right: 20%
+#plate-gallery
+  p
+    width: 70%
+.cpn-result
+  font-size: 1.5rem
+  font-weight: 700
+  color: $color-primary
+  width: 70%
+
+
+.btn-close
+  position: absolute
+  right: 15px
+  top: 5px
+  z-index: 4
+  &:hover
+    cursor: pointer
+
+
 
 
 #news
@@ -375,14 +392,10 @@ section
   &:focus
     box-shadow: none !important
 
-
-
 #carouselSantos
   display: block
 #carouselNIA
   display: none
-
-
 
 #safety
   padding: 3rem 1.5rem
@@ -398,7 +411,6 @@ section
 .full-graph
   width: 100%
   display: none
-
 
 .stat
   background-color: #EDEDED
@@ -586,12 +598,6 @@ section
     .card-body
       padding: 1.5rem
 
-
-.result
-  padding: 4rem 0
-  height: auto
-  background: $color-secondary
-  display: none
 
 #nov-gallery
   img
@@ -1115,6 +1121,11 @@ section
       width: 30px
       height: 15px
 
+@media (min-width: 768px) and (max-height: 750px)
+
+  #result
+    max-height: fit-content
+
 @media (min-width:992px) /* tablet, landscape iPad, lo-res laptops ands desktops */
 
   h1
@@ -1420,6 +1431,7 @@ section
   header
     padding-top: 11rem
 
+
 @media (min-width: 992px) and (min-height: 1200px)
   header, .missionhead
     height: auto
@@ -1443,7 +1455,7 @@ section
     padding-bottom: 1rem
   h3
     font-size: 1.5rem
-    padding-bottom: 1rem
+    padding-bottom: .5rem
   h4
     font-size: 1.4rem
     font-weight: 700
@@ -1524,6 +1536,21 @@ section
 
   .form-info
     max-width: 570px
+
+  #result
+    p
+      margin-bottom: 1rem
+    .order-3
+      order: 2
+    .order-2
+      order: 3
+  .panel-title
+    h2
+      padding-bottom: 2rem
+  .reminder-div
+    padding-top: 0
+    padding-right: 2rem
+
 
 
   #maps
