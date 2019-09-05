@@ -100,21 +100,36 @@ header {
     width: 95%; }
 
 footer {
-  padding: 1.5rem !important;
   background-color: #5F5F5F;
   color: #AFAFAF !important; }
-  footer h4 {
-    padding-left: 2px; }
+  footer .footer {
+    padding: 1.5rem; }
   footer a {
     font-size: 0.7rem;
     color: #AFAFAF !important; }
   footer img {
     display: none;
     align-items: center; }
+  footer h4 {
+    padding-bottom: 0.5rem; }
   footer .col-12 {
     padding-bottom: 1rem; }
   footer .row {
     text-align: left; }
+
+.footer-elements {
+  padding-bottom: 15px; }
+
+.copyright {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  text-align: center;
+  font-size: 0.7rem;
+  z-index: 9; }
+
+button:focus {
+  outline: none; }
 
 input {
   margin-top: 0.5rem;
@@ -221,19 +236,15 @@ section, .safety-div {
   #features .row {
     width: -webkit-fill-available; }
   #features .card-items {
-    height: -webkit-fill-available;
     padding: 1rem 0; }
   #features .features-icon {
     height: 100%;
     display: flex;
     align-items: center; }
     #features .features-icon img {
-      width: 5rem;
+      width: 4rem;
       padding-right: 0.5rem;
       margin: auto 0 auto auto; }
-
-.form-info {
-  padding: 5rem 1.5rem 3rem; }
 
 #nov-info, #cpn-info {
   background-color: #1F8425; }
@@ -244,12 +255,15 @@ section, .safety-div {
 #nov, #cpn {
   padding: 0; }
 
+.form-info {
+  padding: 3rem 1.5rem; }
+
 .nov-info {
   padding-right: 0;
   padding-left: 0; }
 
-#nov-form .container {
-  padding: 3rem 1.5rem 5rem; }
+#nov-form .form-input {
+  padding: 3rem 1.5rem; }
 
 #nov-form, #cpn-form {
   color: #50AD55;
@@ -274,9 +288,8 @@ section, .safety-div {
       border-color: #50AD55; }
 
 .result {
-  padding: 4rem 2rem;
+  padding: 3rem 0;
   height: auto;
-  max-height: 100%;
   background: #5F5F5F;
   display: none;
   color: white; }
@@ -300,13 +313,14 @@ section, .safety-div {
   font-size: 1.5rem;
   font-weight: 700;
   color: #50AD55;
-  width: 70%; }
+  width: 90%; }
 
 .btn-close {
   position: absolute;
   right: 15px;
-  top: 5px;
-  z-index: 4; }
+  top: 0;
+  z-index: 4;
+  width: 20px; }
   .btn-close:hover {
     cursor: pointer; }
 
@@ -315,11 +329,14 @@ section, .safety-div {
   padding: auto 0;
   color: white; }
   #news .carousel-inner {
-    width: 80%;
-    margin: auto; }
+    width: 100%;
+    margin: auto;
+    height: 280px; }
   #news .carousel-item {
     height: auto;
-    text-align: left; }
+    text-align: left;
+    padding: 1rem;
+    color: white; }
   #news h3 {
     width: 80%; }
   #news .btn {
@@ -346,8 +363,13 @@ section, .safety-div {
     -webkit-transform: none; }
 
 #carouselNews {
-  margin-top: 2rem;
   height: auto; }
+
+.news-img {
+  display: none; }
+  .news-img img {
+    height: 300px;
+    width: 300px; }
 
 #maps {
   padding: 0; }
@@ -425,10 +447,8 @@ section, .safety-div {
   padding: 3rem 1.5rem;
   height: 50%; }
 
-#funding {
-  background-image: url(../img/funky-lines.png); }
-  #funding img {
-    width: 12rem; }
+#funding img {
+  width: 12rem; }
 
 .funding-info {
   float: left;
@@ -611,15 +631,17 @@ section, .safety-div {
   margin-left: 0;
   margin-right: 0; }
 
-@media (max-width: 350px) {
+@media (max-width: 361px) {
   header {
     height: 20.5rem; }
     header .header-elements {
       width: 15.625rem; }
 
-  #features img {
+  #features .features-icon img {
     position: relative;
-    right: 10px; }
+    right: 10px;
+    padding-right: 0;
+    width: 3.5rem; }
   #features h3 {
     font-size: 1.05rem; }
   #features .card {
@@ -627,8 +649,10 @@ section, .safety-div {
 
   #news h3 {
     width: 100%; }
+  #news .carousel-inner {
+    height: 311px; }
   #news .carousel-item {
-    height: 342px; }
+    height: 282px; }
   #news button {
     margin-top: auto; }
 
@@ -637,15 +661,32 @@ section, .safety-div {
 
   .form-control {
     width: 100% !important; } }
-@media (max-width: 481px) {
-  .features-icon img {
-    width: 4rem !important; } }
+@media (min-width: 481px) {
+  #news .carousel-item {
+    padding: 2rem; }
+
+  .li-casing {
+    width: 230px; }
+
+  #congestion {
+    height: 660px; }
+
+  #download h5, #download a {
+    width: 70%; }
+  #download a {
+    padding: 0.6rem;
+    margin-bottom: 1rem; }
+  #download h5 {
+    font-size: 1rem; } }
 @media (min-width: 576px) {
   h1 {
     font-size: 1.8rem; }
 
   h5 {
     font-size: 1.1rem; }
+
+  p {
+    font-size: 1rem; }
 
   footer .order-3 {
     order: 2; }
@@ -655,10 +696,7 @@ section, .safety-div {
 
   .form-info, .form-input {
     max-width: 504px;
-    margin: 0 auto;
-    padding-right: 30%; }
-    .form-info p, .form-input p {
-      font-size: 1rem; }
+    margin: 0 auto; }
 
   .form-control {
     width: 24rem;
@@ -715,7 +753,6 @@ section, .safety-div {
     padding-top: 9rem; }
 
   .cpn-header, .downloads-header {
-    height: auto;
     padding-top: 7rem;
     padding-bottom: 1rem; }
 
@@ -756,19 +793,18 @@ section, .safety-div {
     .li-casing .nav-link {
       font-size: 1.1rem; }
 
-  button:focus {
-    outline: none; }
+  .menu {
+    padding-top: 0; }
 
-  footer {
-    padding: 3rem 0 !important; }
-    footer h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      padding-bottom: 0; }
-    footer a {
-      font-size: 0.9rem; }
-    footer img {
-      width: 100%; }
+  footer .footer {
+    padding: 3rem 0; }
+  footer h4 {
+    font-size: 1.1rem;
+    font-weight: 600; }
+  footer a {
+    font-size: 0.9rem; }
+  footer img {
+    width: 100%; }
 
   #mobhead {
     background-image: url("../img/funky-lines.png"); }
@@ -824,9 +860,7 @@ section, .safety-div {
   .form-info, .form-input {
     max-width: 100%;
     margin: auto;
-    max-width: 720px;
-    padding-right: 30%;
-    padding-left: 0.9rem; }
+    max-width: 720px; }
 
   .nov-info {
     padding: 0;
@@ -847,12 +881,13 @@ section, .safety-div {
       background-color: #EDEDED;
       padding: 0.375rem 0.75rem !important; }
     #nov-form .btn, #cpn-form .btn {
-      padding-top: 0.6rem;
-      padding-bottom: 0.6rem;
       margin: 1rem 0; }
     #nov-form span, #cpn-form span {
       font-size: 1.2rem;
       font-weight: 400; }
+
+  .result {
+    padding: 4rem 2rem; }
 
   .reCAPTCHA {
     margin: 1rem 0; }
@@ -871,8 +906,7 @@ section, .safety-div {
     #news h3 {
       color: #5F5F5F;
       margin: 0;
-      padding: 0.5rem 0;
-      width: 100%; }
+      padding: 0.5rem 0; }
     #news h4 {
       color: #5F5F5F;
       font-size: 1.2rem; }
@@ -887,9 +921,9 @@ section, .safety-div {
       border-radius: 2px; }
     #news .carousel-item {
       width: 100%;
-      height: 331px;
       text-align: left;
-      padding: 1.5rem; }
+      padding: 1.5rem;
+      height: 333px; }
     #news .card {
       width: 80%;
       background-color: transparent; }
@@ -907,6 +941,9 @@ section, .safety-div {
       bottom: -3.5rem; }
     #news .carousel-control-next, #news .carousel-control-prev {
       display: flex; }
+
+  .btn-close {
+    width: 25px; }
 
   .container {
     height: 100%; }
@@ -956,7 +993,6 @@ section, .safety-div {
     padding: 3rem 2rem; }
 
   #congestion {
-    padding: 0;
     height: auto;
     max-height: auto !important; }
     #congestion .row {
@@ -1005,9 +1041,7 @@ section, .safety-div {
       margin-bottom: 1.2rem;
       margin-top: 0.8rem;
       font-size: 1.3rem;
-      font-weight: 400;
       width: 65%;
-      color: #5F5F5F;
       padding-top: 1rem; }
 
   #faq .card {
@@ -1087,8 +1121,7 @@ section, .safety-div {
     font-size: 3.3rem; }
 
   h2 {
-    font-size: 1.6rem;
-    padding-bottom: 1rem; }
+    font-size: 1.6rem; }
 
   h3 {
     font-size: 1.5rem;
@@ -1099,25 +1132,18 @@ section, .safety-div {
     font-weight: 700;
     padding-bottom: 0.5rem; }
 
-  p {
-    font-size: 1rem;
-    font-weight: 400; }
-
   a {
     font-size: 1rem; }
 
   header {
     min-height: 650px;
-    height: 89.5vh;
-    background-color: #50AD55;
-    padding-top: 17rem;
+    height: 90vh;
+    padding-top: 18rem;
     color: white; }
     header .intro-text {
       display: block;
       width: 80%; }
     header .container {
-      height: 100%;
-      position: relative;
       z-index: 6; }
     header .header-elements {
       width: 70%;
@@ -1130,7 +1156,7 @@ section, .safety-div {
         width: 40%; }
 
   .missionhead {
-    height: 89vh;
+    height: 90vh;
     max-height: fit-content;
     padding-top: 18rem; }
 
@@ -1138,7 +1164,7 @@ section, .safety-div {
     height: 100%; }
 
   .cpn-header, .downloads-header {
-    height: 89.9vh;
+    height: 90vh;
     padding-bottom: 3rem;
     padding-top: 4rem;
     padding-right: 0; }
@@ -1158,15 +1184,15 @@ section, .safety-div {
   section#cpn-form, #cpn-form.safety-div, section#download, #download.safety-div {
     min-height: 0; }
 
-  footer {
-    padding: 3rem 2rem !important; }
-    footer a {
-      font-size: 0.9rem; }
-    footer img {
-      width: auto;
-      display: block; }
-    footer .row {
-      text-align: left; }
+  footer .footer {
+    padding: 3rem 2rem; }
+  footer a {
+    font-size: 0.9rem; }
+  footer img {
+    width: auto;
+    display: block; }
+  footer .row {
+    text-align: left; }
 
   .footer-logo {
     text-align: -webkit-right; }
@@ -1235,9 +1261,7 @@ section, .safety-div {
     #features .card-body {
       min-height: 11.5rem;
       display: flex;
-      align-items: center;
-      padding-top: 1rem;
-      padding-bottom: 1rem; }
+      align-items: center; }
     #features .font-w {
       color: #50AD55; }
     #features .feature-all {
@@ -1283,8 +1307,7 @@ section, .safety-div {
 
   #news .carousel-inner {
     width: 90%;
-    min-height: 287px;
-    margin: 1rem auto; }
+    height: auto; }
   #news .carousel-control-next {
     right: -20px;
     width: 70px; }
@@ -1292,10 +1315,15 @@ section, .safety-div {
     left: -20px;
     width: 70px; }
   #news .carousel-item {
-    padding: 2rem; }
-
-  #carouselNews {
+    padding: 2rem;
     height: auto; }
+  #news h3 {
+    padding: 0 0 0.5rem; }
+  #news .col {
+    align-self: center; }
+
+  .news-img {
+    display: block; }
 
   #maps {
     min-height: auto; }
@@ -1364,9 +1392,12 @@ section, .safety-div {
     width: 24rem; }
 
   .cpn.row, .downl.row {
-    height: 88.9vh; } }
+    height: 88.9vh; }
+
+  .btn-close {
+    right: 15px; } }
 @media (min-width: 992px) and (max-height: 750px) {
-  header {
+  header, .missionhead {
     padding-top: 11rem; } }
 @media (min-width: 992px) and (min-height: 1200px) {
   header, .missionhead {
@@ -1383,12 +1414,8 @@ section, .safety-div {
   #nov {
     height: 750px; } }
 @media (min-width: 1200px) {
-  h1 {
-    font-size: 3.3rem; }
-
   h2 {
-    font-size: 2rem;
-    padding-bottom: 1rem; }
+    font-size: 2rem; }
 
   h3 {
     font-size: 1.5rem;
@@ -1399,10 +1426,6 @@ section, .safety-div {
     font-weight: 700;
     padding-bottom: 1rem; }
 
-  p {
-    font-size: 1rem;
-    font-weight: 400; }
-
   a {
     font-size: 1rem; }
 
@@ -1411,12 +1434,10 @@ section, .safety-div {
     .navbar-brand .logo {
       width: 80%; }
 
-  header, .missionhead {
-    padding-top: 17rem; }
-    header .header-elements .title-header, .missionhead .header-elements .title-header {
-      width: 100%; }
-    header .header-elements .intro-text, .missionhead .header-elements .intro-text {
-      width: 60%; }
+  header .header-elements .title-header, .missionhead .header-elements .title-header {
+    width: 100%; }
+  header .header-elements .intro-text, .missionhead .header-elements .intro-text {
+    width: 60%; }
 
   .cpn-header .header-elements h1, .downloads-header .header-elements h1 {
     width: 70%; }
@@ -1581,10 +1602,10 @@ section, .safety-div {
     padding: 4rem 3rem;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); } }
-@media (min-width: 1200px) and (max-height: 750px) {
-  header {
-    padding-top: 11rem; } }
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); }
+
+  .btn-close {
+    width: 30px; } }
 @media (min-width: 1400px) {
   .form-info {
     max-width: 570px;
@@ -1592,18 +1613,16 @@ section, .safety-div {
 
   .cpn-header .header-elements h1, .downloads-header .header-elements h1 {
     width: 50%; } }
-@media (min-width: 1400px) and (max-height: 750px) {
-  header, .missionhead {
-    padding-top: 11rem; } }
 @media (min-width: 1600px) {
   h1 {
     font-size: 4rem; }
 
-  p {
+  p, a {
     font-size: 1.2rem; }
 
   header, .missionhead {
-    padding-top: 17rem; }
+    padding-top: 17rem;
+    height: 89.5vh; }
 
   .cpn-header, .downloads-header {
     height: 88.6vh; }

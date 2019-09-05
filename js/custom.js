@@ -1,8 +1,18 @@
+var count = 0;
 $(".navbar-toggler-icon").click(function(e) {
-  $('html, body').css({
-    overflow: 'hidden',
-    height: '100%'
-  });
+  if (count == 0) {
+    $('html, body').css({
+      overflow: 'hidden',
+      height: '100%',
+    });
+    count++;
+  } else {
+    $('html, body').css({
+      overflow: 'visible',
+      height: 'auto'
+    });
+    count = 0;
+  }
 });
 
 
@@ -11,8 +21,6 @@ $('.btn-nov').click(function() {
     scrollTop: $('#nov').offset().top
   }, 1000);
 });
-
-
 
 
 $('.btn-santos').click(function() {
@@ -50,11 +58,13 @@ $(document).ready(function() {
 
 /* To be added for the result if captcha is vaidated*/
 $('.btn-submit').click(function() {
-  var resultDiv = $('.result').css('display');
-  if (resultDiv == "none") {
-    $('.result').toggle('slow');
-    $('#nov-gallery').toggle('fast');
-    window.location.href = '#result';
-    resultDiv = $('.result').css('display');
+  if ($.trim($('.form-control').val()) != '') {
+    var resultDiv = $('.result').css('display');
+    if (resultDiv == "none") {
+      $('.result').toggle('slow');
+      $('#nov-gallery').toggle('fast');
+      window.location.href = '#result';
+      resultDiv = $('.result').css('display');
+    }
   }
 });
