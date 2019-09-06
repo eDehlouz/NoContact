@@ -294,6 +294,20 @@ section, .safety-div {
   display: none;
   color: white; }
 
+.result-msg {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 90%; }
+
+.no-violation {
+  color: #50AD55; }
+
+.violation {
+  color: #F57F21; }
+
+.no-record {
+  color: #AFAFAF; }
+
 .reminder-div {
   padding-top: 1rem;
   text-align: left; }
@@ -308,12 +322,6 @@ section, .safety-div {
 
 #plate-gallery p {
   width: 70%; }
-
-.cpn-result {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #50AD55;
-  width: 90%; }
 
 .btn-close {
   position: absolute;
@@ -598,9 +606,10 @@ section, .safety-div {
       padding: 1.5rem; }
 
 #nov-gallery img {
-  max-height: -webkit-fill-available;
-  width: auto;
-  margin: 0 auto; }
+  width: 100%;
+  margin: 0 auto;
+  margin-left: 4rem;
+  float: right; }
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
   width: 30px;

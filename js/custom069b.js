@@ -37,15 +37,18 @@ $(document).ready(function(){
 		}
 		else{
 			submit($(this));
-      // $('.btn-submit').click(function(){
-      //   var resultDiv = $('.result').css('display');
-      //   if (resultDiv == "none"){
-      //     $('.result').toggle('slow');
-      //     window.location.href = '#result';
-      //     resultDiv = $('.result').css('display');
+      //-------ADD THIS PART WHEN RECONNECTING THE reCAPTCHA----//
+      // $('.btn-submit').click(function() {
+      //   if ($.trim($('.form-control').val()) != '') {
+      //     var resultDiv = $('.result').css('display');
+      //     if (resultDiv == "none") {
+      //       $('.result').toggle('slow');
+      //       $('#nov-gallery').toggle('fast');
+      //       window.location.href = '#result';
+      //       resultDiv = $('.result').css('display');
+      //     }
       //   }
       // });
-
 		}
 
 	});
@@ -59,6 +62,18 @@ $(document).ready(function(){
 		}
 		else{
 			submit($(this));
+      //-------ADD THIS PART WHEN RECONNECTING THE reCAPTCHA----//
+      // $('.btn-submit').click(function() {
+      //   if ($.trim($('.form-control').val()) != '') {
+      //     var resultDiv = $('.result').css('display');
+      //     if (resultDiv == "none") {
+      //       $('.result').toggle('slow');
+      //       $('#plate-gallery').toggle('fast');
+      //       window.location.href = '#result';
+      //       resultDiv = $('.result').css('display');
+      //     }
+      //   }
+      // });
 		}
 	});
 

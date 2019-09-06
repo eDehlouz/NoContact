@@ -15,13 +15,11 @@ $(".navbar-toggler-icon").click(function(e) {
   }
 });
 
-
 $('.btn-nov').click(function() {
   $("html, body").animate({
     scrollTop: $('#nov').offset().top
   }, 1000);
 });
-
 
 $('.btn-santos').click(function() {
   $('.btn-nia').removeClass("active");
@@ -56,13 +54,14 @@ $(document).ready(function() {
   });
 });
 
-/* To be added for the result if captcha is vaidated*/
+/* REMOVE THIS PART AND ADD THEM IN THE custom069b.js FILE*/
 $('.btn-submit').click(function() {
   if ($.trim($('.form-control').val()) != '') {
     var resultDiv = $('.result').css('display');
     if (resultDiv == "none") {
       $('.result').toggle('slow');
       $('#nov-gallery').toggle('fast');
+      $('#plate-gallery').toggle('fast');
       window.location.href = '#result';
       resultDiv = $('.result').css('display');
     }

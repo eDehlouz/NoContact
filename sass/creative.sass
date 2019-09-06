@@ -1,6 +1,5 @@
 $color-primary: #50AD55
 $color-secondary: #85BE5B
-$font-mobhead-size-tablet: 1.4rem
 
 .font-w
   color: white
@@ -144,7 +143,6 @@ input
 section
   padding: 3rem 1.5rem
 
-
 #toTop
   opacity: 0
   position: fixed
@@ -251,7 +249,6 @@ section
       margin: auto 0 auto auto
 
 
-
 #nov-info, #cpn-info
   background-color: #1F8425
   h2
@@ -301,6 +298,16 @@ section
   background: #5F5F5F
   display: none
   color: white
+.result-msg
+  font-size: 1.5rem
+  font-weight: 700
+  width: 90%
+.no-violation
+  color: $color-primary
+.violation
+  color: #F57F21
+.no-record
+  color: #AFAFAF
 .reminder-div
   padding-top: 1rem
   text-align: left
@@ -316,11 +323,7 @@ section
 #plate-gallery
   p
     width: 70%
-.cpn-result
-  font-size: 1.5rem
-  font-weight: 700
-  color: $color-primary
-  width: 90%
+
 
 .btn-close
   position: absolute
@@ -612,9 +615,10 @@ section
 
 #nov-gallery
   img
-    max-height: -webkit-fill-available
-    width: auto
+    width: 100%
     margin: 0 auto
+    margin-left: 4rem
+    float: right
 
 .carousel-control-next-icon, .carousel-control-prev-icon
     width: 30px
@@ -913,6 +917,8 @@ section
 
   .result
     padding: 4rem 2rem
+
+
   .reCAPTCHA
     margin: 1rem 0
 
