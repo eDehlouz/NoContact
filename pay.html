@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from nocontact.paranaquecity.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Mar 2019 11:54:25 GMT -->
+<!-- Mirrored from nocontact.paranaquecity.net/plate by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Mar 2019 11:55:00 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
@@ -27,6 +27,7 @@
 
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -35,7 +36,6 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-
 
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -87,12 +87,8 @@
 
 <body id="page-top">
 
-
-
-
-
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark active-nav cpn-nav" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark active-nav altNav" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="index.html">
         <img src="img/top-logo.png" class="logo">
@@ -109,22 +105,22 @@
           </div>
           <div class="li-casing">
             <li class="nav-item ">
-              <a class="nav-link js-scroll-trigger" href="our-mission.html">OUR MISSION</a>
+              <a class="nav-link js-scroll-trigger " href="our-mission.html">OUR MISSION</a>
             </li>
           </div>
           <div class="li-casing">
             <li class="nav-item ">
-              <a class="nav-link js-scroll-trigger active" href="plate.html">CHECK PLATE</a>
+              <a class="nav-link js-scroll-trigger" href="plate.html">CHECK PLATE</a>
             </li>
           </div>
           <div class="li-casing">
             <li class="nav-item ">
-              <a class="nav-link js-scroll-trigger" href="pay.html">PAY</a>
+              <a class="nav-link js-scroll-trigger active" href="pay.html">PAY</a>
             </li>
           </div>
           <div class="li-casing">
             <li class="nav-item ">
-              <a class="nav-link js-scroll-trigger " href="downloads.html">DOWNLOADS</a>
+              <a class="nav-link js-scroll-trigger  " href="downloads.html">DOWNLOADS</a>
             </li>
           </div>
           <div class="li-casing">
@@ -137,80 +133,70 @@
       </div>
     </div>
   </nav>
-  <div class="result">
-    <div class="panel panel-default">
-          <div class="panel-body container">
-            <div class="relative">
-              <img src="img/btn-close.svg" class="btn-close" onClick="window.location.reload();">
-            </div>
-              <div id="plate-gallery" style="display: block;">
-                <div class="placeholder result-msg no-violation">
-                  Congratulations! You have no pending violations in Parañaque City
-                </div><br>
-                <p>Thank you for taking the time to check if your vehicle was recorded to have violated Parañaque City's traffic ordinance.
-                  Keep up the good work and drive safely!</p>
 
-                  <!-- <div class="placeholder result-msg  violation">You have 7 violations </div><br><p>Your vehicle was recorded by our traffic enforcement camera to have committed a violation against Ordinance No. 05-04 otherwise known as Local Traffic Code of Paranaque City. Please proceed to the Parañaque City Traffic and Parking Management Office at the Parañaque City Hall, San Antonio Ave, Baranggay San Antonio, Parañaque City right away.</p></div> -->
+  <div class="row pay margin-fix">
+    <div class="col-lg-6 padding-fix ">
 
-                  <!-- <div class="placeholder result-msg no-record">No matching record found</div> -->
-              </div>
-          </div>
-        </div>
-  </div>
-
-
-  <div class="row cpn margin-fix">
-    <div class="col-lg-6 padding-fix">
-
-      <header class="cpn-header">
+      <header class="pay-header ">
         <div class="container font-w ">
           <div class="header-elements">
-            <h1>CHECK YOUR PLATE NO.</h1>
-            <p class="noticeText">If you want to check whether you have a violation or not please enter your plate no.</p>
-            <p class="noticeText">Otherwise click below to view your notice of violation </p>
-            <button type="button" class="btn btn-outline-light btn-chk-nov" onclick="window.location.href = 'index.html#nov';">Check Notice.</button>
+            <h1>HOW TO MAKE PAYMENTS</h1>
+            <p>To pay your violation, please visit the Traffic and Parking Management Office on the ground floor of the Parañaque City Hall.</p>
+            <p>Please bring your NOTICE OF VIOLATION and ORDINANCE VIOLATION RECEIPT.</p>
+
           </div>
         </div>
       </header>
     </div>
-    <div class="col-lg-6 padding-fix">
-      <section id="cpn-form">
-        <div class="container">
-          <div class="form-input" style="">
-            <div class="panel panel-default">
+    <div class="col-lg-6 padding-fix" style="">
+      <section id="pay">
 
-              <form class="panel-body nov-form" target="#nov_hiddenRecaptcha" action="https://nocontact.paranaquecity.net/api-nov" method="POST" data-target="#nov-gallery">
-                <input type="hidden" name="_token" value="S1ZJi12PGLLlEqiIHGNRwDJ1u19RyvXSe92j2cnn">
-
-                <div class="padding-tb-10">
-                  <div class=" ">
-                    <span>ENTER PLATE NO. <br>OR CONDUCTION STICKER</span>
-                    <input type="text" class="form-control" name="cpn" id="cpn" required>
+        <div class="container ">
+          <a class="image-popup-no-margins" href="img/Maps D.Santos-01.png"  title="Map of City Hall" >
+            <img src="img/Maps D.Santos-01.png" class="pay-map d-block w-100" >
+          </a>
+          <div class="container cityhall-info">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="row">
+                  <div class="col-sm-2 col-1">
+                    <img src="img/placeholder-filled-point.svg" class="pay-icon" alt="">
+                  </div>
+                  <div class="col-auto">
+                    <p><b>Paranaque City Hall</b><br>
+                    San Antonio Avenue<br>
+                      Baranggay San Antonio<br>
+                      Paranaque City</p>
                   </div>
                 </div>
-
-                  <div class="reCAPTCHA">
-                    <!-- <div class="g-recaptcha-nov" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc" id="RecaptchaNov"></div>
-                <input type="hidden" class="hiddenRecaptcha" name="nov_hiddenRecaptcha" id="nov_hiddenRecaptcha">
-                <div class="g-recaptcha" data-sitekey="6LfIAUoUAAAAAKOcWcqiCKe8_Kf_uUCSlGzg6Qvc"></div> -->
-                    <img src="img/recaptcha.png" alt="reCAPTCHA placeholder" style="width: 250px;">
-                  </div>
-
-
-                  <div class="">
-                    <button class="btn btn-submit" type="submit">SEARCH</button>
-                  </div>
-
-              </form>
+              </div>
+            <div class="col-sm-5">
+              <div class="row">
+                <div class="col-sm-2 col-1">
+                  <img src="img/clock-circular-outline.svg" class="pay-icon" alt="">
+                </div>
+                <div class="col-auto">
+                  <p><b>Monday - Friday</b><br>
+                    8am - 5pm</p>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-2 col-1">
+                  <img src="img/telephone.svg" class="pay-icon" alt="">
+                </div>
+                <div class="col-auto">
+                  <p><b>0912 445 3556</b></p>
+                </div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
-
-
-      </section>
-
     </div>
+    </section>
   </div>
+  </div>
+
 
 
 
@@ -225,7 +211,6 @@
 
   <!-- Custom scripts for this template -->
   <!-- <script src="js/creative.min.js"></script> -->
-  <script src="js/custom.js"></script>
   <script type="text/javascript" src="js/custom069b.js?version=1.1"></script>
 
   <script type="text/javascript">
@@ -239,6 +224,6 @@
 </body>
 
 
-<!-- Mirrored from nocontact.paranaquecity.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Mar 2019 11:54:37 GMT -->
+<!-- Mirrored from nocontact.paranaquecity.net/plate by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Mar 2019 11:55:00 GMT -->
 
 </html>
