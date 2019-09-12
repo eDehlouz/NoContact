@@ -330,7 +330,7 @@ section, .safety-div {
       border-color: #50AD55; }
 
 .result {
-  padding: 3rem 0;
+  padding: 3rem 1.5rem;
   height: auto;
   background: #5F5F5F;
   display: none;
@@ -790,7 +790,7 @@ section, .safety-div {
     right: 2.2rem; }
 
   #congestion {
-    height: 130%; }
+    height: 836px; }
 
   .form-control {
     width: 100% !important; } }
