@@ -101,7 +101,8 @@ footer {
   background-color: #5F5F5F;
   color: #AFAFAF !important; }
   footer .footer {
-    padding: 1.5rem; }
+    padding: 1.5rem;
+    padding-bottom: 0.5rem; }
   footer a {
     font-size: 0.85rem;
     color: #AFAFAF !important; }
@@ -120,12 +121,10 @@ footer {
   font-size: 0.85rem; }
 
 .copyright {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
   text-align: center;
-  font-size: 0.7rem;
-  z-index: 9; }
+  font-size: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #7f7f7f; }
 
 button:focus {
   outline: none; }
@@ -215,8 +214,48 @@ section, .safety-div {
     background-color: #BFC364; }
   .li-casing:nth-of-type(5) {
     background-color: #9FD592; }
+  .li-casing:nth-of-type(6) {
+    background-color: #AFAFAF; }
   .li-casing .active {
     font-weight: 400; }
+
+#nav-wrapper {
+  display: inline-block;
+  border-radius: 500px;
+  position: relative;
+  padding: 10px;
+  margin: 2px; }
+
+.circle {
+  width: 25px;
+  height: 17px;
+  position: relative;
+  text-align: left; }
+
+.line {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s; }
+
+.top {
+  top: -1%; }
+
+.middle {
+  top: 50%; }
+
+.bottom {
+  top: 101%; }
+
+.nav-icon.close .top {
+  transform: rotate(45deg);
+  top: 48%; }
+
+.nav-icon.close .middle, .nav-icon.close .bottom {
+  transform: rotate(-45deg);
+  top: 48%; }
 
 #mobhead {
   text-align: center;
@@ -228,13 +267,16 @@ section, .safety-div {
 #features {
   background-color: #50AD55;
   color: #5F5F5F; }
+  #features a {
+    color: #50AD55; }
   #features .card {
-    height: 10rem;
+    height: 8rem;
     justify-content: center; }
   #features .card-body {
     display: grid; }
   #features .row {
-    width: -webkit-fill-available; }
+    width: -webkit-fill-available;
+    align-items: center; }
   #features .card-items {
     padding: 1rem 0; }
   #features .features-icon {
@@ -416,6 +458,8 @@ section, .safety-div {
 
 #safety {
   padding: 3rem 1.5rem; }
+  #safety a {
+    color: #50AD55; }
 
 .safety-img {
   height: 100%;
@@ -468,15 +512,19 @@ section, .safety-div {
   text-align: center;
   padding-top: 1.5rem; }
 
-#pay .col-1 {
-  padding: 0; }
+#pay p {
+  font-size: 1rem; }
 
 .pay-icon {
-  width: 1rem;
-  padding-top: 0.1rem; }
+  height: 100%;
+  float: left; }
+  .pay-icon img {
+    width: 1rem;
+    margin-right: 0.5rem; }
 
 .pay-map {
   width: 100%;
+  height: 370px;
   margin-bottom: 1.5rem; }
 
 .cityhall-info {
@@ -747,9 +795,6 @@ section, .safety-div {
   #news .carousel-item {
     padding: 2rem; }
 
-  .li-casing {
-    width: 230px; }
-
   #congestion {
     height: 660px; }
 
@@ -770,13 +815,19 @@ section, .safety-div {
   p, a {
     font-size: 1rem; }
 
+  footer .footer {
+    padding-bottom: 1.5rem; }
   footer .order-3 {
     order: 2; }
   footer a, footer .footer-elements {
     font-size: 0.9rem; }
 
   .footer-elements {
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    min-width: 171px; }
+
+  .copyright {
+    font-size: 0.7rem; }
 
   #nov .container {
     max-width: 100vw; }
@@ -789,8 +840,23 @@ section, .safety-div {
     width: 24rem;
     margin: 1rem 0; }
 
+  .pay-header .header-elements {
+    width: 26rem; }
+
   #news .carousel-inner {
-    min-height: 221.5px; } }
+    min-height: 221.5px; }
+
+  #pay p {
+    font-size: 1.1rem; }
+  #pay .col-10 {
+    padding-left: 1rem;
+    padding-bottom: 0.5rem; }
+
+  .pay-info {
+    padding-bottom: 0.5rem; }
+
+  .relative .header-img.mission {
+    max-height: none; } }
 @media (min-width: 768px) {
   h1 {
     font-size: 2.8rem; }
@@ -801,7 +867,7 @@ section, .safety-div {
 
   h3 {
     font-size: 1.4rem;
-    padding-bottom: 1rem; }
+    padding-bottom: 0.5rem; }
 
   h4 {
     font-size: 1.2rem;
@@ -867,7 +933,7 @@ section, .safety-div {
   .navbar-toggler-icon {
     background-size: 150% 200%; }
 
-  .navbar-collapse {
+  .menu {
     padding-top: 7rem; }
 
   .li-casing {
@@ -875,9 +941,6 @@ section, .safety-div {
     width: 45%; }
     .li-casing .nav-link {
       font-size: 1.1rem; }
-
-  .menu {
-    padding-top: 0; }
 
   footer {
     position: relative;
@@ -890,7 +953,17 @@ section, .safety-div {
     footer a {
       font-size: 0.9rem; }
     footer img {
-      width: 100%; }
+      width: auto;
+      display: block;
+      position: absolute; }
+    footer .row {
+      text-align: left; }
+
+  .footer-logo {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 14px; }
 
   #mobhead {
     background-image: url("../img/funky-lines.png"); }
@@ -912,7 +985,9 @@ section, .safety-div {
       min-height: 9.19rem;
       padding: 1rem 1rem; }
     #features p {
-      padding-right: 1.5rem; }
+      padding-right: 3rem; }
+    #features .card {
+      height: 8rem; }
     #features .card-title {
       margin-bottom: 0; }
     #features .features-icon img {
@@ -929,14 +1004,14 @@ section, .safety-div {
     display: flex;
     flex-direction: column;
     align-content: center;
-    text-align: left; }
+    text-align: left;
+    padding-bottom: 5rem; }
     #nov .form-input input {
       height: 40px; }
   #nov h2 {
     font-size: 2.3rem;
-    width: 70%; }
+    width: 50%; }
   #nov .container {
-    padding-right: 0;
     padding-left: 0;
     max-width: 100%; }
   #nov .row {
@@ -946,7 +1021,11 @@ section, .safety-div {
   .form-info, .form-input {
     max-width: 100%;
     margin: auto;
-    max-width: 720px; }
+    max-width: 720px;
+    padding-right: 11rem; }
+
+  .form-info {
+    padding-top: 5rem; }
 
   .nov-info {
     padding: 0;
@@ -1033,9 +1112,6 @@ section, .safety-div {
   .btn-close {
     width: 25px; }
 
-  .container {
-    height: 100%; }
-
   #maps {
     position: relative;
     z-index: 5;
@@ -1071,7 +1147,7 @@ section, .safety-div {
 
   .safety-img {
     position: absolute;
-    right: 0; }
+    right: 20px; }
 
   .half-graph {
     width: 600px;
@@ -1117,6 +1193,11 @@ section, .safety-div {
 
   #cpn-form .form-control {
     margin: 1rem 0; }
+
+  #pay .pay-map {
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(181, 181, 181, 0.5);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(181, 181, 181, 0.5);
+    box-shadow: 0px 0px 11px 0px rgba(181, 181, 181, 0.5); }
 
   #downloads-header {
     padding-top: 4rem;
@@ -1226,7 +1307,6 @@ section, .safety-div {
 
   header {
     min-height: 650px;
-    height: 90vh;
     padding-top: 18rem;
     color: white; }
     header .intro-text {
@@ -1244,16 +1324,17 @@ section, .safety-div {
       header .header-elements .title-header {
         width: 40%; }
 
+  header, .cpn-header, .downloads-header, .pay-header, .missionhead {
+    height: 89.5vh; }
+
   .missionhead {
-    height: 90vh;
     max-height: fit-content;
     padding-top: 18rem; }
 
-  .downloads-header .container {
+  .downloads-header .container, .pay-header .container {
     height: 100%; }
 
   .cpn-header, .downloads-header, .pay-header {
-    height: 90vh;
     padding-bottom: 3rem;
     padding-top: 4rem;
     padding-right: 0; }
@@ -1282,11 +1363,6 @@ section, .safety-div {
     display: block; }
   footer .row {
     text-align: left; }
-
-  .footer-logo {
-    text-align: -webkit-right;
-    text-align: -moz-right;
-    text-align: -ms-right; }
 
   #toTop {
     opacity: initial;
@@ -1329,7 +1405,7 @@ section, .safety-div {
     align-self: flex-end;
     border-radius: 0;
     margin-bottom: 0; }
-    .li-casing:nth-of-type(1), .li-casing:nth-of-type(2), .li-casing:nth-of-type(3), .li-casing:nth-of-type(4), .li-casing:nth-of-type(5) {
+    .li-casing:nth-of-type(1), .li-casing:nth-of-type(2), .li-casing:nth-of-type(3), .li-casing:nth-of-type(4), .li-casing:nth-of-type(5), .li-casing:nth-of-type(6) {
       background-color: transparent; }
 
   .relative.screen-lg {
@@ -1350,7 +1426,8 @@ section, .safety-div {
     #features .card {
       -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3); }
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+      height: 9rem; }
     #features .card-body {
       min-height: 11.5rem;
       display: flex;
@@ -1374,7 +1451,8 @@ section, .safety-div {
   #nov {
     height: 100%; }
     #nov h2 {
-      font-size: 2.5rem; }
+      font-size: 2.5rem;
+      width: 70%; }
     #nov .row {
       height: 100%;
       width: 100%; }
@@ -1468,6 +1546,25 @@ section, .safety-div {
   .form-input {
     padding: 0; }
 
+  #pay {
+    padding-bottom: 3rem;
+    padding-top: 4rem;
+    height: 87.5vh; }
+    #pay .container {
+      max-width: 480px;
+      height: 100%; }
+    #pay .cityhall-info {
+      height: auto; }
+    #pay p {
+      font-size: 1rem; }
+    #pay .col-md-6, #pay .col-12 {
+      padding-left: 0; }
+
+  .cityhall-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
   #download {
     height: 100%;
     width: 70%;
@@ -1515,8 +1612,6 @@ section, .safety-div {
     padding-bottom: 0.5rem; }
 
   h4 {
-    font-size: 1.4rem;
-    font-weight: 700;
     padding-bottom: 1rem; }
 
   a {
@@ -1558,8 +1653,6 @@ section, .safety-div {
   footer a {
     font-size: 0.9rem;
     color: #AFAFAF !important; }
-  footer img {
-    position: relative; }
 
   #nov h2 {
     width: 75%; }
@@ -1699,6 +1792,13 @@ section, .safety-div {
     -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3); }
 
+  #pay .container {
+    max-width: 570px; }
+  #pay p {
+    font-size: 1.2rem; }
+  #pay .col-md-6, #pay .col-12 {
+    padding-left: 0; }
+
   .btn-close {
     width: 30px; } }
 @media (min-width: 1400px) {
@@ -1726,7 +1826,7 @@ section, .safety-div {
     .cpn-header .container, .downloads-header .container, .pay-header .container {
       max-width: 700px; }
 
-  .cpn.row, .downl.row {
+  .cpn.row, .downl.row, .pay.row {
     height: 88.6vh !important; }
 
   .container {
@@ -1743,6 +1843,8 @@ section, .safety-div {
   #features p {
     padding-right: 1rem;
     font-size: 1rem; }
+  #features a {
+    font-size: 1rem; }
 
   #safety .safety-img {
     bottom: -22px; }
@@ -1758,4 +1860,7 @@ section, .safety-div {
 
   #safety, #congestion, #funding {
     height: auto;
-    padding: 9rem 0; } }
+    padding: 9rem 0; }
+
+  #pay .container {
+    max-width: 700px; } }

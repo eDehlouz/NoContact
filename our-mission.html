@@ -17,7 +17,7 @@
     </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0, user-scalable=yes">
   <meta name="description" content="#">
   <meta name="keywords" content="flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
   <meta name="author" content="#">
@@ -93,7 +93,13 @@
         <img src="img/top-logo.png" class="logo">
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <div id="nav-wrapper">
+          <div class="circle nav-icon">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+          </div>
+        </div>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto menu">
@@ -330,42 +336,42 @@
 
   <footer id="footer">
     <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-2 col-lg-3 col-sm-4 col-6 order-1 footer-elements">
-            <h4>| THIS SITE</h4>
-            <a href="index.html">HOME</a><br>
-            <a href="our-mission.html">OUR MISSION</a><br>
-            <a href="index.html#nov">CHECK NOTICE</a><br>
-            <a href="plate.html#cpn">CHECK PLATE NO.</a><br>
-            <a href="faq.html">FAQ</a><br>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-sm-4 col-6 order-3 footer-elements ">
-            <h4>| USER INFO</h4>
-            <!-- <a href="privacy.html">PRIVACY POLICY</a><br> -->
-            <a href="pay.html">HOW TO PAY</a><br>
-            <a href="downloads.html">DOWNLOADS</a><br>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-sm-4 col-6 order-2 footer-elements">
-            <h4>| HELP CENTER</h4>
-            <a>+632 697 0707</a><br>
-            Paranaque City Hall,<br>
-            San Antonio Avenue,<br>
-            Baranggay San Antonio,<br>
-            Paranaque City
-          </div>
-          <div class="col-xl-6 col-lg-3 order-4 footer-logo">
-            <img src="img/Logo BnW@2x.png" alt="footer-logo">
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-2 col-md-auto col-sm-4 col-6 order-1 footer-elements">
+          <h4>| THIS SITE</h4>
+          <a href="index.html">HOME</a><br>
+          <a href="our-mission.html">OUR MISSION</a><br>
+          <a href="index.html#nov">CHECK NOTICE</a><br>
+          <a href="plate.html#cpn">CHECK PLATE NO.</a><br>
+          <a href="faq.html">FAQ</a><br>
+        </div>
+        <div class="col-xl-2 col-md-auto col-sm-4 col-6 order-3 footer-elements ">
+          <h4>| USER INFO</h4>
+          <!-- <a href="privacy.html">PRIVACY POLICY</a><br> -->
+          <a href="pay.html">HOW TO PAY</a><br>
+          <a href="downloads.html">DOWNLOADS</a><br>
+        </div>
+        <div class="col-xl-2 col-md-auto col-sm-4 col-6 order-2 footer-elements">
+          <h4>| HELP CENTER</h4>
+          +632 697 0707<br>
+          Paranaque City Hall<br>
+          San Antonio Avenue<br>
+          Barangay San Antonio<br>
+          Paranaque City<br>
+        </div>
+        <div class="col-md order-4 footer-logo">
+          <img src="img/Logo BnW@2x.png" alt="footer-logo">
         </div>
       </div>
     </div>
+    </div>
     <!-- PLEASE ADD THIS PART WHEN OUR STUDIO IS ESTABLISHED FOR COPYRIGHT PURPOSE. THANK YOU -->
-    <!-- <div class="relative">
+    <div class="relative">
       <div class="copyright">
           © 2019 | Bamboo Creative Studio
       </div>
-    </div> -->
+    </div>
     <!-- PLEASE ADD THIS PART WHEN OUR STUDIO IS ESTABLISHED FOR COPYRIGHT PURPOSE. THANK YOU -->
   </footer>
 
@@ -377,9 +383,9 @@
 
 
 
+
   <!-- Bootstrap core JavaScript -->
-
-
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- <script src="vendor/scrollreveal/scrollreveal.min.js"></script> -->
@@ -387,14 +393,14 @@
 
   <!-- Custom scripts for this template -->
   <!-- <script src="js/creative.min.js"></script> -->
-  <script type="text/javascript" src="js/custom069b.js?version=1.1"></script>
   <script src="js/custom.js"></script>
+  <script type="text/javascript" src="js/custom069b.js?version=1.1"></script>
+
   <script type="text/javascript">
     document.addEventListener('contextmenu', event => event.preventDefault());
     jQuery(document).ready(function() {
 
       // jQuery("#gallery").unitegallery();
-
     });
   </script>
 </body>

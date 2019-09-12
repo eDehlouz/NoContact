@@ -1,5 +1,5 @@
 var count = 0;
-$(".navbar-toggler-icon").click(function(e) {
+$("#nav-wrapper").click(function(e) {
   if (count == 0) {
     $('html, body').css({
       overflow: 'hidden',
@@ -13,6 +13,10 @@ $(".navbar-toggler-icon").click(function(e) {
     });
     count = 0;
   }
+});
+
+$("#nav-wrapper").click(function(){
+  $(".nav-icon").toggleClass("close");
 });
 
 $('.btn-nov').click(function() {
@@ -58,7 +62,7 @@ $('.image-popup-no-margins').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
 		closeBtnInside: false,
-		fixedContentPos: true,
+		fixedContentPos: false,
 		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
 		image: {
 			verticalFit: true

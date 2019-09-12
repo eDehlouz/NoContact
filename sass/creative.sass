@@ -127,6 +127,7 @@ footer
   color: $color-grey-2 !important
   .footer
     padding: 1.5rem
+    padding-bottom: .5rem
   a
     font-size: 0.85rem
     color: $color-grey-2 !important
@@ -144,12 +145,10 @@ footer
   font-size: 0.85rem
 
 .copyright
-  position: absolute
-  right: 10px
-  bottom: 10px
   text-align: center
-  font-size: .7rem
-  z-index: 9
+  font-size: .5rem
+  padding-bottom: .5rem
+  color: #7f7f7f
 
 button:focus
   outline: none
@@ -236,8 +235,41 @@ section
     background-color: $color-green-4
   &:nth-of-type(5)
     background-color: $color-green-2
+  &:nth-of-type(6)
+    background-color: $color-grey-2
   .active
     font-weight: 400
+
+#nav-wrapper
+  display: inline-block
+  border-radius: 500px
+  position: relative
+  padding: 10px
+  margin: 2px
+.circle
+  width: 25px
+  height: 17px
+  position: relative
+  text-align: left
+.line
+  position: absolute
+  height: 2px
+  width: 100%
+  background-color: white
+  border-radius: 2px
+  transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s
+.top
+  top: -1%
+.middle
+  top: 50%
+.bottom
+  top: 101%
+.nav-icon.close .top
+  transform: rotate(45deg)
+  top: 48%
+.nav-icon.close .middle, .nav-icon.close .bottom
+  transform: rotate(-45deg)
+  top: 48%
 
 #mobhead
   text-align: center
@@ -249,13 +281,16 @@ section
 #features
   background-color: $color-green-1
   color: $color-grey-3
+  a
+    color: $color-green-1
   .card
-    height: 10rem
+    height: 8rem
     justify-content: center
   .card-body
     display: grid
   .row
     width: -webkit-fill-available
+    align-items: center
   .card-items
     padding: 1rem 0
   .features-icon
@@ -266,6 +301,7 @@ section
       width: 4rem
       padding-right: .5rem
       margin: auto 0 auto auto
+
 
 
 #nov-info, #cpn-info
@@ -342,7 +378,6 @@ section
 #plate-gallery
   p
     width: 70%
-
 
 .btn-close
   position: absolute
@@ -438,6 +473,8 @@ section
 
 #safety
   padding: 3rem 1.5rem
+  a
+    color: $color-green-1
 .safety-img
   height: 100%
   display: flex
@@ -471,6 +508,7 @@ section
     margin-left: 0
     margin-right: 0
 
+
 .congestion-info
   background-color: $color-green-1
   padding: 3rem 1.5rem
@@ -491,17 +529,22 @@ section
   padding-top: 1.5rem
 
 #pay
-  .col-1
-    padding: 0
+  p
+    font-size: 1rem
 .pay-icon
-  width: 1rem
-  padding-top: .1rem
+  height: 100%
+  float: left
+  img
+    width: 1rem
+    margin-right: .5rem
 .pay-map
   width: 100%
+  height: 370px
   margin-bottom: 1.5rem
 .cityhall-info
   color: #85BE5B
   line-height: 1.3rem
+
 
 #downloads-header
   padding-top: 4rem
@@ -791,8 +834,6 @@ section
     .carousel-item
       padding: 2rem
 
-  .li-casing
-    width: 230px
 
   #congestion
     height: 660px
@@ -818,12 +859,18 @@ section
 
 
   footer
+    .footer
+      padding-bottom: 1.5rem
     .order-3
       order: 2
     a, .footer-elements
       font-size: .9rem
   .footer-elements
     padding-bottom: 0
+    min-width: 171px
+
+  .copyright
+    font-size: .7rem
 
   #nov
     .container
@@ -835,10 +882,27 @@ section
     width: 24rem
     margin: 1rem 0
 
+  .pay-header
+    .header-elements
+      width: 26rem
+
   #news
     .carousel-inner
       min-height: 221.5px
 
+  #pay
+    p
+      font-size: 1.1rem
+    .col-10
+      padding-left: 1rem
+      padding-bottom: .5rem
+  .pay-info
+    padding-bottom: .5rem
+
+  .relative
+    .header-img
+      &.mission
+        max-height: none
 
 @media (min-width:768px)  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   h1
@@ -848,7 +912,7 @@ section
     padding-bottom: 1rem
   h3
     font-size: 1.4rem
-    padding-bottom: 1rem
+    padding-bottom: .5rem
   h4
     font-size: 1.2rem
     font-weight: 700
@@ -909,18 +973,13 @@ section
     width: 55%
   .navbar-toggler-icon
     background-size: 150% 200%
-  .navbar-collapse
+  .menu
     padding-top: 7rem
   .li-casing
     padding: 0.8rem 0 0.8rem 3rem
     width: 45%
     .nav-link
       font-size: 1.1rem
-
-  .menu
-    padding-top: 0
-
-
 
   footer
     position: relative
@@ -933,7 +992,16 @@ section
     a
       font-size: 0.9rem
     img
-      width: 100%
+      width: auto
+      display: block
+      position: absolute
+    .row
+      text-align: left
+  .footer-logo
+    display: flex
+    justify-content: flex-end
+    position: relative
+    bottom: 14px
 
   #mobhead
     background-image: url("../img/funky-lines.png")
@@ -954,8 +1022,9 @@ section
       min-height: 9.19rem
       padding: 1rem 1rem
     p
-      padding-right: 1.5rem
-
+      padding-right: 3rem
+    .card
+      height: 8rem
     .card-title
       margin-bottom: 0
     .features-icon
@@ -977,13 +1046,13 @@ section
       flex-direction: column
       align-content: center
       text-align: left
+      padding-bottom: 5rem
       input
         height: 40px
     h2
       font-size: 2.3rem
-      width: 70%
+      width: 50%
     .container
-      padding-right: 0
       padding-left: 0
       max-width: 100%
     .row
@@ -994,6 +1063,9 @@ section
     max-width: 100%
     margin: auto
     max-width: 720px
+    padding-right: 11rem
+  .form-info
+    padding-top: 5rem
   .nov-info
     padding: 0
     background-color: $color-green-5
@@ -1078,8 +1150,8 @@ section
   .btn-close
     width: 25px
 
-  .container
-    height: 100%
+  // .container
+  //   height: 100%
 
   #maps
     position: relative
@@ -1111,7 +1183,7 @@ section
     width: 50%
   .safety-img
     position: absolute
-    right: 0
+    right: 20px
   .half-graph
     width: 600px
     padding: 0
@@ -1154,6 +1226,10 @@ section
   #cpn-form
     .form-control
       margin: 1rem 0
+
+  #pay
+    .pay-map
+      @include box-shadow-light
 
 
   #downloads-header
@@ -1266,7 +1342,6 @@ section
 
   header
     min-height: 650px
-    height: 90vh
     padding-top: 18rem
     color: white
     .intro-text
@@ -1284,16 +1359,18 @@ section
       .title-header
         width: 40%
 
+  header, .cpn-header, .downloads-header, .pay-header, .missionhead,
+    height: 89.5vh
+
   .missionhead
-    height: 90vh
     max-height: fit-content
     padding-top: 18rem
 
-  .downloads-header .container
-    height: 100%
+  .downloads-header, .pay-header
+    .container
+      height: 100%
 
   .cpn-header, .downloads-header, .pay-header
-    height: 90vh
     padding-bottom: 3rem
     padding-top: 4rem
     padding-right: 0
@@ -1327,10 +1404,6 @@ section
       display: block
     .row
       text-align: left
-  .footer-logo
-    text-align: -webkit-right
-    text-align: -moz-right
-    text-align: -ms-right
 
   #toTop
     opacity: initial
@@ -1370,7 +1443,7 @@ section
     align-self: flex-end
     border-radius: 0
     margin-bottom: 0
-    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5)
+    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6)
       background-color: transparent
 
 
@@ -1391,6 +1464,7 @@ section
       padding: 0
     .card
       @include box-shadow-dark
+      height: 9rem
     .card-body
       min-height: 11.5rem
       display: flex
@@ -1416,6 +1490,7 @@ section
     height: 100%
     h2
       font-size: 2.5rem
+      width: 70%
     .row
       height: 100%
       width: 100%
@@ -1508,6 +1583,26 @@ section
   .form-input
     padding: 0
 
+  #pay
+    padding-bottom: 3rem
+    padding-top: 4rem
+    height: 87.5vh
+    // padding-left: 3rem
+    .container
+      max-width: 480px
+      height: 100%
+    .cityhall-info
+      height: auto
+    p
+      font-size: 1rem
+    .col-md-6, .col-12
+      padding-left: 0
+  .cityhall-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+
   #download
     height: 100%
     width: 70%
@@ -1556,8 +1651,6 @@ section
     font-size: 1.5rem
     padding-bottom: .5rem
   h4
-    font-size: 1.4rem
-    font-weight: 700
     padding-bottom: 1rem
   a
     font-size: 1rem
@@ -1597,13 +1690,10 @@ section
       height: auto
       min-height: auto
 
-
   footer
     a
       font-size: 0.9rem
       color: $color-grey-2 !important
-    img
-      position: relative
 
   #nov
     h2
@@ -1733,6 +1823,15 @@ section
     padding: 4rem 3rem
     @include  box-shadow-dark
 
+  #pay
+    .container
+      max-width: 570px
+    p
+      font-size: 1.2rem
+
+    .col-md-6, .col-12
+      padding-left: 0
+
   .btn-close
     width: 30px
 
@@ -1767,7 +1866,7 @@ section
     .container
       max-width: 700px
 
-  .cpn.row, .downl.row
+  .cpn.row, .downl.row, .pay.row
     height: 88.6vh !important
 
   .container
@@ -1785,8 +1884,8 @@ section
     p
       padding-right: 1rem
       font-size: 1rem
-
-
+    a
+      font-size: 1rem
 
   #safety
     .safety-img
@@ -1803,3 +1902,7 @@ section
   #safety, #congestion, #funding
     height: auto
     padding: 9rem 0
+
+  #pay
+    .container
+      max-width: 700px

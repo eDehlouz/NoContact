@@ -17,7 +17,7 @@
     </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0, user-scalable=yes">
   <meta name="description" content="#">
   <meta name="keywords" content="flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
   <meta name="author" content="#">
@@ -98,7 +98,13 @@
         <img src="img/top-logo.png" class="logo">
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <div id="nav-wrapper">
+          <div class="circle nav-icon">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+          </div>
+        </div>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto menu">
@@ -143,17 +149,18 @@
             <div class="relative">
               <img src="img/btn-close.svg" class="btn-close" onClick="window.location.reload();">
             </div>
+            <div class="placeholder result-msg no-violation">
+              Congratulations! You have no pending violations in Parañaque City
+            </div><br>
+            <p>Thank you for taking the time to check if your vehicle was recorded to have violated Parañaque City's traffic ordinance.
+              Keep up the good work and drive safely!</p>
+
+              <!-- <div class="placeholder result-msg  violation">You have 7 violations </div><br><p>Your vehicle was recorded by our traffic enforcement camera to have committed a violation against Ordinance No. 05-04 otherwise known as Local Traffic Code of Paranaque City. Please proceed to the Parañaque City Traffic and Parking Management Office at the Parañaque City Hall, San Antonio Ave, Baranggay San Antonio, Parañaque City right away.</p></div> -->
+
+              <!-- <div class="placeholder result-msg no-record">No matching record found</div> -->
+          </div>
               <div id="plate-gallery" style="display: block;">
-                <div class="placeholder result-msg no-violation">
-                  Congratulations! You have no pending violations in Parañaque City
-                </div><br>
-                <p>Thank you for taking the time to check if your vehicle was recorded to have violated Parañaque City's traffic ordinance.
-                  Keep up the good work and drive safely!</p>
 
-                  <!-- <div class="placeholder result-msg  violation">You have 7 violations </div><br><p>Your vehicle was recorded by our traffic enforcement camera to have committed a violation against Ordinance No. 05-04 otherwise known as Local Traffic Code of Paranaque City. Please proceed to the Parañaque City Traffic and Parking Management Office at the Parañaque City Hall, San Antonio Ave, Baranggay San Antonio, Parañaque City right away.</p></div> -->
-
-                  <!-- <div class="placeholder result-msg no-record">No matching record found</div> -->
-              </div>
           </div>
         </div>
   </div>
@@ -216,8 +223,7 @@
 
 
   <!-- Bootstrap core JavaScript -->
-
-
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- <script src="vendor/scrollreveal/scrollreveal.min.js"></script> -->
@@ -233,7 +239,6 @@
     jQuery(document).ready(function() {
 
       // jQuery("#gallery").unitegallery();
-
     });
   </script>
 </body>
