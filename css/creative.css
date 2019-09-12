@@ -789,6 +789,9 @@ section, .safety-div {
   #funding .funding-IMG {
     right: 2.2rem; }
 
+  #congestion {
+    height: 130%; }
+
   .form-control {
     width: 100% !important; } }
 @media (min-width: 481px) {
