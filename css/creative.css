@@ -1281,7 +1281,7 @@ section, .safety-div {
     #download h5 {
       margin-bottom: 1.2rem;
       margin-top: 0.8rem;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       width: 65%;
       padding-top: 1rem;
       font-weight: 400; }
@@ -1854,8 +1854,8 @@ section, .safety-div {
 
   .funding-IMG {
     background: none;
-    padding-left: 7rem;
-    text-align: left; }
+    padding-right: 3rem;
+    text-align: center; }
 
   .funding-info, .safety-info {
     padding: 0; }
@@ -1924,6 +1924,9 @@ section, .safety-div {
     .cpn-header .container, .downloads-header .container, .pay-header .container {
       max-width: 700px; }
 
+  .faq-header .header-elements {
+    width: 510px; }
+
   .cpn.row, .downl.row, .pay.row {
     height: 88.6vh !important; }
 
@@ -1973,4 +1976,4 @@ section, .safety-div {
     max-width: 700px; }
 
   #plate-gallery p {
-    font-size: 700px; } }
+    width: 700px; } }
