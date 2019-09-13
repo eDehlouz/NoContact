@@ -1902,7 +1902,7 @@ section, .safety-div {
     padding-right: 13rem; }
 
   .cpn-header .header-elements h1, .downloads-header .header-elements h1, .pay-header .header-elements h1 {
-    width: 50%; } }
+    width: 330px; } }
 @media (min-width: 1600px) {
   h1 {
     font-size: 4rem; }
