@@ -37,14 +37,19 @@ $(document).ready(function(){
 		}
 		else{
 			submit($(this));
-      //-------ADD THIS PART WHEN RECONNECTING THE reCAPTCHA----//
+      //-------ADD BUTTON SUBMIT PART WHEN RECONNECTING THE reCAPTCHA(added placeholder code for guidelines)----//
       // $('.btn-submit').click(function() {
       //   if ($.trim($('.form-control').val()) != '') {
       //     var resultDiv = $('.result').css('display');
       //     if (resultDiv == "none") {
-      //       $('.result').toggle('slow');
-      //       $('#nov-gallery').toggle('fast');
-      //       window.location.href = '#result';
+      //       $('.result').toggle();
+      //       if ($('#nov').length) {
+      //         $('#nov-gallery').toggle('normal ');
+      //         window.location.href = "index.html#result";
+      //       } else {
+      //         $('#plate-gallery').toggle('normal');
+      //         window.location.href = "plate.html#page-top";
+      //       }
       //       resultDiv = $('.result').css('display');
       //     }
       //   }
@@ -62,14 +67,19 @@ $(document).ready(function(){
 		}
 		else{
 			submit($(this));
-      //-------ADD THIS PART WHEN RECONNECTING THE reCAPTCHA----//
+      //-------ADD BUTTON SUBMIT PART WHEN RECONNECTING THE reCAPTCHA(added placeholder code for guidelines)----//
       // $('.btn-submit').click(function() {
       //   if ($.trim($('.form-control').val()) != '') {
       //     var resultDiv = $('.result').css('display');
       //     if (resultDiv == "none") {
-      //       $('.result').toggle('slow');
-      //       $('#plate-gallery').toggle('fast');
-      //       window.location.href = '#result';
+      //       $('.result').toggle();
+      //       if ($('#nov').length) {
+      //         $('#nov-gallery').toggle('normal ');
+      //         window.location.href = "index.html#result";
+      //       } else {
+      //         $('#plate-gallery').toggle('normal');
+      //         window.location.href = "plate.html#page-top";
+      //       }
       //       resultDiv = $('.result').css('display');
       //     }
       //   }
