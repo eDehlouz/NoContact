@@ -341,8 +341,12 @@ section, .safety-div {
   font-weight: 700;
   width: 90%; }
 
-.no-violation {
+.no-violation, .paid-record {
   color: #50AD55; }
+
+.paid-record p {
+  color: white;
+  font-weight: 400; }
 
 .violation {
   color: #F57F21; }
@@ -1126,6 +1130,9 @@ section, .safety-div {
     right: 40px;
     top: 40px; }
 
+  #nov-gallery .no-record, #nov-gallery .paid-record {
+    width: 100%; }
+
   #cpn-form {
     padding-top: 3rem; }
     #cpn-form input {
@@ -1753,8 +1760,12 @@ section, .safety-div {
   .form-info {
     max-width: 570px; }
 
-  #result p {
-    margin-bottom: 1rem; }
+  #nov-gallery .no-record, #nov-gallery .paid-record {
+    position: relative;
+    width: 1140px !important;
+    padding: 0 15px;
+    left: -54%; }
+
   #result .order-3 {
     order: 2; }
   #result .order-2 {
@@ -1766,6 +1777,8 @@ section, .safety-div {
   .reminder-div {
     padding-top: 0;
     padding-right: 2rem; }
+    .reminder-div p {
+      margin-bottom: 1rem; }
 
   #maps {
     display: block;
@@ -1975,5 +1988,10 @@ section, .safety-div {
   #pay .container {
     max-width: 700px; }
 
+  #nov-gallery .no-record, #nov-gallery .paid-record {
+    width: 1400px !important; }
+
   #plate-gallery p {
     width: 700px; } }
+
+/*# sourceMappingURL=creative.css.map */

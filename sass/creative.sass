@@ -353,8 +353,11 @@ section
   font-size: 1.2rem
   font-weight: 700
   width: 90%
-.no-violation
+.no-violation, .paid-record
   color: $color-green-1
+.paid-record p
+  color: white
+  font-weight: 400
 .violation
   color: #F57F21
 .no-record
@@ -1138,6 +1141,10 @@ section
     right: 40px
     top: 40px
 
+  #nov-gallery
+    .no-record, .paid-record
+      width: 100%
+
   #cpn-form
     padding-top: 3rem
     input
@@ -1757,9 +1764,13 @@ section
   .form-info
     max-width: 570px
 
+  #nov-gallery
+    .no-record, .paid-record
+      position: relative
+      width: 1140px !important
+      padding: 0 15px
+      left: -54%
   #result
-    p
-      margin-bottom: 1rem
     .order-3
       order: 2
     .order-2
@@ -1770,6 +1781,8 @@ section
   .reminder-div
     padding-top: 0
     padding-right: 2rem
+    p
+      margin-bottom: 1rem
 
   #maps
     display: block
@@ -1974,6 +1987,10 @@ section
   #pay
     .container
       max-width: 700px
+
+  #nov-gallery
+    .no-record, .paid-record
+      width: 1400px !important
 
   #plate-gallery p
     width: 700px
